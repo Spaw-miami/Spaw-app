@@ -29,7 +29,7 @@ export default class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">MERN Boilerplate</h1>
           <NavLink to="/" exact>
-            Client
+            Home
           </NavLink>
           <NavLink to="/countries">Countries</NavLink>
           <NavLink to="/add-country">Add country</NavLink>
