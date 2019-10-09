@@ -6,6 +6,7 @@ import AddCountry from './pages/AddCountry'
 import Secret from './pages/Secret'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import Groomerprofile from './pages/Groomerprofile'
 import api from '../api'
 import logo from '../logo.svg'
 
@@ -31,6 +32,7 @@ export default class App extends Component {
           <NavLink to="/" exact>
             Home
           </NavLink>
+          <NavLink to="/groomerprofile">Profile</NavLink>
           <NavLink to="/countries">Countries</NavLink>
           <NavLink to="/add-country">Add country</NavLink>
           {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
@@ -48,6 +50,7 @@ export default class App extends Component {
           <Route path="/add-country" component={AddCountry} />
           <Route path="/signup" component={Signup} />
           <Route path="/login" component={Login} />
+          <Route path="/groomerprofile" component={Groomerprofile} />
           <Route path="/secret" component={Secret} />
           <Route render={() => <h2>404</h2>} />
         </Switch>
