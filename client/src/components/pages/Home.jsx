@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../home.css'
 
 export default class Home extends Component {
   render() {
@@ -7,9 +8,12 @@ export default class Home extends Component {
       <div className="row">
         <div className="col-md-3 ">
           {/* USER PROFILE CARD */}
-          <h1>PROFILE</h1>
+
           <div className="card">
-            <img className="card-img-top" src="..." alt="Card image cap" />
+            <div class="avatar-flip">
+              <img src="http://media.idownloadblog.com/wp-content/uploads/2012/04/Phil-Schiller-headshot-e1362692403868.jpg" height="150" width="150" />
+              <img src="http://i1112.photobucket.com/albums/k497/animalsbeingdicks/abd-3-12-2015.gif~original" height="250" width="250" />
+            </div>
             <div className="card-body">
               <h5 className="card-title">User Name</h5>
               <p className="card-text">
@@ -25,12 +29,11 @@ export default class Home extends Component {
         </div>
         <div className="col-md-6">
           {/* GEO LIST + EVENTS */}
-          <h1>NEAR YOU + EVENTS</h1>
-          <div class="container align-self-start">
-            <div class="row ">
+          <div class="container">
+            <div class="row">
+              <h2>Groomers near you!</h2>
               <div class="col">
-                Near Me
-               <ul>
+                <ul>
                   <li>
                     Username , Distance , Rate
                  </li>
@@ -49,9 +52,9 @@ export default class Home extends Component {
           </div>
           <div class="container align-self-start">
             <div class="row ">
+              <h2>Events in Miami</h2>
               <div class="col">
-                Events
-               <ul>
+                <ul>
                   <li>
                     Username , Content , Link
                  </li>
