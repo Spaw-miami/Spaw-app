@@ -87,7 +87,11 @@ export default class Signup extends Component {
             this.signupTwo()
           }
         </form>
-        <button onClick={this.showTwo}>next</button>
+        {this.state.show ?
+          this.showButton()
+          :
+          <br></br>
+        }
         {this.state.message && (
           <div className="info info-danger">{this.state.message}</div>
         )}
@@ -156,6 +160,12 @@ export default class Signup extends Component {
       show: newshow
     })
     console.log("pushh", this.state.show, newshow)
+  }
+
+  showButton = () => {
+    return (
+      <button onClick={this.showTwo}>next</button>
+    )
   }
 
 
