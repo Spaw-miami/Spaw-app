@@ -1,41 +1,49 @@
 import React, { Component } from 'react'
 import Calendar from '../Calendar'
-
+import WeekCalendar from '../WeekCalendar'
 
 export default class Home extends Component {
   render() {
     return (
       <frameElement>
-        <div id="book">
-          <button type="button" className="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Book groomer</button>
-        </div>
-        <div className="container">
-          <div className="avatar-flip">
-            <img src="http://media.idownloadblog.com/wp-content/uploads/2012/04/Phil-Schiller-headshot-e1362692403868.jpg" alt="" height="150" width="150" />
-            <img src="http://i1112.photobucket.com/albums/k497/animalsbeingdicks/abd-3-12-2015.gif~original" alt="" height="250" width="250" />
-          </div>
-          <h2>CHRISTIAN ROQUE</h2>
-          <h4>BEST GROOMER IN MIAMI</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, qui. Et doloremque aperiam suscipit impedit, voluptas voluptatum nesciunt, reprehenderit quod enim expedita cum a! Suscipit unde natus praesentium laborum quam!</p>
-          <div className="rate">
-            <input type="radio" id="star5" name="rate" value="5" />
-            <label for="star5" title="text">5 stars</label>
-            <input type="radio" id="star4" name="rate" value="4" />
-            <label for="star4" title="text">4 stars</label>
-            <input type="radio" id="star3" name="rate" value="3" />
-            <label for="star3" title="text">3 stars</label>
-            <input type="radio" id="star2" name="rate" value="2" />
-            <label for="star2" title="text">2 stars</label>
-            <input type="radio" id="star1" name="rate" value="1" />
-            <label for="star1" title="text">1 star</label>
+
+
+        <div class="containerr-two">
+          <div><h2>CHRISTIAN ROQUE</h2></div>
+          <div id="book">
+            <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Book groomer</button>
           </div>
           <br></br>
-          <div className="modal fade" id="myModal" role="dialog">
-            <div className="modal-dialog">
-              <div className="modal-content">
-                <div className="modal-header">
-                  <button type="button" className="close" data-dismiss="modal">&times;</button>
-                  <h4 className="modal-title">BOOKING</h4>
+          <div><h4>BEST GROOMER IN MIAMI</h4></div>
+          <div> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, qui. Et doloremque aperiam suscipit impedit, voluptas voluptatum nesciunt, reprehenderit quod enim expedita cum a! Suscipit unde natus praesentium laborum quam!</p></div>
+
+        </div>
+        <div class="containerr-two">
+          <div><h2>WEEK SCHEDULE</h2></div>
+          <br></br>
+          <WeekCalendar />
+        </div>
+
+        <div class="containerr">
+          <div class="avatar-flip">
+            <img src="http://media.idownloadblog.com/wp-content/uploads/2012/04/Phil-Schiller-headshot-e1362692403868.jpg" height="150" width="150" />
+            <img src="http://i1112.photobucket.com/albums/k497/animalsbeingdicks/abd-3-12-2015.gif~original" height="250" width="250" />
+          </div>
+          <h2>CONTACT INFO</h2>
+          <h4>Phone Number</h4>
+          <p>(999)999-9999</p>
+          <h2><em></em>(84% rating)</h2>
+          <div class="star-ratings-css">
+            <div class="star-ratings-css-top"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          </div>
+          <br></br>
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">BOOKING</h4>
                 </div>
                 <form>
                   <div className="modal-body">
