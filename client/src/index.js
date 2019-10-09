@@ -9,7 +9,7 @@ import Calendar from 'react-calendar'
 ReactDOM.render(
   <Router>
     <App />
-    <Calendar/>
+    {/* <Calendar/> */}
   </Router>,
   document.getElementById('root')
 )
