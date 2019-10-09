@@ -176,24 +176,8 @@ p {
 }
 
 
-.custom-select{
-  width:200px;
-}
-
-.select-items {
-  position: absolute;
-  background-color: DodgerBlue;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-
-/*hide the items when the select box is closed:*/
-.select-hide {
-  display: none;
-}
-
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
+// \--------------------------------------
+#book{
+  float:right;
+  margin-right:5%;
 }

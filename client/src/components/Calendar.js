@@ -16,7 +16,6 @@ export default function Example() {
         parseDate={parseDate}
         placeholder={`${formatDate(new Date())}`}
       />
-      {`${formatDate(new Date())}`}
     </div>
   );
 }
