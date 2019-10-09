@@ -369,7 +369,7 @@ tr:nth-child(odd) td:not(.headcol) {
 }
 
 tr:nth-child(even) td:not(.headcol) {
-  border-bottom: 1px solid #eee;
+  
 }
 
 tr td {
@@ -401,7 +401,6 @@ tbody tr td {
     border: 0;
     outline: 0;
     width: 100px;
-    heigth: 100px;
     background: white;
     color: transparent;
     display:block;
@@ -458,12 +457,12 @@ tbody {
 
 
 td:hover:after {
-  content: "+";
+  content: "Available";
   vertical-align: middle;
-  font-size: 1.875rem;
+  font-size: 1rem;
   font-weight: 100;
   color: rgba(0, 0, 0, 0.5);
-  position: absolute;
+ 
 }
 
 button.secondary {

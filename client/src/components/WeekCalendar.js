@@ -1,13 +1,24 @@
 import React, { Component } from 'react'
 
 export default class WeekCalendar extends Component {
+
+
+
+
   render() {
+      
+function colorChanger(headcol){
+  headcol.style.backgroundColor = '#007d00';
+}
+
+function myFunction() {
+  document.getElementsByClassName("headcol").innerHTML = "Hello World";
+}
     return (
       <div>
         <div class="calendar">
   
   <header>
-      
       <div class="calendar__title" >
         <div class="icon secondary chevron_left">‹</div>
         <h1 class="" ><span></span><strong>Current Week</strong> </h1>
@@ -15,15 +26,12 @@ export default class WeekCalendar extends Component {
       </div> 
       <div ></div>
   </header>
-  
   <div class="outer">
-
-  
   <table>
   <thead>
     <tr>
       <th class="headcol"></th>
-      <th>Mon</th>
+      <th >Mon</th>
       <th>Tue</th>
       <th >Wed</th>
       <th>Thu</th>
@@ -33,14 +41,12 @@ export default class WeekCalendar extends Component {
     </tr>
   </thead>
   </table>
-
 <div class="wrap"> 
   <table class="offset">
-
   <tbody>
-    <tr>
+    <tr onclick="colorChanger(this)">
       <td class="headcol"></td>
-      <td></td>
+      <td ></td>
       <td></td>
       <td class="past"></td>
       <td></td>
