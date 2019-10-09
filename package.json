@@ -10,5 +10,10 @@
   },
   "engines": {
     "node": "8.9.4"
+  },
+  "dependencies": {
+    "moment": "^2.24.0",
+    "react-day-picker": "^7.3.2",
+    "react-moment": "^0.9.6"
   }
 }
