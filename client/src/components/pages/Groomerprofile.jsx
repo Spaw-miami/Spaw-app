@@ -27,7 +27,7 @@ export default class Home extends Component {
         <div class="containerr">
           <div class="avatar-flip">
             <img src="http://media.idownloadblog.com/wp-content/uploads/2012/04/Phil-Schiller-headshot-e1362692403868.jpg" height="150" width="150" />
-            <img src="http://i1112.photobucket.com/albums/k497/animalsbeingdicks/abd-3-12-2015.gif~original" height="250" width="250" />
+            <img src="https://www.dccomics.com/sites/default/files/Char_GetToKnow_Batman80_5ca54cb83a27a6.53173051.png" height="250" width="250" />
           </div>
           <h2>CONTACT INFO</h2>
           <h4>Phone Number</h4>
