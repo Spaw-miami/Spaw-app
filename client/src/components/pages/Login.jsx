@@ -50,6 +50,10 @@ export default class Login extends Component {
             onChange={this.handleInputChange}
           />{' '}
           <br />
+          <input type="radio" name="user" value="groomer" />Groomer
+          <br />
+          <input type="radio" name="user" value="owner" />Owner
+          <br />
           <button onClick={e => this.handleClick(e)}>Login</button>
         </form>
         {this.state.message && (

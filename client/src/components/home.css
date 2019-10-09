@@ -70,8 +70,9 @@ div.col-md-6{
 }
 li{
   list-style-type: none;
+  text-align: start;
 }
 .container{
-  margin: 22% 25% 5% 0%;
+  margin: 22% 25% -7% 0%;
   margin-left: 0;
 }
