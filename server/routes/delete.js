@@ -1,26 +1,34 @@
 const express = require('express');
 const router = express.Router();
-
-// Route to get all countries
-router.get('/', (req, res, next) => {
-	Country.find()
-		.then((countries) => {
-			res.json(countries);
-		})
-		.catch((err) => next(err));
-});
+const User = require('../models/User');
+const Groomer = require('../models/Groomer');
+const Dog = require('../models/Dog');
+const Review = require('../models/Review');
+const Week = require('../models/Week');
+const Price = require('../models/Price');
 
 // Route to add a country
-router.post('/', (req, res, next) => {
-	let { name, capitals, area, description } = req.body;
-	Country.create({ name, capitals, area, description })
-		.then((country) => {
-			res.json({
-				success: true,
-				country
-			});
-		})
-		.catch((err) => next(err));
+router.get('/user', (req, res, next) => {
+	const { userID } = req.body;
+	User.findById(userID).then((user) => {
+		res.json(user);
+	});
+});
+
+router.post('/groomer', (req, res, next) => {
+	const { username, password, firstName, lastName, profilePic, email, phoneNumber, address } = req.body;
+});
+
+router.post('/prices', (req, res, next) => {
+	const { username, password, firstName, lastName, profilePic, email, phoneNumber, address } = req.body;
+});
+
+router.post('/dog', (req, res, next) => {
+	const { username, password, firstName, lastName, profilePic, email, phoneNumber, address } = req.body;
+});
+
+router.post('/review', (req, res, next) => {
+	const { username, password, firstName, lastName, profilePic, email, phoneNumber, address } = req.body;
 });
 
 module.exports = router;

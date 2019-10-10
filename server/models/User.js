@@ -12,7 +12,7 @@ const userSchema = new Schema(
 		phoneNumber: String,
 		address: String,
 		dogs: [ { type: Schema.Types.ObjectId, ref: 'Dog' } ],
-		reviews: [ { type: Schema.Types.ObjectId, ref: 'Reviews' } ],
+		reviews: [ { type: Schema.Types.ObjectId, ref: 'Review' } ],
 		receipt: [ { type: Schema.Types.ObjectId, ref: 'Receipt' } ]
 	},
 	{
@@ -26,15 +26,19 @@ const userSchema = new Schema(
 const User = mongoose.model('User', userSchema);
 module.exports = User;
 
-let dummy = {
-	username: 'hello',
-	password: 'bye',
-	firstName: 'Christian',
-	lastName: 'Roque',
-	profilePic: 'https://www.himgs.com/imagenes/hello/social/hello-fb-logo.png',
-	email: 'croqu008@fiu.edu',
-	phoneNumber: '7862039897',
-	address: 'My address'
-};
+// let dummyCreate = {
+// 	"username": "hello",
+// 	"password": "bye",
+// 	"firstName": "Christian",
+// 	"lastName": "Roque",
+// 	"profilePic": "https://www.himgs.com/imagenes/hello/social/hello-fb-logo.png",
+// 	"email": "croqu008@fiu.edu",
+// 	"phoneNumber": "7862039897",
+// 	"address": "My address"
+// };
+
+// let dummyRead = {
+// 	"userID": "5d9e2d0947f73f2f5012f132"
+// }
 
 // User C finished
