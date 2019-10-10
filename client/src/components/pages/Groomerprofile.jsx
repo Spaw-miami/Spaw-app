@@ -29,8 +29,8 @@ export default class Home extends Component {
             <img alt="" src="http://media.idownloadblog.com/wp-content/uploads/2012/04/Phil-Schiller-headshot-e1362692403868.jpg" height="150" width="150" />
           </div>
           <h2>CONTACT INFO</h2>
-          <h4>Phone Number</h4>
-          <p>(999)999-9999</p>
+          <h4>(999)999-9999</h4>
+          <p>christian.roque@groomer.com</p>
           <h2><em></em>(84% rating)</h2>
           <div className="star-ratings-css">
             <div className="star-ratings-css-top"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
