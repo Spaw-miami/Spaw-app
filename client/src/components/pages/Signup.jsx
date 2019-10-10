@@ -16,7 +16,8 @@ export default class Signup extends Component {
       profilepicture: '',
       phone: '',
       address: '',
-      show: true
+      show: true,
+      groomer: true
     }
     this.handleInputChange = this.handleInputChange.bind(this)
   }
@@ -55,7 +56,8 @@ export default class Signup extends Component {
   signupOne = () => {
     return (
       <Fragment>
-        <h2>Signup</h2>
+        <h2>Pet Owner Signup</h2>
+        <button onClick={this.groomerOrUser}>Are you a Pet Groomer?</button>
         <form>
           Username:{' '}
           <input
@@ -81,29 +83,6 @@ export default class Signup extends Component {
             onChange={this.handleInputChange}
           />{' '}
           <br />
-          {this.state.show ?
-            <br></br>
-            :
-            this.signupTwo()
-          }
-        </form>
-        {this.state.show ?
-          this.showButton()
-          :
-          <br></br>
-        }
-        {this.state.message && (
-          <div className="info info-danger">{this.state.message}</div>
-        )}
-      </Fragment>
-    )
-  }
-  //RENDERS AFTER COMPLETING FORM 1
-  signupTwo = () => {
-    return (
-      <Fragment>
-        <h2>Add more info</h2>
-        <form>
           First name:{' '}
           <input
             type="text"
@@ -153,9 +132,120 @@ export default class Signup extends Component {
       </Fragment>
     )
   }
+  signupGroomer = () => {
+    return (
+      <Fragment>
+        <h2>Pet Groomer Signup</h2>
+        <button onClick={this.groomerOrUser}>Are you a Pet Owner?</button>
+        <form>
+          Username:{' '}
+          <input
+            type="text"
+            value={this.state.username}
+            name="username"
+            onChange={this.handleInputChange}
+          />{' '}
+          <br />
+          E-mail:{' '}
+          <input
+            type="email"
+            value={this.state.email}
+            name="email"
+            onChange={this.handleInputChange}
+          />{' '}
+          <br />
+          Password:{' '}
+          <input
+            type="password"
+            value={this.state.password}
+            name="password"
+            onChange={this.handleInputChange}
+          />{' '}
+          <br />
+          First name:{' '}
+          <input
+            type="text"
+            value={this.state.firstName}
+            name="firstName"
+            onChange={this.handleInputChange}
+          />{' '}
+          <br />
+          Last name:{' '}
+          <input
+            type="text"
+            value={this.state.lastName}
+            name="lastName"
+            onChange={this.handleInputChange}
+          />{' '}
+          <br />
+          Profile picture:{' '}
+          <input
+            type="text"
+            value={this.state.pfp}
+            name="profile_picture"
+            onChange={this.handleInputChange}
+          />{' '}
+          <br />
+          Phone number:{' '}
+          <input
+            type="text"
+            value={this.state.phone}
+            name="phone"
+            onChange={this.handleInputChange}
+          />{' '}
+          <br />
+          Address:{' '}
+          <input
+            type="text"
+            value={this.state.address}
+            name="address"
+            onChange={this.handleInputChange}
+          />{' '}
+          <br />
+          Daily Hours:
+          <br></br>
+          <label>From</label>
+          <select id="start-hours">
+            <option>9:00 am</option>
+            <option>8:00 am</option>
+            <option>10:00 am</option>
+            <option>11:00 am</option>
+            <option>12:00 pm</option>
+            <option>1:00 pm</option>
+            <option>2:00 pm</option>
+            <option>3:00 pm</option>
+            <option>4:00 pm</option>
+            <option>5:00 pm</option>
+            <option>6:00 pm</option>
+          </select>
+          <label>To</label>
+          <select id="end-hours">
+            <option>8:00 am</option>
+            <option>9:00 am</option>
+            <option>10:00 am</option>
+            <option>11:00 am</option>
+            <option>12:00 pm</option>
+            <option>1:00 pm</option>
+            <option>2:00 pm</option>
+            <option>3:00 pm</option>
+            <option>4:00 pm</option>
+            <option>5:00 pm</option>
+            <option>6:00 pm</option>
+          </select>
+          <br></br>
+          <br></br>
+          <button onClick={e => this.handleClick(e)}>Signup</button>
+        </form>
+
+        {this.state.message && (
+          <div className="info info-danger">{this.state.message}</div>
+        )}
+      </Fragment>
+    )
+  }
 
   showTwo = () => {
-    let newshow = !this.state.show
+    let newshow = !this.state.show;
     this.setState({
       show: newshow
     })
@@ -168,12 +258,30 @@ export default class Signup extends Component {
     )
   }
 
+  groomerOrUser = () => {
+
+    let notUser = !this.state.groomer;
+    this.setState({
+      groomer: notUser
+    })
+  }
 
   render() {
     return (
       <div className="Signup">
 
-        {this.signupOne()}
+
+
+
+        {
+          this.state.groomer ?
+            this.signupOne()
+            :
+            this.signupGroomer()
+        }
+
+
+
 
 
 
