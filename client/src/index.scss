@@ -6,6 +6,17 @@ body {
   font-family: sans-serif;
 }
 
+.test2{
+  width:70%;
+  float:right;
+}
+
+
+.test1{
+  width:70%;
+  float:left;
+}
+
 
 h3 {
   background-color: rgba(36, 36, 39, 0.9);
@@ -13,25 +24,41 @@ h3 {
   margin: 0 auto;
 }
 
-h3 {
-  background-color: rgba(36, 36, 39, 0.9);
-  color: white;
-  margin: 0 auto;
+.landing-image{
+  opacity: .7;
+  width:40%;
+  margin-top:20%;
 }
 
 .parallax {
-  background-image: url("https://images.unsplash.com/photo-1516386408840-d718a820a05c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
-  min-height: 400px;
-  width:50%;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  // background-image: url("https://files.slack.com/files-pri/T02CQ4EN4-FP5V285CG/image_from_ios.jpg");opacity:0.3;color:red;
+  min-height: 100vh;
   background-attachment: fixed;
-  // background-position: center;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+}
+.parallax1 {
+  background-image: url("http://allpetwp.com/wp-content/uploads/2016/07/grooming.jpg");opacity:0.7;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .parallax2 {
-  background-image: url("https://media.giphy.com/media/3oKIPtwX904KOvjCEw/giphy.gif");
-  min-height: 800px;
+  background-image: url("http://cypressvets.com/wp-content/uploads/2015/03/dog-being-bathed.jpg");opacity:0.7;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax3 {
+  background-image: url("https://www.ryslip.com/wp-content/uploads/2019/02/dog-groomer-grooming-a-cavalier-king-charles-spaniel-dog-969077342-5c113de946e0fb0001eb892e-1500x1000.jpg");opacity:0.7;
+  min-height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -39,8 +66,9 @@ h3 {
 }
 
 .para {
-  height: 370px;
-  background-color: rgb(255, 255, 255);
+  padding-top: 7%;
+  height: 100vh;
+  background:linear-gradient(to right, #1e3c72, #2a5298);
   color: white;
   font-size: 36px;
 }
@@ -72,7 +100,9 @@ h3 {
   // }
 
   .App-header {
-    background-color: $primary;
+    opacity: .9;
+    background:rgba(155, 70, 70, 0.3);
+
     // padding: 20px;
     color: white;
 
@@ -454,11 +484,11 @@ thead th {
 
 header {
   background: #fff;
-  padding: 1rem;
+  
   color: rgba(0, 0, 0, 0.7);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
-  border-radius: 8px 8px 0px 0px;
+ 
 }
 
 header h1 {

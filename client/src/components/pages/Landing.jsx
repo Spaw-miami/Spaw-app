@@ -10,36 +10,44 @@ export default class Landing extends Component {
   }
   render() {
     return (
-      <div className="">
-       <div class="parallax">
-         <h2>SPAWS</h2>
-       </div>
-
-
- 
-  
-
-
-
-
-
-<h1>WELCOME TO Spaws</h1>
-<h5>this is the best place to share ideas opinions and over all views!
-  your are one of kind and the world would not be the same without you!
-  debitis beatae unde aliquam dolorem ratione iure rerum, reprehenderit
-</h5>
-
-
-<h1>SECOND PARAGRAPH</h1> 
-
-<div class="parallax2"></div>
-
-<div class="para">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis modi itaque debitis beatae unde aliquam dolorem ratione iure rerum, reprehenderit nesciunt quidem qui illum maxime natus ut corporis corrupti! Earum?
-</div>
+<div >       
         
+
+        <div className="">
+          <div className="parallax">
+            <img className="landing-image"src="./images/Spaws_white.png"></img>
+          </div>
+        </div>  
+        <h1></h1>
+        <div className="test1">
+          <div className="parallax1"></div>
+        </div>              
+        <div className="test2">
+            <h1></h1>
+          
+        </div>
+        <div className="test2">
+            <div className="parallax2"></div>
+        </div>
+        <div className="test1">
+            <h1></h1>
+            
+        </div>
+            <div className="test1">
+          <div className="parallax3"></div>
+        </div> 
+        <div className="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis modi itaque debitis beatae unde aliquam dolorem ratione iure rerum, reprehenderit nesciunt quidem qui illum maxime natus ut corporis corrupti! Earum?
+        </div>
+        <div className="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis modi itaque debitis beatae unde aliquam dolorem ratione iure rerum, reprehenderit nesciunt quidem qui illum maxime natus ut corporis corrupti! Earum?
+        </div>
+        <div className="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis modi itaque debitis beatae unde aliquam dolorem ratione iure rerum, reprehenderit nesciunt quidem qui illum maxime natus ut corporis corrupti! Earum?
+        </div>
+        <p className="para"></p>
       
-      </div>
+</div>
     )
   }
   componentDidMount() {
