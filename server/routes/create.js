@@ -16,37 +16,25 @@ router.post('/user', (req, res, next) => {
 		res.status(400).json({ message: '{Please fill all fields}' });
 		return;
 	}
-	User.findOne({ username })
-		.then((userDoc) => {
-			if (userDoc !== null) {
-				res.status(409).json({ message: 'The username already exists' });
-				return;
-			}
-			const salt = bcrypt.genSaltSync(bcryptSalt);
-			const hashPass = bcrypt.hashSync(password, salt);
-			const newUser = new User({
-				username,
-				password: hashPass,
-				firstName,
-				lastName,
-				profilePic,
-				email,
-				phoneNumber,
-				address
-			});
-			return newUser.save();
-		})
-		.then((userSaved) => {
-			// LOG IN THIS USER
-			// "req.logIn()" is a Passport method that calls "serializeUser()"
-			// (that saves the USER ID in the session)
-			req.logIn(userSaved, () => {
-				// hide "encryptedPassword" before sending the JSON (it's a security risk)
-				userSaved.password = undefined;
-				res.json(userSaved);
-			});
-		})
-		.catch((err) => next(err));
+	User.findOne({ username }).then((userDoc) => {
+		if (userDoc !== null) {
+			res.status(409).json({ message: 'The username already exists' });
+			return;
+		}
+		const salt = bcrypt.genSaltSync(bcryptSalt);
+		const hashPass = bcrypt.hashSync(password, salt);
+		const newUser = new User({
+			username,
+			password: hashPass,
+			firstName,
+			lastName,
+			profilePic,
+			email,
+			phoneNumber,
+			address
+		});
+		return newUser.save();
+	});
 });
 
 router.post('/groomer', (req, res, next) => {
@@ -135,7 +123,7 @@ router.post('/groomer', (req, res, next) => {
 					Friday: timeArr,
 					Saturday: timeArr,
 					Sunday: timeArr,
-					id: i
+					weekNumber: i
 				});
 				newWeek.save().then((weeksaved) => {
 					Groomer.findByIdAndUpdate(groomerSaved._id, {
