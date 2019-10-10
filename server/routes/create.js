@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
-const Grommer = require('../models/Grommer');
+const Groomer = require('../models/Groomer');
 const Dog = require('../models/Dog');
 const Review = require('../models/Review');
 const Week = require('../models/Week');
+const Price = require('../models/Price');
 
 const bcrypt = require('bcrypt');
 const bcryptSalt = 10;
@@ -48,7 +49,7 @@ router.post('/user', (req, res, next) => {
 		.catch((err) => next(err));
 });
 
-router.post('/grommer', (req, res, next) => {
+router.post('/groomer', (req, res, next) => {
 	const {
 		username,
 		password,
@@ -62,24 +63,6 @@ router.post('/grommer', (req, res, next) => {
 		phoneNumber,
 		address
 	} = req.body;
-
-	let startArr = startingTime.split(':');
-	let endArr = endTime.split(':');
-	let start = 0;
-	let end = 0;
-
-	if (startArr[1].includes('pm')) {
-		start += Number(startArr[0]) + 12;
-	} else {
-		start += Number(startArr[0]);
-	}
-	if (endArr[1].includes('pm')) {
-		end += Number(endArr[0]) + 12;
-	} else {
-		end += Number(endArr[0]);
-	}
-	let timeSlotsArr = [];
-	let hoursWorking = end - start;
 
 	if (
 		!username ||
@@ -96,15 +79,15 @@ router.post('/grommer', (req, res, next) => {
 		res.status(400).json({ message: '{Please fill all fields}' });
 		return;
 	}
-	Grommer.findOne({ username })
-		.then((grommer) => {
-			if (grommer !== null) {
+	Groomer.findOne({ username })
+		.then((groomer) => {
+			if (groomer !== null) {
 				res.status(409).json({ message: 'The username already exists' });
 				return;
 			}
 			const salt = bcrypt.genSaltSync(bcryptSalt);
 			const hashPass = bcrypt.hashSync(password, salt);
-			const newGrommer = new Grommer({
+			const newGroomer = new Groomer({
 				username,
 				password: hashPass,
 				firstName,
@@ -117,31 +100,79 @@ router.post('/grommer', (req, res, next) => {
 				endTime,
 				address
 			});
-			return newGrommer.save();
+			return newGroomer.save();
 		})
-		.then((grommerSaved) => {
-			for (let i = 1; i <= 52; i++) {
-				newWeek = new Week({
-					Monday: [],
-					Tuesday: [],
-					Wednesday: [],
-					Thursday: [],
-					Friday: [],
-					Saturday: [],
-					Sunday: []
+		.then((groomerSaved) => {
+			let t = 0;
+			let timeArr = [];
+			let sArr = startingTime.split(':');
+			let eArr = endTime.split(':');
+
+			t -= sArr[1].includes('pm') ? Number(sArr[0]) - 12 : Number(sArr[0]);
+			t += eArr[1].includes('pm') ? Number(eArr[0]) + 12 : Number(eArr[0]);
+
+			for (let i = 0; i < t; i++) {
+				timeArr.push({
+					clientID: 'String',
+					groomerID: 'String',
+					time: sArr.join(':')
 				});
+
+				sArr[0] = Number(sArr[0]) + 1;
+
+				if (Number(sArr[0]) % 12 == 0) {
+					sArr[1] = '00 pm';
+					sArr[0] = Number(sArr[0]) % 12;
+				}
 			}
 
+			for (let i = 1; i <= 52; i++) {
+				newWeek = new Week({
+					Monday: timeArr,
+					Tuesday: timeArr,
+					Wednesday: timeArr,
+					Thursday: timeArr,
+					Friday: timeArr,
+					Saturday: timeArr,
+					Sunday: timeArr,
+					id: i
+				});
+				newWeek.save().then((weeksaved) => {
+					Groomer.findByIdAndUpdate(groomerSaved._id, {
+						$push: { weeks: weeksaved._id }
+					}).then((groomer) => {
+						console.log(groomer);
+					});
+				});
+			}
 			// LOG IN THIS USER
 			// "req.logIn()" is a Passport method that calls "serializeUser()"
 			// (that saves the USER ID in the session)
-			req.logIn(grommerSaved, () => {
+			req.logIn(groomerSaved, () => {
 				// hide "encryptedPassword" before sending the JSON (it's a security risk)
-				grommerSaved.password = undefined;
-				res.json(grommerSaved);
+				groomerSaved.password = undefined;
+				res.json(groomerSaved);
 			});
 		})
 		.catch((err) => next(err));
+});
+
+router.post('/prices', (req, res, next) => {
+	const { groomerID, small, medium, large } = req.body;
+	if (!groomerID || !small || !medium || !large) {
+		res.status(400).json({ message: '{Please fill all fields}' });
+		return;
+	}
+	const newPrice = new Price({ small, medium, large });
+	newPrice.save().then((price) => {
+		console.log(price._id);
+		Groomer.findByIdAndUpdate(groomerID, {
+			$push: { pricing: price._id }
+		}).then((groomer) => {
+			console.log(groomer);
+		});
+		res.json(price);
+	});
 });
 
 router.post('/dog', (req, res, next) => {
@@ -165,20 +196,20 @@ router.post('/dog', (req, res, next) => {
 });
 
 router.post('/review', (req, res, next) => {
-	const { starNumber, content, date, grommer, author, dog } = req.body;
-	if (!starNumber || !content || !date || !grommer || !author || !dog) {
+	const { starNumber, content, date, groomer, author, dog } = req.body;
+	if (!starNumber || !content || !date || !groomer || !author || !dog) {
 		res.status(400).json({ message: '{Please fill all fields}' });
 		return;
 	}
 	User.findOne({ date })
 		.then((doggo) => {
-			const newReview = new Review({ starNumber, content, date, grommer, author, dog });
+			const newReview = new Review({ starNumber, content, date, groomer, author, dog });
 			return newReview.save();
 		})
 		.then((reviewSaved) => {
 			// LOG IN THIS USER
 			User.findByIdAndUpdate(author, { $push: { reviews: reviewSaved._id } }).then((user) => {});
-			Grommer.findByIdAndUpdate(grommer, { $push: { reviews: reviewSaved._id } }).then((grommer) => {});
+			Groomer.findByIdAndUpdate(groomer, { $push: { reviews: reviewSaved._id } }).then((groomer) => {});
 
 			res.json(reviewSaved);
 		})

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const grommerSchema = new Schema({
+const groomerSchema = new Schema({
 	username: String,
 	password: String,
 	firstName: String,
@@ -13,13 +13,13 @@ const grommerSchema = new Schema({
 	address: String,
 	startingTime: String,
 	endTime: String,
-	weeeks: [ { type: Schema.Types.ObjectId, ref: 'Weeks' } ],
+	weeks: [ { type: Schema.Types.ObjectId, ref: 'Week' } ],
 	reviews: [ { type: Schema.Types.ObjectId, ref: 'Reviews' } ],
-	pricing: { type: Schema.Types.ObjectId, ref: 'Price' }
+	pricing: [ { type: Schema.Types.ObjectId, ref: 'Price' } ]
 });
 
-const Grommer = mongoose.model('Grommer', grommerSchema);
-module.exports = Grommer;
+const Groomer = mongoose.model('Groomer', groomerSchema);
+module.exports = Groomer;
 
 // let dummy = {
 //   "startingTime": "9:00 am",
@@ -35,4 +35,8 @@ module.exports = Grommer;
 // 	"address": "String"
 // }
 
-// Grommer C finished
+// let dummyRead = {
+// 	"groomerID": "5d9f5746d6978446bd9df4ac"
+// }
+
+// Groomer C finished
