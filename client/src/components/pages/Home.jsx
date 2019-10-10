@@ -2,6 +2,62 @@ import React, { Component } from 'react'
 
 
 export default class Home extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      petSettings: false,
+      userSettings: true,
+    }
+  }
+
+  showPet = () => {
+    let petShow = !this.state.petSettings;
+    this.setState({
+      petSettings: petShow
+    })
+    console.log("work")
+  }
+  showUser = () => {
+    let userShow = !this.state.userSettings;
+    this.setState({
+      userSettings: userShow
+    })
+    console.log("work")
+  }
+
+
+  petInfo = () => {
+    return (
+      <div className="petInfo">
+        <h2>Pet Name</h2>
+        <h3>Pet Breed</h3>
+        <h4>Pet weight</h4>
+      </div>
+    )
+  }
+  userInfo = () => {
+    return (
+      <div className="userInfo">
+        <h2>User Name</h2>
+        <h3>Address</h3>
+        <h4>Phone number</h4>
+        <h5>Dog drop down</h5>
+      </div>
+    )
+  }
+
+  switchSettings = () => {
+    return (
+      <p onClick={this.showUser} className="card-link">User Settings</p>
+    )
+  }
+  switchSettings2 = () => {
+    return (
+      <p onClick={this.showUser} className="card-link">Pet Settings</p>
+    )
+  }
+
+
   render() {
     return (
       <div className="Home">
@@ -21,9 +77,12 @@ export default class Home extends Component {
               </p>
               </div>
               <div className="card-body">
-                <a href="/" className="card-link">Pet Settings</a>
-                <br></br>
-                <a href="/" className="card-link">User Settings</a>
+                {
+                  this.state.petSettings || this.state.userSettings ?
+                    this.switchSettings()
+                    :
+                    this.switchSettings2()
+                }
               </div>
             </div>
           </div>
@@ -83,7 +142,26 @@ export default class Home extends Component {
             </div>
           </div>
           <div className="col-md-3">
-            <h1>TRENDING NEWS</h1>
+            <div className="settings-box">
+              <div>
+                <h1>Settings</h1>
+
+              </div>
+              <br></br>
+              <br></br>
+              <br></br>
+              {this.state.petSettings || this.state.userSettings ?
+                this.petInfo()
+                :
+                <br></br>
+              }
+              {this.state.userSettings || this.state.petSettings ?
+                <br></br>
+                :
+                this.userInfo()
+              }
+
+            </div>
           </div>
         </div>
       </div>
