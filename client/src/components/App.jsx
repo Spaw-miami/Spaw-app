@@ -26,9 +26,9 @@ export default class App extends Component {
     return (
 
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header"> */}
         
-          <h1 className="App-title">Welcome to Spaws</h1>
+          {/* <h1 className="App-title">Welcome to Spaws</h1> */}
           <NavLink to="/" exact>
             Home
           </NavLink>
@@ -43,7 +43,7 @@ export default class App extends Component {
             </Link>
           )}
           <NavLink to="/secret">Secret</NavLink>
-        </header>
+        {/* </header> */}
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/landing" component={Landing} />
