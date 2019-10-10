@@ -16,6 +16,7 @@ router.get('/user', (req, res, next) => {
 		.populate('dogs')
 		// .populate('reviews')
 		.then((user) => {
+			user.password = undefined;
 			res.json(user);
 		});
 });
@@ -27,6 +28,7 @@ router.get('/groomer', (req, res, next) => {
 		.populate('weeks')
 		.populate('pricing')
 		.then((groomer) => {
+			groomer.password = undefined;
 			res.json(groomer);
 		});
 });
