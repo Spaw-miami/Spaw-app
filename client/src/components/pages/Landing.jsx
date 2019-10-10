@@ -11,12 +11,27 @@ export default class Landing extends Component {
   render() {
     return (
 <div >       
-        
+{/* <div class="box fade-in one">
+       1) look at me fade in
+</div>
+
+<div class="box fade-in two">
+      2)  Oh hi! i can fade too!
+</div>
+
+<div class="box fade-in three">
+      3) Oh hi! i can fade three!
+</div> */}
 
         <div className="">
-          <div className="parallax">
-            <img className="landing-image"src="./images/Spaws_white.png"></img>
+          <div >
+
+          <div  className="box fade-in two" >
+            <img className="landing-image" src="./images/Spaws_white.png"></img>
           </div>
+
+          </div>
+         
         </div>  
         <h1></h1>
         <div className="test1">
