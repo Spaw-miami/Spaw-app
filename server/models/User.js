@@ -26,15 +26,15 @@ const userSchema = new Schema(
 const User = mongoose.model('User', userSchema);
 module.exports = User;
 
-// let dummy = {
-// 	"username": "hello",
-// 	"password": "bye",
-// 	"firstName": "Christian",
-// 	"lastName": "Roque",
-// 	"profilePic": "https://www.himgs.com/imagenes/hello/social/hello-fb-logo.png",
-// 	"email": "croqu008@fiu.edu",
-// 	"phoneNumber": "7862039897",
-// 	"address": "My address"
-// }
+let dummy = {
+	username: 'hello',
+	password: 'bye',
+	firstName: 'Christian',
+	lastName: 'Roque',
+	profilePic: 'https://www.himgs.com/imagenes/hello/social/hello-fb-logo.png',
+	email: 'croqu008@fiu.edu',
+	phoneNumber: '7862039897',
+	address: 'My address'
+};
 
 // User C finished
