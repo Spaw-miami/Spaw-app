@@ -160,7 +160,7 @@ li{
 }
 ///////////////////////////////////////////PROFILE/////////////////////////////////////////
 .containerr {
-  width: 20%;
+  width: 30%;
   margin-left:3%;
   margin-top:90px;
   margin-bottom: 120px;
@@ -172,10 +172,10 @@ li{
 }
 .containerr-two {
   float:right;
-  margin-top:90px;
-  margin-right: 25%;
-  height:40%;
-  width: 50%;
+  margin-top:10px;
+  margin-right: 3%;
+  height:60%;
+  width: 60%;
   background-color: rgb(255, 255, 255);
   padding: 0 20px 20px;
   border-radius: 6px;
@@ -267,6 +267,18 @@ p {
     box-shadow: 0 2px 5px rgba(0,0,0,0.075);
     -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.075);
     -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+    text-align: center;
+  }
+  .containerr-two {
+    float:right;
+    margin-top:10px;
+    margin-right: 3%;
+    height:60%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 0 20px 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.075);
     text-align: center;
   }
   // \--------------------------------------
@@ -519,22 +531,6 @@ tbody tr td {
 .event.double {
   height: 200%;
 }
-
-/**
-thead {
-    tr {
-      display: block;
-      position: relative;
-    }
-  }
-tbody {
-    display: block;
-    overflow: auto;
-    width: 800px;
-    height: 100%;
-  }
-*/
-
 
 
 td:hover:after {
