@@ -83,16 +83,17 @@ div.col-md-6{
   margin: 8% 0% 0% 0%;
 }
 div.row{
-  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .075)
 }
 .card:hover .avatar-flip {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
 }
-.container:hover .avatar-flip img:first-child {
+.card:hover .avatar-flip img:first-child {
   opacity: 0;
 }
-.container:hover .avatar-flip img:last-child {
+.card:hover .avatar-flip img:last-child {
   opacity: 1;
 }
 .avatar-flip {
@@ -132,9 +133,10 @@ div.row{
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%,-50%);
-  height: 50%;
-  width: 50%;
-  background: burlywood;
+  height: 60%;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .075)
 }
 li{
   list-style-type: none;
@@ -145,10 +147,15 @@ li{
   margin-left: 0;
 }
 .settings-box{
-  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
   display: flex;
   margin: 32% 0% 0% 10%;
   width: 90%;
+  flex-direction: column;
+}
+.hold-down{
+  margin: 5% 0% 0% 0%;
 }
 }
 
