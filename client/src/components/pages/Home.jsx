@@ -4,59 +4,123 @@ export default class Home extends Component {
     super(props);
     this.state = {
       petSettings: false,
-      userSettings: true
+      userSettings: true,
+      showEdit: false
     };
   }
 
+
+  //SHOW EDIT PET AND SETTINGS BOX v
   showPet = () => {
     let petShow = !this.state.petSettings;
     this.setState({
       petSettings: petShow
     });
-    console.log('work');
+
   };
+
+  showEditPet = () => {
+    let showTheEdit = !this.state.showEdit;
+    this.setState({
+      showEdit: showTheEdit
+    })
+
+  }
+
+  editPet = () => {
+    return (
+      <div className="edit-pet">
+        <form>
+          <input type="text" name="petname" placeholder="Pet's Name" />
+          <input type="text" name="petbreed" placeholder="Pet's Breed" />
+          <input type="text" name="petweight" placeholder="Pet's Weight" />
+          <br></br>
+          <button>Submit</button>
+        </form>
+        <button onClick={this.showEditPet}>back</button>
+      </div>
+    )
+  }
+
+  petInfo = () => {
+    return (
+      <div className="petInfo">
+        {this.state.showEdit ?
+          this.editPet()
+          :
+          <div>
+            <h3>Pet Name</h3>
+            <h2>Pet Breed</h2>
+            <h4>Pet weight</h4>
+            <button onClick={this.showEditPet}>edit info</button>
+          </div>
+        }
+      </div>
+    );
+  };
+  //SHOW EDIT PET AND SETTINGS BOX ^
+
+  // USER SWTTINGS BOX SWITCH v
   showUser = () => {
     let userShow = !this.state.userSettings;
     this.setState({
       userSettings: userShow
     });
-    console.log('work');
+
   };
 
-  petInfo = () => {
+  editUser = () => {
     return (
-      <div className="petInfo">
-        <h2>Pet Name</h2>
-        <h3>Pet Breed</h3>
-        <h4>Pet weight</h4>
+      <div className="edit-pet">
+        <form>
+          <input type="text" name="username" placeholder="User's Username" />
+          <input type="text" name="firstname" placeholder="User's First Name" />
+          <input type="text" name="lastname" placeholder="User's Last Name" />
+          <input type="text" name="address" placeholder="User's Address" />
+          <input type="text" name="phone" placeholder="User's Phone Number" />
+          <br></br>
+          <button>Submit</button>
+        </form>
+        <button onClick={this.showEditPet}>back</button>
       </div>
-    );
-  };
+    )
+  }
+
   userInfo = () => {
     return (
       <div className="userInfo">
-        <h2>User Name</h2>
-        <h3>Address</h3>
-        <h4>Phone number</h4>
-        <h5>Dog drop down</h5>
+        {this.state.showEdit ?
+          this.editUser()
+          :
+          <div>
+            <h3>User Name</h3>
+            <h2>Address</h2>
+            <h4>Phone number</h4>
+            <h5>Dog drop down</h5>
+            <button onClick={this.showEditPet}>edit info</button>
+          </div>
+        }
       </div>
     );
   };
+  // USER SWTTINGS BOX SWITCH ^
 
+  // SWITCHES SETTINGS BOX v
   switchSettings = () => {
     return (
       <p onClick={this.showUser} className="card-link">
-        User Settings
-			</p>
+        <button className="settings-button">User Settings</button>
+      </p>
     );
   };
   switchSettings2 = () => {
     return (
       <p onClick={this.showUser} className="card-link">
-        Pet Settings
-			</p>
+        <button>Pet Settings</button>
+      </p>
     );
   };
+  // SWITCHES SETTINGS BOX ^
 
   render() {
     return (
@@ -95,7 +159,7 @@ export default class Home extends Component {
           </div>
           <div className="col-md-6">
             {/* GEO LIST + EVENTS */}
-            {/* <div className="container"> */}
+
             <div>
               <div className="row">
                 <h2>Groomers near you!</h2>
@@ -153,8 +217,7 @@ export default class Home extends Component {
               <div>
                 <h1>Settings</h1>
               </div>
-              {this.state.petSettings || this.state.userSettings ? this.petInfo() : <br />}
-              {this.state.userSettings || this.state.petSettings ? <br /> : this.userInfo()}
+              {this.state.petSettings || this.state.userSettings ? this.petInfo() : this.userInfo()}
             </div>
           </div>
         </div>

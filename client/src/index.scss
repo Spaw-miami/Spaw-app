@@ -150,14 +150,19 @@ li{
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
   display: flex;
-  margin: 32% 0% 0% 10%;
-  width: 90%;
+  margin: 32% 0% 0% 15%;
+  width: 70%;
+  height: 60%;
   flex-direction: column;
 }
 .hold-down{
   margin: 5% 0% 0% 0%;
 }
-
+.settings-button{
+  border: none;
+  border-radius: 4px;
+  background: #c7c5c5;
+}
 }
 
 .Secret {
