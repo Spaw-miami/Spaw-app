@@ -15,9 +15,12 @@ export default class Landing extends Component {
           <div >
           <div  className="box fade-in two" >          
             <img  id="element" className="landing-image" src="./images/Spaws_white.png"></img>
-            <div class="box fade-in one">
+            <div className="box fade-in one">
             <br></br>
+           
             <h1 className="landing-statement" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio reiciendis, tempore laborum, minus et, accusantium nisi earum cumque quas ab ratione ipsa. Eveniet vel illum quod obcaecati commodi numquam magni.</h1>
+            <button className="buttonn">LOGIN</button>
+            <button className="button">SIGN UP</button>
         </div>
           </div>
 
@@ -30,14 +33,12 @@ export default class Landing extends Component {
         </div>              
         <div className="test2">
             <h1></h1>
-          
         </div>
         <div className="test2">
             <div className="parallax2"></div>
         </div>
         <div className="test1">
             <h1></h1>
-            
         </div>
             <div className="test1">
           <div className="parallax3"></div>
