@@ -27,22 +27,22 @@ export default class App extends Component {
 
       <div className="App">
         {/* <header className="App-header"> */}
-        
-          {/* <h1 className="App-title">Welcome to Spaws</h1> */}
-          <NavLink to="/" exact>
-            Home
+
+        {/* <h1 className="App-title">Welcome to Spaws</h1> */}
+        <NavLink to="/" exact>
+          Home
           </NavLink>
-          <NavLink to="/groomerprofile">Profile</NavLink>
-          <NavLink to="/landing">Landing</NavLink>
-          <NavLink to="/add-country">Add country</NavLink>
-          {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
-          {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
-          {api.isLoggedIn() && (
-            <Link to="/" onClick={e => this.handleLogoutClick(e)}>
-              Logout
+        <NavLink to="/groomerprofile">Profile</NavLink>
+        <NavLink to="/landing">Landing</NavLink>
+        <NavLink to="/add-country">Groomer Dash-Board</NavLink>
+        {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
+        {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
+        {api.isLoggedIn() && (
+          <Link to="/" onClick={e => this.handleLogoutClick(e)}>
+            Logout
             </Link>
-          )}
-          <NavLink to="/secret">Secret</NavLink>
+        )}
+        <NavLink to="/secret">Secret</NavLink>
         {/* </header> */}
         <Switch>
           <Route path="/" exact component={Home} />

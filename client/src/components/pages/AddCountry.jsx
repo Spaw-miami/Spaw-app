@@ -153,7 +153,11 @@ export default class AddCountry extends Component {
                 <h2>Google Map</h2>
               </div>
               <div className="settings-box">
-                <h2 onClick={this.switchBox}>Settings</h2> <h2 onClick={this.switchBox} >Schedule</h2>
+                {this.state.switch ?
+                  <button onClick={this.switchBox}>Settings</button>
+                  :
+                  <button onClick={this.switchBox} >Schedule</button>
+                }
               </div>
             </div>
           </div>
