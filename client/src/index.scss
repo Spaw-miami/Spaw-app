@@ -68,10 +68,12 @@ body {
 }
 ////////////////////////////////////////PARALLAX SETTINGS////////////////////////////////////////////////////
 .test2{
+  margin-top: 9%;
   width:70%;
   float:right;
 }
 .test1{
+  margin-top: 9%;
   width:70%;
   float:left;
 }
@@ -92,6 +94,7 @@ h3 {
   background-size: cover;
 }
 .parallax1 {
+  margin-top:-12%;
   background-image: url("http://allpetwp.com/wp-content/uploads/2016/07/grooming.jpg");opacity:0.8;
   min-height: 100vh;
   background-attachment: fixed;
@@ -100,6 +103,7 @@ h3 {
   background-size: cover;
 }
 .parallax2 {
+  margin-top:-4%;
   background-image: url("http://cypressvets.com/wp-content/uploads/2015/03/dog-being-bathed.jpg");opacity:0.8;
   min-height: 100vh;
   background-attachment: fixed;
@@ -116,7 +120,21 @@ h3 {
   background-size: cover;
 }
 .para {
-  padding-top: 7%;
+  padding-top: 6%;
+  height: 100vh;
+  background: linear-gradient(to right, #dae2f8, #d6a4a4);
+  color: white;
+  font-size: 36px;
+}
+.para1 {
+  padding-top: 22%;
+  height: 100vh;
+  background: linear-gradient(to right, #dae2f8, #d6a4a4);
+  color: white;
+  font-size: 36px;
+}
+.para2 {
+  padding-top: 44%;
   height: 100vh;
   background: linear-gradient(to right, #dae2f8, #d6a4a4);
   color: white;
