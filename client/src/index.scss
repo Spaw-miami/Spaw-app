@@ -56,35 +56,6 @@ body {
     animation-duration:.5s;
 }
 .fade-in.two {
-<<<<<<< HEAD
--webkit-animation-delay: .7s;
--moz-animation-delay:.7s;
-animation-delay: .7s;
-background: linear-gradient(to right, #dae2f8, #d6a4a4);
-// background-image: url("https://files.slack.com/files-pri/T02CQ4EN4-FP5V285CG/image_from_ios.jpg");opacity:0.3;color:red;
-min-height: 100vh;
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-
-}
-// .two{
-//   opacity: .7;
-//   width:40%;
-//   margin-top:20%;
-// }
-
-.fade-in.three {
--webkit-animation-delay: 1.6s;
--moz-animation-delay: 1.6s;
-animation-delay: 1.6s;
-}
-
-
-
-
-=======
     -webkit-animation-delay: .7s;
     -moz-animation-delay:.7s;
     animation-delay: .7s;
@@ -96,7 +67,6 @@ animation-delay: 1.6s;
     background-size: cover;
 }
 ////////////////////////////////////////PARALLAX SETTINGS////////////////////////////////////////////////////
->>>>>>> 10a6ed34bf389de298a8542241acdaade68c0713
 .test2{
   margin-top: 9%;
   width:70%;
