@@ -126,21 +126,6 @@ animation-delay: 1.6s;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .test2{
   width:70%;
   float:right;
@@ -730,11 +715,6 @@ h2 { font-size: 16px; margin-bottom: 15px;}
 ///////////////////////////////////
 
 
-
-.offset {
-
-}
-
 .outer {
   position:relative;
 }
@@ -806,7 +786,6 @@ table {
   text-align: center;
   border: 0;
   position: relative;
-// 
   border-bottom: 1px solid transparent;
 }
 
@@ -877,7 +856,7 @@ tbody tr td {
     border: 0;
     outline: 0;
     width: 100%;
-    heigth: 100%;
+    height: 100%;
     background: red;
     color: transparent;
     display: inline-block;
@@ -961,4 +940,131 @@ tr td:nth-child(2), tr td:nth-child(3), .past {
 
 .icon:hover {
   color: red;
+}
+
+.Signup{
+  body {
+    text-align: center;
+    background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/upfeathers.png);
+  }
+  .form-container {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    input[type=text], input[type=email], input[type=phone], input[type=number], input[type=password], textarea {
+      width: 90%;
+      margin: 20px auto;
+      border: 1px solid white;
+      box-shadow: 0  0 1px 1px white;
+    }
+    textarea {
+      min-height: 150px;
+    }
+    .panel {
+      background: rgba(0,0,0,.2);
+      .panel-heading {
+        margin-bottom: 20px;
+      }
+    }
+    .btn-group {
+      width: 90%;
+      margin: 0 auto 10px auto;
+    }
+    .back {
+      float: left;
+    }
+    .continue {
+      float: right;
+    }
+  }
+  div.pet-owner{
+    background: linear-gradient(to right, #dae2f8, #d6a4a4);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .btn{
+    background: linear-gradient(to right, #dae2f8, #d6a4a4);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+  }
+  .panel-primary {
+    border-color: none; 
+  }
+  .panel-primary h3 {
+    background: none;
+  }
+  button{
+    background: linear-gradient(to left, #dae2f8, #d6a4a4);
+    border: none;
+    border-radius: 2px;
+  }
+  /* Multi-Part CSS */
+  input[type=checkbox] {
+    position: absolute;
+    /* Position the checkbox in upper left corner */
+    
+    opacity: 0;
+  }
+  
+  /* Styling Parts */
+  #part1,
+  #part2,
+  #part3,
+  #part4 {
+    z-index: 2;
+    display: block;
+    height: auto;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* Hidden Parts */
+  #part2,
+  #part3,
+  #part4 {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  /* Show Step 2 & Hide Step 1 */
+  #step2:checked ~ #part2 {
+    opacity: 1;
+    height: auto;
+  }
+  #step2:checked ~ #part1 {
+    opacity: 0;
+    height: 0;
+    display: none;
+  }
+  
+  /* Show Step 3  & Hide Step 2 */
+  #step3:checked ~ #part3 {
+    opacity: 1;
+    height: auto;
+  }
+  #step3:checked ~ #part2 {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  #step4:checked ~ #part4 {
+    opacity: 1;
+    height: auto;
+  }
+  #step4:checked ~ #part3 {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+
+
 }
