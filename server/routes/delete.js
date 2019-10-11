@@ -10,25 +10,30 @@ const Price = require('../models/Price');
 // Route to add a country
 router.get('/user', (req, res, next) => {
 	const { userID } = req.body;
-	User.findById(userID).then((user) => {
+	User.findByIdAndDelete(userID).then((user) => {
 		res.json(user);
 	});
 });
 
-router.post('/groomer', (req, res, next) => {
-	const { username, password, firstName, lastName, profilePic, email, phoneNumber, address } = req.body;
+router.get('/groomer', (req, res, next) => {
+	const { groomerID } = req.body;
+	Groomer.findByIdAndDelete(groomerID).then((groomer) => {
+		res.json(groomer);
+	});
 });
 
-router.post('/prices', (req, res, next) => {
-	const { username, password, firstName, lastName, profilePic, email, phoneNumber, address } = req.body;
+router.get('/dog', (req, res, next) => {
+	const { dogID } = req.body;
+	Dog.findByIdAndDelete(dogID).then((dog) => {
+		res.json(dog);
+	});
 });
 
-router.post('/dog', (req, res, next) => {
-	const { username, password, firstName, lastName, profilePic, email, phoneNumber, address } = req.body;
-});
-
-router.post('/review', (req, res, next) => {
-	const { username, password, firstName, lastName, profilePic, email, phoneNumber, address } = req.body;
+router.get('/review', (req, res, next) => {
+	const { reviewID } = req.body;
+	Review.findByIdAndDelete(reviewID).then((review) => {
+		res.json(review);
+	});
 });
 
 module.exports = router;

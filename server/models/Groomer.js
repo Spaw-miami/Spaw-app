@@ -36,7 +36,21 @@ module.exports = Groomer;
 // }
 
 // let dummyRead = {
-// 	"groomerID": "5d9f5746d6978446bd9df4ac"
+// 	"groomerID": "5d9f9cdc581f3d4fa89445d9"
+// }
+
+// let dummyUpdate = {
+//  "groomerID": "5d9f9cdc581f3d4fa89445d9",
+//   "startingTime": "9:00 am",
+//   "endTime": "6:00 pm",
+// 	"username": "String",
+// 	"firstName": "String",
+// 	"lastName": "String",
+// 	"profilePic": "String",
+// 	"email": "String",
+// 	"phoneNumber": "String",
+// 	"about": "String",
+// 	"address": "String"
 // }
 
 // Groomer C finished

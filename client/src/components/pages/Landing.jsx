@@ -11,14 +11,20 @@ export default class Landing extends Component {
   render() {
     return (
 <div >       
-        
-
         <div className="">
-          <div className="parallax">
-            <img className="landing-image"src="./images/Spaws_white.png"></img>
+          <div >
+          <div  className="box fade-in two" >          
+            <img  id="element" className="landing-image" src="./images/Spaws_white.png"></img>
+            <div class="box fade-in one">
+            <br></br>
+            <h1 className="landing-statement" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio reiciendis, tempore laborum, minus et, accusantium nisi earum cumque quas ab ratione ipsa. Eveniet vel illum quod obcaecati commodi numquam magni.</h1>
+        </div>
           </div>
+
+          </div>
+         
         </div>  
-        <h1></h1>
+       
         <div className="test1">
           <div className="parallax1"></div>
         </div>              

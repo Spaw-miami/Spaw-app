@@ -16,3 +16,11 @@ module.exports = Price;
 // 	"medium": "50",
 // 	"small": "25"
 // }
+
+// let dummyUpdate = {
+//   "priceID": "5d9f9d1f581f3d4fa894460e",
+// 	"groomerID": "5d9f62a01429e24aaf7fe6fd",
+// 	"large": "75",
+// 	"medium": "50",
+// 	"small": "25"
+// }

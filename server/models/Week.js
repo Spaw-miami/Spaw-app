@@ -10,7 +10,7 @@ const weekSchema = new Schema({
 	Friday: Object,
 	Saturday: Object,
 	Sunday: Object,
-	id: Number
+	weekNumber: Number
 });
 
 const Week = mongoose.model('Week', weekSchema);
