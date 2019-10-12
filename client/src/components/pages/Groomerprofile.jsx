@@ -3,15 +3,34 @@ import Calendar from '../Calendar'
 import WeekCalendar from '../WeekCalendar'
 
 export default class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      name: '',
+      password: '',
+      message: null,
+      firstName: '',
+      lastName: '',
+      profilepicture: '',
+      phone: '',
+      address: '',
+      show: true,
+      groomer: true
+    };
+  }
+
+  
   render() {
+    
     return (
       <div className="entire-content">
 
 
         <div className="containerr-two">
-          <div><h2>CHRISTIAN ROQUE</h2></div>
+          <div><h2>{this.state.username}</h2></div>
           <div id="book">
-            <button type="button" className="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Book groomer</button>
+            <button type="button" className="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">{this.state.firstName} {this.state.lastName}</button>
           </div>
           <br></br>
           <div><h4>BEST GROOMER IN MIAMI</h4></div>
