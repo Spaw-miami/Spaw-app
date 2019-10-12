@@ -14,7 +14,7 @@ const groomerSchema = new Schema({
 	startingTime: String,
 	endTime: String,
 	weeks: [ { type: Schema.Types.ObjectId, ref: 'Week' } ],
-	reviews: [ { type: Schema.Types.ObjectId, ref: 'Reviews' } ],
+	reviews: [ { type: Schema.Types.ObjectId, ref: 'Review' } ],
 	pricing: [ { type: Schema.Types.ObjectId, ref: 'Price' } ]
 });
 
