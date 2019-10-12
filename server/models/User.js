@@ -41,4 +41,15 @@ module.exports = User;
 // 	"userID": "5d9e2d0947f73f2f5012f132"
 // }
 
+// let dummyUpdate = {
+//  "userID": "5d9f9c2e8afcf44f5676895b",
+// 	"username": "I pay too much",
+// 	"firstName": "Generous",
+// 	"lastName": "Bill",
+// 	"profilePic": "https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F540230%2Fhand-holding-100-dollar-bills-cash.jpg&w=700&op=resize",
+// 	"email": "rich@google.com",
+// 	"phoneNumber": "1",
+// 	"address": "Private"
+// };
+
 // User C finished
