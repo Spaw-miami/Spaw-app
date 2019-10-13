@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { Route, Link, NavLink, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Landing from './pages/Landing';
-import AddCountry from './pages/AddCountry';
 import Secret from './pages/Secret';
 import Login from './pages/Login';
 import axios from 'axios';
 import Signup from './pages/Signup';
 import Groomerprofile from './pages/Groomerprofile';
 import api from '../api';
+import Dashboard from './pages/Dashboard';
 
 export default class App extends Component {
 	constructor(props) {
@@ -41,7 +41,7 @@ export default class App extends Component {
 				</NavLink>
 				<NavLink to="/groomerprofile">Profile</NavLink>
 				<NavLink to="/landing">Landing</NavLink>
-				<NavLink to="/add-country">Groomer Dash-Board</NavLink>
+				<NavLink to="/dashboard">Groomer Dash-Board</NavLink>
 				{!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
 				{!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
 				{api.isLoggedIn() && (
@@ -54,7 +54,7 @@ export default class App extends Component {
 				<Switch>
 					<Route path="/" exact component={Home} />
 					<Route path="/landing" component={Landing} />
-					<Route path="/add-country" component={AddCountry} />
+					<Route path="/dashboard" component={Dashboard} />
 					<Route path="/signup" component={Signup} />
 					<Route path="/login" component={Login} />
 					<Route path="/groomerprofile" component={Groomerprofile} />
