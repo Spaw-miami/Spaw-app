@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react'
 import api from '../../api'
-import $ from 'jquery'
 
 export default class Signup extends Component {
 
