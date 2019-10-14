@@ -5,11 +5,34 @@ const Groomer = require('../models/Groomer');
 const Dog = require('../models/Dog');
 const Review = require('../models/Review');
 const Week = require('../models/Week');
+const Appointment = require('../models/Appointment');
 const Price = require('../models/Price');
 
 const bcrypt = require('bcrypt');
 const bcryptSalt = 10;
 // Route to add a country
+
+router.post('/appointment', (req, res, next) => {
+	// information passed through the body of the front end
+	const { userID, dogID, appID } = req.body;
+	// prevents update if body does not contain all fields
+	if (!appID || !dogID || !userID) {
+		res.status(400).json({ message: '{Please fill all fields}' });
+		return;
+	}
+	// find user and update its data
+	Appointment.findByIdAndUpdate(appID, {
+		customer: userID,
+		dog: dogID,
+		booked: true,
+		Accepted: false
+	})
+		.then((appSaved) => {
+			res.json(appSaved);
+		})
+		.catch((err) => next(err));
+});
+
 router.post('/user', (req, res, next) => {
 	// information passed through the body of the front end
 	const { userID, username, firstName, lastName, profilePic, email, phoneNumber, address } = req.body;
@@ -122,7 +145,7 @@ router.post('/dog', (req, res, next) => {
 	// info passed
 	const { dogID, name, picture, breed, size, age, userId } = req.body;
 	// required fields
-	if (!dogID || !name || !picture || !breed || !size || !age) {
+	if (!userId || !dogID || !name || !picture || !breed || !size || !age) {
 		res.status(400).json({ message: '{Please fill all fields}' });
 		return;
 	}
