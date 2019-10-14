@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import api from '../../api';
 import axios from 'axios';
-import {Image} from 'cloudinary-react'
+import Images from '../Images';
 
 
 export default class Signup extends Component {
@@ -170,6 +170,7 @@ export default class Signup extends Component {
                     className="form-control"
                     placeholder="Address"
                   />
+                  <Images></Images>
                   <div
                     className="btn-group btn-group-lg btn-group-justified"
                     role="group"
