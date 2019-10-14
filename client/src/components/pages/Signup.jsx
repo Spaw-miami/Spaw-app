@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import api from '../../api';
 import axios from 'axios';
+import {Image} from 'cloudinary-react'
 
 
 export default class Signup extends Component {
