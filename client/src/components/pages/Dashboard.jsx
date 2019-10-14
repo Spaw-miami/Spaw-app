@@ -6,12 +6,16 @@ export default class Dashboard extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			name: '',
-			capitals: '',
-			area: '',
-			description: '',
+			username: '',
+			firstName: '',
+			lastName: '',
+			address: '',
 			message: null,
-			switch: true
+			switch: true,
+			phone: '',
+			startTime: '',
+			endTime: ''
+
 		};
 		this.handleInputChange = this.handleInputChange.bind(this);
 	}
@@ -32,31 +36,25 @@ export default class Dashboard extends Component {
 
 	handleClick(e) {
 		e.preventDefault();
-		console.log(this.state.name, this.state.description);
 		let data = {
-			name: this.state.name,
-			capitals: this.state.capitals,
-			area: this.state.area,
-			description: this.state.description
+			username: this.state.username,
+			firstName: this.state.firstName,
+			lastName: this.state.lastName,
+			address: this.state.address,
+			message: null,
+			switch: true,
+			phone: this.state.phone,
+			startTime: this.state.startTime,
+			endTime: this.state.endTime
 		};
 		api
-			.addCountry(data)
-			.then((result) => {
-				console.log('SUCCESS!');
-				this.setState({
-					name: '',
-					capitals: '',
-					area: '',
-					description: '',
-					message: `Your country '${this.state.name}' has been created`
-				});
-				setTimeout(() => {
-					this.setState({
-						message: null
-					});
-				}, 2000);
+			.signup(data)
+			// CHANGE ROUTES
+			.then(result => {
+				console.log('SUCCESS!')
+				this.props.history.push('/') // Redirect to the home page
 			})
-			.catch((err) => this.setState({ message: err.toString() }));
+			.catch(err => this.setState({ message: err.toString() }))
 	}
 
 	switchBox = () => {
@@ -196,8 +194,8 @@ export default class Dashboard extends Component {
 								{this.state.switch ? (
 									<button onClick={this.switchBox}>Settings</button>
 								) : (
-									<button onClick={this.switchBox}>Schedule</button>
-								)}
+										<button onClick={this.switchBox}>Schedule</button>
+									)}
 							</div>
 						</div>
 					</div>
