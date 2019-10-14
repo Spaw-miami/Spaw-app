@@ -958,8 +958,52 @@ tr td:nth-child(3),
 .icon:hover {
 	color: red;
 }
+.Login{
+	display: flex;
+	justify-items: center;
+	flex-direction: column;
+	background: linear-gradient(
+			to right,
+			#dae2f8,
+			#d6a4a4
+		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		min-height: 100vh;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	// div{
+	// 	display: flex;
+	// 	justify-content: center;
+	// 	flex-direction: column;
+		
+	// }
+	form{
+		display: flex;
+		flex-direction: column;
+		width: 50vw;
+		justify-content: center;
+	}
+	.owner-button{
+		width: 50vw;
+	}
+	.owner-login{
+		width: 50vw;
+	}
+	 .center{
+	margin: 15% 0% 0% 0%;
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	.logo{
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
 
-.Signup {
+.Signup, .Login{
 	body {
 		text-align: center;
 		background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/upfeathers.png);
