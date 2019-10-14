@@ -7,7 +7,8 @@ const appointmentSchema = new Schema({
 	dog: [ { type: Schema.Types.ObjectId, ref: 'Dog' } ],
 	booked: Boolean,
 	Accepted: Boolean,
-	time: String
+	time: String,
+	weekNumber: Number
 });
 
 const Appointment = mongoose.model('Appointment', appointmentSchema);
