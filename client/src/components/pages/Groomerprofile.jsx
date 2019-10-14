@@ -43,13 +43,7 @@ export default class Home extends Component {
 						<p>{this.state.groomer.about}</p>
 					</div>
 				</div>
-				<div className="containerr-two">
-					<div>
-						<h2>WEEK SCHEDULE</h2>
-					</div>
-					<br />
-					<WeekCalendar />
-				</div>
+			
 				<div className="containerr">
 					<div className="avatar-flip">
 						<img alt="" src={this.state.groomer.profilePic} height="150" width="150" />
@@ -83,6 +77,13 @@ export default class Home extends Component {
 						</div>
 					</div>
 					<br />
+					<div className="containerr-calendar">
+					<div>
+						<h2>WEEK SCHEDULE</h2>
+					</div>
+					<br />
+					<WeekCalendar />
+				</div>
 					<div className="modal fade" id="myModal" role="dialog">
 						<div className="modal-dialog">
 							<div className="modal-content">
