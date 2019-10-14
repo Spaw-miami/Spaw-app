@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import api from '../../api'
 
-
 export default class Signup extends Component {
 
   //CHANGE MODEL

@@ -53,7 +53,7 @@ require('./passport')(app);
 app.use('/', require('./routes/index'));
 
 // MY ROUTES :: CHRISTIAN
-
+app.use('/auth', require('./routes/auth'));
 app.use('/create', require('./routes/create'));
 app.use('/read', require('./routes/read'));
 app.use('/update', require('./routes/update'));

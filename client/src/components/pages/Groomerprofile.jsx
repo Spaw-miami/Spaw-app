@@ -7,7 +7,7 @@ export default class Home extends Component {
 	state = {};
 
 	componentWillMount() {
-		axios.get(`http://localhost:5000/read/groomer/${'5da3d2060746979f0ea46d11'}`).then((groomer) => {
+		axios.get(`http://localhost:5000/read/groomer/${'5da478786b0d84a504022fb2'}`).then((groomer) => {
 			this.setState({
 				groomer: groomer.data
 			});
@@ -25,14 +25,14 @@ export default class Home extends Component {
 						<h2>{this.state.groomer.username}</h2>
 					</div>
 					<div id="book">
-						<button
+						{/* <button
 							type="button"
 							className="btn btn-info btn-md"
 							data-toggle="modal"
 							data-target="#myModal"
 						>
 							{this.state.groomer.firstName} {this.state.groomer.lastName}
-						</button>
+						</button> */}
 					</div>
 					<br />
 					<div>
