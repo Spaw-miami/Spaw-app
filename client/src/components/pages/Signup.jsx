@@ -69,8 +69,8 @@ export default class Signup extends Component {
                   <div className="panel-heading">
                     <h3 className="panel-title">Owner User info</h3>
                   </div>
-                  <input onChange={this.handleInputChange} value={this.state.username} type="text" name="owner-username" className="form-control" placeholder="Username" aria-describedby="sizing-addon1" />
-                  <input onChange={this.handleInputChange} value={this.state.password} type="password" name="owner-password" className="form-control" placeholder="password" aria-describedby="sizing-addon1" />
+                  <input onChange={this.handleInputChange} type="text" name="owner-username" className="form-control" placeholder="Username" aria-describedby="sizing-addon1" />
+                  <input onChange={this.handleInputChange} type="password" name="owner-password" className="form-control" placeholder="password" aria-describedby="sizing-addon1" />
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
                     <label htmlFor='step2' id="continue-step2" className="continue">
                       <div
@@ -86,9 +86,9 @@ export default class Signup extends Component {
                   <div className="panel-heading">
                     <h3 className="panel-title">Owner Personal Info</h3>
                   </div>
-                  <input onChange={this.handleInputChange} value={this.state.email} type="email" name="owner-email" className="form-control" placeholder="Email" />
-                  <input onChange={this.handleInputChange} value={this.state.phone} type="phone" name="owner-phone" className="form-control" placeholder="Phone" />
-                  <input onChange={this.handleInputChange} value={this.state.address} type="text" name="owner-address" className="form-control" placeholder="Address" />
+                  <input onChange={this.handleInputChange} type="email" name="owner-email" className="form-control" placeholder="Email" />
+                  <input onChange={this.handleInputChange} type="phone" name="owner-phone" className="form-control" placeholder="Phone" />
+                  <input onChange={this.handleInputChange} type="text" name="owner-address" className="form-control" placeholder="Address" />
                   <div className="btn-group btn-group-lg btn-group-justified" role="group" aria-label="...">
 
                     <label htmlFor='step2' id="back-step2" className="back">
@@ -111,8 +111,8 @@ export default class Signup extends Component {
                   <div className="panel-heading">
                     <h3 className="panel-title">Owner Full Name</h3>
                   </div>
-                  <input onChange={this.handleInputChange} value={this.state.firstName} type="text" name="firstname" className="form-control" placeholder="FirstName" />
-                  <input onChange={this.handleInputChange} value={this.state.lastName} type="text" name="lastname" className="form-control" placeholder="LastName" />
+                  <input onChange={this.handleInputChange} type="text" name="firstname" className="form-control" placeholder="FirstName" />
+                  <input onChange={this.handleInputChange} type="text" name="lastname" className="form-control" placeholder="LastName" />
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
 
                     <label htmlFor='step3' id="back-step3" className="back">
@@ -134,7 +134,7 @@ export default class Signup extends Component {
                   <div className="panel-heading">
                     <h3 className="panel-title">Profile Picture</h3>
                   </div>
-                  <input onChange={this.handleInputChange} type="text" value={this.state.profilepicture} name="PFP" className="form-control" placeholder="Profile Picture"></input>
+                  <input onChange={this.handleInputChange} type="text" name="PFP" className="form-control" placeholder="Profile Picture"></input>
                   {/* IMAGE UPLOAD TO BE ADDED */}
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
                     <label htmlFor='step4' id="back-step4" className="back">
@@ -172,8 +172,8 @@ export default class Signup extends Component {
                   <div className="panel-heading">
                     <h3 className="panel-title">Groomer User Info</h3>
                   </div>
-                  <input onChange={this.handleInputChange} value={this.state.username} type="text" name="username" className="form-control" placeholder="Username" aria-describedby="sizing-addon1" />
-                  <input onChange={this.handleInputChange} value={this.state.password} type="password" name="password" className="form-control" placeholder="password" aria-describedby="sizing-addon1" />
+                  <input onChange={this.handleInputChange} type="text" name="username" className="form-control" placeholder="Username" aria-describedby="sizing-addon1" />
+                  <input onChange={this.handleInputChange} type="password" name="password" className="form-control" placeholder="password" aria-describedby="sizing-addon1" />
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
                     <label htmlFor='step2' id="continue-step2" className="continue">
                       <div
@@ -189,9 +189,9 @@ export default class Signup extends Component {
                   <div className="panel-heading">
                     <h3 className="panel-title">Groomer Personal Info</h3>
                   </div>
-                  <input onChange={this.handleInputChange} value={this.state.email} type="email" name="email" className="form-control" placeholder="Email" />
-                  <input onChange={this.handleInputChange} value={this.state.phone} type="phone" name="phone" className="form-control" placeholder="Phone" />
-                  <input onChange={this.handleInputChange} value={this.state.address} type="text" name="address" className="form-control" placeholder="Address" />
+                  <input onChange={this.handleInputChange} type="email" name="email" className="form-control" placeholder="Email" />
+                  <input onChange={this.handleInputChange} type="phone" name="phone" className="form-control" placeholder="Phone" />
+                  <input onChange={this.handleInputChange} type="text" name="address" className="form-control" placeholder="Address" />
                   <div className="btn-group btn-group-lg btn-group-justified" role="group" aria-label="...">
 
                     <label htmlFor='step2' id="back-step2" className="back">
@@ -214,8 +214,8 @@ export default class Signup extends Component {
                   <div className="panel-heading">
                     <h3 className="panel-title">Groomer Full Name</h3>
                   </div>
-                  <input onChange={this.handleInputChange} value={this.state.firstName} type="text" name="firstname" className="form-control" placeholder="FirstName" />
-                  <input onChange={this.handleInputChange} value={this.state.lastName} type="text" name="lastname" className="form-control" placeholder="LastName" />
+                  <input onChange={this.handleInputChange} type="text" name="firstname" className="form-control" placeholder="FirstName" />
+                  <input onChange={this.handleInputChange} type="text" name="lastname" className="form-control" placeholder="LastName" />
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
 
                     <label htmlFor='step3' id="back-step3" className="back">
@@ -237,7 +237,7 @@ export default class Signup extends Component {
                   <div className="panel-heading">
                     <h3 className="panel-title">Groomer Bio</h3>
                   </div>
-                  <textarea onChange={this.handleInputChange} value={this.state.about} name="message" className="form-control" placeholder="About You..."></textarea>
+                  <textarea onChange={this.handleInputChange} name="message" className="form-control" placeholder="About You..."></textarea>
                   {/* IMAGE UPLOAD TO BE ADDED */}
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
                     <label htmlFor='step4' id="back-step4" className="back">
