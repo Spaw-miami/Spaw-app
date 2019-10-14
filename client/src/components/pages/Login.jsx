@@ -8,6 +8,8 @@ export default class Login extends Component {
       username: '',
       password: '',
       message: null,
+      groomer: false,
+      owner: false
     }
     this.handleInputChange = this.handleInputChange.bind(this)
   }
@@ -50,9 +52,9 @@ export default class Login extends Component {
             onChange={this.handleInputChange}
           />{' '}
           <br />
-          <input type="radio" name="user" value="groomer" />Groomer
+          <input onChange={this.handleInputChange} type="radio" name="user" value="groomer" />Groomer
           <br />
-          <input type="radio" name="user" value="owner" />Owner
+          <input onChange={this.handleInputChange} type="radio" name="user" value="owner" />Owner
           <br />
           <button onClick={e => this.handleClick(e)}>Login</button>
         </form>

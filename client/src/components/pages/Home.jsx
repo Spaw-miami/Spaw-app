@@ -1,12 +1,59 @@
 import React, { Component } from 'react';
+import api from '../../api'
+
 export default class Home extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       petSettings: false,
       userSettings: true,
-      showEdit: false
-    };
+      showEdit: false,
+      username: '',
+      password: '',
+      message: null,
+      firstName: '',
+      lastName: '',
+      profilepicture: '',
+      about: '',
+      phone: '',
+      address: '',
+      groomer: false,
+      petName: '',
+      petBreed: '',
+      petWeight: ''
+    }
+    this.handleInputChange = this.handleInputChange.bind(this)
+  }
+
+  handleInputChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value,
+    })
+  }
+
+  handleClick(e) {
+    e.preventDefault()
+    let data = {
+      username: this.state.username,
+      email: this.state.email,
+      password: this.state.password,
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      profilepicture: this.state.pfp,
+      about: this.state.about,
+      phone: this.state.phone,
+      address: this.state.address,
+      petName: this.state.petName,
+      petBreed: this.state.petBreed,
+      petWeight: this.state.petWeight
+    }
+    api
+      .signup(data)
+      .then(result => {
+        console.log('SUCCESS!')
+        this.props.history.push('/') // Redirect to the home page
+      })
+      .catch(err => this.setState({ message: err.toString() }))
   }
 
 
@@ -31,9 +78,9 @@ export default class Home extends Component {
     return (
       <div className="edit-pet">
         <form>
-          <input type="text" name="petname" placeholder="Pet's Name" />
-          <input type="text" name="petbreed" placeholder="Pet's Breed" />
-          <input type="text" name="petweight" placeholder="Pet's Weight" />
+          <input onChange={this.handleInputChange} type="text" name="petName" placeholder="Pet's Name" />
+          <input onChange={this.handleInputChange} type="text" name="petBreed" placeholder="Pet's Breed" />
+          <input onChange={this.handleInputChange} type="text" name="petWeight" placeholder="Pet's Weight" />
           <br></br>
           <button>Submit</button>
         </form>
@@ -50,8 +97,11 @@ export default class Home extends Component {
           :
           <div>
             <h3>Pet Name</h3>
+            {/* this.state.petName */}
             <h2>Pet Breed</h2>
+            {/* this.state.petBreed */}
             <h4>Pet weight</h4>
+            {/* this.state.petWeight */}
             <button onClick={this.showEditPet}>edit info</button>
           </div>
         }
@@ -73,11 +123,11 @@ export default class Home extends Component {
     return (
       <div className="edit-pet">
         <form>
-          <input type="text" name="username" placeholder="User's Username" />
-          <input type="text" name="firstname" placeholder="User's First Name" />
-          <input type="text" name="lastname" placeholder="User's Last Name" />
-          <input type="text" name="address" placeholder="User's Address" />
-          <input type="text" name="phone" placeholder="User's Phone Number" />
+          <input onChange={this.handleInputChange} type="text" name="username" placeholder="User's Username" />
+          <input onChange={this.handleInputChange} type="text" name="firstname" placeholder="User's First Name" />
+          <input onChange={this.handleInputChange} type="text" name="lastname" placeholder="User's Last Name" />
+          <input onChange={this.handleInputChange} type="text" name="address" placeholder="User's Address" />
+          <input onChange={this.handleInputChange} type="text" name="phone" placeholder="User's Phone Number" />
           <br></br>
           <button>Submit</button>
         </form>
@@ -94,9 +144,13 @@ export default class Home extends Component {
           :
           <div>
             <h3>User Name</h3>
+            {/* this.state.username */}
             <h2>Address</h2>
+            {/* this.state.address */}
             <h4>Phone number</h4>
+            {/* this.state.phone */}
             <h5>Dog drop down</h5>
+            {/* this.state.petName */}
             <button onClick={this.showEditPet}>edit info</button>
           </div>
         }
@@ -146,7 +200,9 @@ export default class Home extends Component {
               </div>
               <div className="card-body">
                 <h5 className="card-title">User Name</h5>
+                {/* this.state.username */}
                 <p className="card-text">User preferred address.</p>
+                {/* this.state.address */}
               </div>
               <div className="card-body">
                 {this.state.petSettings || this.state.userSettings ? (
