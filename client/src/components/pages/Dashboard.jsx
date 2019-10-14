@@ -6,12 +6,16 @@ export default class Dashboard extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			name: '',
-			capitals: '',
-			area: '',
-			description: '',
+			username: '',
+			firstName: '',
+			lastName: '',
+			address: '',
 			message: null,
-			switch: true
+			switch: true,
+			phone: '',
+			startTime: '',
+			endTime: ''
+
 		};
 		this.handleInputChange = this.handleInputChange.bind(this);
 	}
@@ -32,31 +36,25 @@ export default class Dashboard extends Component {
 
 	handleClick(e) {
 		e.preventDefault();
-		console.log(this.state.name, this.state.description);
 		let data = {
-			name: this.state.name,
-			capitals: this.state.capitals,
-			area: this.state.area,
-			description: this.state.description
+			username: this.state.username,
+			firstName: this.state.firstName,
+			lastName: this.state.lastName,
+			address: this.state.address,
+			message: null,
+			switch: true,
+			phone: this.state.phone,
+			startTime: this.state.startTime,
+			endTime: this.state.endTime
 		};
 		api
-			.addCountry(data)
-			.then((result) => {
-				console.log('SUCCESS!');
-				this.setState({
-					name: '',
-					capitals: '',
-					area: '',
-					description: '',
-					message: `Your country '${this.state.name}' has been created`
-				});
-				setTimeout(() => {
-					this.setState({
-						message: null
-					});
-				}, 2000);
+			.signup(data)
+			// CHANGE ROUTES
+			.then(result => {
+				console.log('SUCCESS!')
+				this.props.history.push('/') // Redirect to the home page
 			})
-			.catch((err) => this.setState({ message: err.toString() }));
+			.catch(err => this.setState({ message: err.toString() }))
 	}
 
 	switchBox = () => {
@@ -99,41 +97,38 @@ export default class Dashboard extends Component {
 						type="text"
 						name="username"
 						placeholder="Groomer's Username"
-						value={this.state.groomer.username}
+						onChange={this.handleInputChange}
 					/>
 					<input
 						type="text"
 						name="firstname"
 						placeholder="Groomer's First Name"
-						value={this.state.groomer.firstName}
+						onChange={this.handleInputChange}
 					/>
 					<input
 						type="text"
 						name="lastname"
 						placeholder="Groomer's Last Name"
-						value={this.state.groomer.lastName}
+						onChange={this.handleInputChange}
 					/>
 					<input
 						type="text"
 						name="address"
 						placeholder="Groomer's Address"
-						value={this.state.groomer.address}
+						onChange={this.handleInputChange}
 					/>
 					<input
 						type="text"
 						name="phone"
 						placeholder="Groomer's Phone Number"
-						value={this.state.groomer.phoneNumber}
+						onChange={this.handleInputChange}
 					/>
 					{/* <input type="text" name="phone" placeholder="Groomer's radius" value={this.state.groomer.} /> */}
 					<br />
 					<label>From</label>
-					<select id="start-hours">
-						<option value={this.state.groomer.startingTime} selected disabled>
-							{this.state.groomer.startingTime}
-						</option>
-						<option>9:00 am</option>
+					<select name="startTime" id="start-hours" onChange={this.handleInputChange}>
 						<option>8:00 am</option>
+						<option>9:00 am</option>
 						<option>10:00 am</option>
 						<option>11:00 am</option>
 						<option>12:00 pm</option>
@@ -145,10 +140,7 @@ export default class Dashboard extends Component {
 						<option>6:00 pm</option>
 					</select>
 					<label>To</label>
-					<select id="end-hours">
-						<option value={this.state.groomer.endTime} selected disabled>
-							{this.state.groomer.endTime}
-						</option>
+					<select name="endTime" id="end-hours" onChange={this.handleInputChange}>
 						<option>8:00 am</option>
 						<option>9:00 am</option>
 						<option>10:00 am</option>
@@ -196,8 +188,8 @@ export default class Dashboard extends Component {
 								{this.state.switch ? (
 									<button onClick={this.switchBox}>Settings</button>
 								) : (
-									<button onClick={this.switchBox}>Schedule</button>
-								)}
+										<button onClick={this.switchBox}>Schedule</button>
+									)}
 							</div>
 						</div>
 					</div>
