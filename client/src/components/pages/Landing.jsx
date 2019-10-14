@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import api from '../../api'
+import Signup from './Signup'
+import { Route, Link, NavLink, Switch } from 'react-router-dom';
 
 export default class Landing extends Component {
   constructor(props) {
@@ -33,8 +35,8 @@ export default class Landing extends Component {
             <br></br>
            
             <h1 className="h1" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio reiciendis, tempore laborum, minus et, accusantium nisi earum cumque quas ab ratione ipsa. Eveniet vel illum quod obcaecati commodi</h1>
-            <button className="buttonn">LOGIN</button>
-            <button className="button">SIGN UP</button>
+            <a className="buttonn"><Link to="/login">Login</Link></a>
+            <a className="button"><Link to="/signup">SignUp</Link></a>
         </div>
           </div>
 

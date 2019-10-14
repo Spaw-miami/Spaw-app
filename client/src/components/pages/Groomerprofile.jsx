@@ -25,14 +25,14 @@ export default class Home extends Component {
 						<h2>{this.state.groomer.username}</h2>
 					</div>
 					<div id="book">
-						<button
+						{/* <button
 							type="button"
 							className="btn btn-info btn-md"
 							data-toggle="modal"
 							data-target="#myModal"
 						>
 							{this.state.groomer.firstName} {this.state.groomer.lastName}
-						</button>
+						</button> */}
 					</div>
 					<br />
 					<div>

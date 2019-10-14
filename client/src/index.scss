@@ -454,6 +454,7 @@ li{
 	background-position: right .7em top 50%, 0 0;
 	background-size: .65em auto, 100%;
   }
+  
   button{
     background-color: #c7c5c5;
   border: none;
@@ -1001,7 +1002,7 @@ tr td:nth-child(2), tr td:nth-child(3), .past {
   font-size: 19px;
   font-family: "Open Sans", Helvetica;
   border-radius: 4px;
-  background: rgb(46, 46, 252);
+  background: white;
   color: #fff;
   box-shadow: 0px 0px 0px rgba(253, 255, 254, 0.1);
   -webkit-transform: translateZ(0);
@@ -1032,7 +1033,7 @@ tr td:nth-child(2), tr td:nth-child(3), .past {
   font-size: 19px;
   font-family: "Open Sans", Helvetica;
   border-radius: 4px;
-  background: rgb(46, 46, 252);
+  background: white;
   color: #fff;
   // box-shadow: 0px 0px 0px rgba(253, 255, 254, 0.1);
   -webkit-transform: translateZ(0);
