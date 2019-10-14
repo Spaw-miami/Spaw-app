@@ -8,8 +8,8 @@ const Week = require('../models/Week');
 const Price = require('../models/Price');
 
 // Route to add a country
-router.get('/user', (req, res, next) => {
-	const { userID } = req.body;
+router.get('/user/:id', (req, res, next) => {
+	let userID = req.params.id;
 	User.findById(userID)
 		.populate({ path: 'reviews', populate: { path: 'author' } })
 		.populate({ path: 'reviews', populate: { path: 'groomer' } })
@@ -21,14 +21,19 @@ router.get('/user', (req, res, next) => {
 		});
 });
 
-router.get('/groomer', (req, res, next) => {
-	const { groomerID } = req.body;
+router.get('/groomer/:id', (req, res, next) => {
+	let groomerID = req.params.id;
 	Groomer.findById(groomerID)
 		.populate({ path: 'reviews', populate: { path: 'author' } })
-		.populate('weeks')
+		.populate({ path: 'weeks', populate: { path: 'Monday' } })
+		.populate({ path: 'weeks', populate: { path: 'Tuesday' } })
+		.populate({ path: 'weeks', populate: { path: 'Wednesday' } })
+		.populate({ path: 'weeks', populate: { path: 'Thursday' } })
+		.populate({ path: 'weeks', populate: { path: 'Friday' } })
+		.populate({ path: 'weeks', populate: { path: 'Saturday' } })
+		.populate({ path: 'weeks', populate: { path: 'Sunday' } })
 		.populate('pricing')
 		.then((groomer) => {
-			groomer.password = undefined;
 			res.json(groomer);
 		});
 });

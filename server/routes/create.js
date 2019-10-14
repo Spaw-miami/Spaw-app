@@ -6,6 +6,7 @@ const Dog = require('../models/Dog');
 const Review = require('../models/Review');
 const Week = require('../models/Week');
 const Price = require('../models/Price');
+const Appointment = require('../models/Appointment');
 
 const bcrypt = require('bcrypt');
 const bcryptSalt = 10;
@@ -99,40 +100,233 @@ router.post('/groomer', (req, res, next) => {
 			t -= sArr[1].includes('pm') ? Number(sArr[0]) - 12 : Number(sArr[0]);
 			t += eArr[1].includes('pm') ? Number(eArr[0]) + 12 : Number(eArr[0]);
 
-			for (let i = 0; i < t; i++) {
-				timeArr.push({
-					clientID: 'String',
-					groomerID: 'String',
-					time: sArr.join(':')
-				});
-
-				sArr[0] = Number(sArr[0]) + 1;
-
-				if (Number(sArr[0]) % 12 == 0) {
-					sArr[1] = '00 pm';
-					sArr[0] = Number(sArr[0]) % 12;
-				}
-			}
-
-			for (let i = 1; i <= 52; i++) {
-				newWeek = new Week({
-					Monday: timeArr,
-					Tuesday: timeArr,
-					Wednesday: timeArr,
-					Thursday: timeArr,
-					Friday: timeArr,
-					Saturday: timeArr,
-					Sunday: timeArr,
-					weekNumber: i
-				});
-				newWeek.save().then((weeksaved) => {
-					Groomer.findByIdAndUpdate(groomerSaved._id, {
-						$push: { weeks: weeksaved._id }
-					}).then((groomer) => {
-						console.log(groomer);
+			function addingWeeks() {
+				for (let i = 1; i <= 52; i++) {
+					Week.create({
+						weekNumber: i,
+						groomerID: groomerSaved._id
+					}).then((week) => {
+						console.log(week._id);
+						Groomer.findByIdAndUpdate(groomerSaved._id, { $push: { weeks: week._id } }).then(
+							console.log(`Created week: ${i}`)
+						);
 					});
-				});
+				}
+				setTimeout(() => {
+					console.log('started to add days');
+					let weekNumber = 1;
+					let day = 0;
+					let hoursWorked = 0;
+					for (let i = 0; i < 4 * 7 * t; i++) {
+						if (day == 0) {
+							Appointment.create({
+								groomer: groomerSaved._id,
+								booked: false,
+								Accepted: false,
+								time: sArr.join(':'),
+								weekNumber: weekNumber
+							}).then((app) => {
+								Week.findOneAndUpdate(
+									{ weekNumber: app.weekNumber },
+									{ $push: { Monday: app._id } }
+								).then((week) => {
+									console.log('HIT IT', week);
+								});
+							});
+							sArr[0] = Number(sArr[0]) + 1;
+
+							if (Number(sArr[0]) % 12 == 0) {
+								sArr[1] = '00 pm';
+								sArr[0] = Number(sArr[0]) % 12;
+							}
+							hoursWorked += 1;
+							if (hoursWorked == t) {
+								hoursWorked = 0;
+								day += 1;
+								continue;
+							}
+						}
+						if (day == 1) {
+							Appointment.create({
+								groomer: groomerSaved._id,
+								booked: false,
+								Accepted: false,
+								time: sArr.join(':'),
+								weekNumber: weekNumber
+							}).then((app) => {
+								Week.findOneAndUpdate(
+									{ weekNumber: app.weekNumber },
+									{ $push: { Tuesday: app._id } }
+								).then((week) => {
+									console.log('HIT IT', week);
+								});
+							});
+
+							sArr[0] = Number(sArr[0]) + 1;
+
+							if (Number(sArr[0]) % 12 == 0) {
+								sArr[1] = '00 pm';
+								sArr[0] = Number(sArr[0]) % 12;
+							}
+							hoursWorked += 1;
+							if (hoursWorked == t) {
+								hoursWorked = 0;
+								day += 1;
+								continue;
+							}
+						}
+						if (day == 2) {
+							Appointment.create({
+								groomer: groomerSaved._id,
+								booked: false,
+								Accepted: false,
+								time: sArr.join(':'),
+								weekNumber: weekNumber
+							}).then((app) => {
+								Week.findOneAndUpdate(
+									{ weekNumber: app.weekNumber },
+									{ $push: { Wednesday: app._id } }
+								).then((week) => {
+									console.log('HIT IT', week);
+								});
+							});
+
+							sArr[0] = Number(sArr[0]) + 1;
+
+							if (Number(sArr[0]) % 12 == 0) {
+								sArr[1] = '00 pm';
+								sArr[0] = Number(sArr[0]) % 12;
+							}
+							hoursWorked += 1;
+							if (hoursWorked == t) {
+								hoursWorked = 0;
+								day += 1;
+								continue;
+							}
+						}
+						if (day == 3) {
+							Appointment.create({
+								groomer: groomerSaved._id,
+								booked: false,
+								Accepted: false,
+								time: sArr.join(':'),
+								weekNumber: weekNumber
+							}).then((app) => {
+								Week.findOneAndUpdate(
+									{ weekNumber: app.weekNumber },
+									{ $push: { Thursday: app._id } }
+								).then((week) => {
+									console.log('HIT IT', week);
+								});
+							});
+
+							sArr[0] = Number(sArr[0]) + 1;
+
+							if (Number(sArr[0]) % 12 == 0) {
+								sArr[1] = '00 pm';
+								sArr[0] = Number(sArr[0]) % 12;
+							}
+							hoursWorked += 1;
+							if (hoursWorked == t) {
+								hoursWorked = 0;
+								day += 1;
+								continue;
+							}
+						}
+						if (day == 4) {
+							Appointment.create({
+								groomer: groomerSaved._id,
+								booked: false,
+								Accepted: false,
+								time: sArr.join(':'),
+								weekNumber: weekNumber
+							}).then((app) => {
+								Week.findOneAndUpdate(
+									{ weekNumber: app.weekNumber },
+									{ $push: { Friday: app._id } }
+								).then((week) => {
+									console.log('HIT IT', week);
+								});
+							});
+
+							sArr[0] = Number(sArr[0]) + 1;
+
+							if (Number(sArr[0]) % 12 == 0) {
+								sArr[1] = '00 pm';
+								sArr[0] = Number(sArr[0]) % 12;
+							}
+							hoursWorked += 1;
+							if (hoursWorked == t) {
+								hoursWorked = 0;
+								day += 1;
+								continue;
+							}
+						}
+						if (day == 5) {
+							Appointment.create({
+								groomer: groomerSaved._id,
+								booked: false,
+								Accepted: false,
+								time: sArr.join(':'),
+								weekNumber: weekNumber
+							}).then((app) => {
+								Week.findOneAndUpdate(
+									{ weekNumber: app.weekNumber },
+									{ $push: { Saturday: app._id } }
+								).then((week) => {
+									console.log('HIT IT', week);
+								});
+							});
+
+							sArr[0] = Number(sArr[0]) + 1;
+
+							if (Number(sArr[0]) % 12 == 0) {
+								sArr[1] = '00 pm';
+								sArr[0] = Number(sArr[0]) % 12;
+							}
+							hoursWorked += 1;
+							if (hoursWorked == t) {
+								hoursWorked = 0;
+								day += 1;
+								continue;
+							}
+						}
+						if (day == 6) {
+							Appointment.create({
+								groomer: groomerSaved._id,
+								booked: false,
+								Accepted: false,
+								time: sArr.join(':'),
+								weekNumber: weekNumber
+							}).then((app) => {
+								Week.findOneAndUpdate(
+									{ weekNumber: app.weekNumber },
+									{ $push: { Sunday: app._id } }
+								).then((week) => {
+									console.log('HIT IT', week);
+								});
+							});
+
+							sArr[0] = Number(sArr[0]) + 1;
+
+							if (Number(sArr[0]) % 12 == 0) {
+								sArr[1] = '00 pm';
+								sArr[0] = Number(sArr[0]) % 12;
+							}
+							hoursWorked += 1;
+							if (hoursWorked == t) {
+								hoursWorked = 0;
+								day = 0;
+								weekNumber += 1;
+								continue;
+							}
+							console.log(weekNumber);
+						}
+					}
+				}, 4000);
 			}
+
+			addingWeeks();
 			// LOG IN THIS USER
 			// "req.logIn()" is a Passport method that calls "serializeUser()"
 			// (that saves the USER ID in the session)

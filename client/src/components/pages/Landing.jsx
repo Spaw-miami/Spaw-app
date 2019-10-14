@@ -10,15 +10,29 @@ export default class Landing extends Component {
   }
   render() {
     return (
-<div >       
+<div >    
+          {/* <div className="gif">
+            <img  src="https://media.giphy.com/media/l4FGtAXjRFvOs3UyY/giphy.gif"></img>
+            <img  src="https://media1.giphy.com/media/3oKIPtwX904KOvjCEw/giphy.gif?cid=790b7611e05d7d57d340fd6969a8fe54979e60257c6968d3&rid=giphy.gif"></img>
+            <img  src="https://media1.giphy.com/media/3o7buc7sAR6NEfAzTi/giphy.gif?cid=790b761140bbb9ca0c9bf9e2a78a9f1f1e678a681ac1306d&rid=giphy.gif"></img>
+            
+            </div>       */}
         <div className="">
-          <div >
-          <div  className="box fade-in two" >          
-            <img  id="element" className="landing-image" src="./images/Spaws_white.png"></img>
-            <div className="box fade-in one">
+          <img id="logo2"src="./images/Spaws_white.png"></img>
+          <div className="bye">
+          
+          <img id="logo1"src="https://media.giphy.com/media/l4FGtAXjRFvOs3UyY/giphy.gif" className=""alt="Norway"></img>
+          <img id="logo" src="https://media1.giphy.com/media/3oKIPtwX904KOvjCEw/giphy.gif?cid=790b7611e05d7d57d340fd6969a8fe54979e60257c6968d3&rid=giphy.gif" className="w3-hover-opacity" alt="Norway"></img>
+          <img  id="logo" src="https://media1.giphy.com/media/3o7buc7sAR6NEfAzTi/giphy.gif?cid=790b761140bbb9ca0c9bf9e2a78a9f1f1e678a681ac1306d&rid=giphy.gif" className="w3-hover-opacity"alt="Norway"></img>
+          <div  className="box fade-in two" >   
+                
+            
+            
+            
+            <div className="hello">
             <br></br>
            
-            <h1 className="landing-statement" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio reiciendis, tempore laborum, minus et, accusantium nisi earum cumque quas ab ratione ipsa. Eveniet vel illum quod obcaecati commodi numquam magni.</h1>
+            <h1 className="h1" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio reiciendis, tempore laborum, minus et, accusantium nisi earum cumque quas ab ratione ipsa. Eveniet vel illum quod obcaecati commodi</h1>
             <button className="buttonn">LOGIN</button>
             <button className="button">SIGN UP</button>
         </div>
@@ -44,7 +58,10 @@ export default class Landing extends Component {
           <div className="parallax3"></div>
         </div> 
         <div className="para">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis modi itaque debitis beatae unde aliquam dolorem ratione iure rerum, reprehenderit nesciunt quidem qui illum maxime natus ut corporis corrupti! Earum?
+            1.  Book your Dog Groomer 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis modi itaque debitis beatae unde aliquam dolorem ratione iure rerum, 
+        
+        reprehenderit nesciunt quidem qui illum maxime natus ut corporis corrupti! Earum?
         </div>
         <div className="para1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis modi itaque debitis beatae unde aliquam dolorem ratione iure rerum, reprehenderit nesciunt quidem qui illum maxime natus ut corporis corrupti! Earum?
