@@ -25,6 +25,10 @@ export default class WeekCalendar extends Component {
 		}
 	};
 
+	modalOpen = (e) => {
+		console.log(e.target);
+	};
+
 	previousWeek = () => {
 		console.log('previous');
 
@@ -62,17 +66,19 @@ export default class WeekCalendar extends Component {
 		];
 
 		for (let i = 0; i < Monday.length; i++) {
-			console.log(Monday[0].clientID);
+			console.log(Monday[i]);
 			arr.push(
 				<tr className="headcol" data-toggle="modal" data-target="#myModall">
 					<td>{Monday[i].time}</td>
-					<td>{Monday[i].clientID}</td>
-					<td>{Tuesday[i].clientID}</td>
-					<td>{Wednesday[i].clientID}</td>
-					<td>{Thursday[i].clientID}</td>
-					<td>{Friday[i].clientID}</td>
-					<td>{Saturday[i].clientID}</td>
-					<td>{Sunday[i].clientID}</td>
+					<td value={Monday[i]._id} onClick={this.modalOpen}>
+						{}
+					</td>
+					<td onClick={this.modalOpen}>{Tuesday[i]._id}</td>
+					<td onClick={this.modalOpen}>{Wednesday[i]._id}</td>
+					<td onClick={this.modalOpen}>{Thursday[i]._id}</td>
+					<td onClick={this.modalOpen}>{Friday[i]._id}</td>
+					<td onClick={this.modalOpen}>{Saturday[i]._id}</td>
+					<td onClick={this.modalOpen}>{Sunday[i]._id}</td>
 				</tr>
 			);
 		}

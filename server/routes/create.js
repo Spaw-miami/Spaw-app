@@ -17,25 +17,33 @@ router.post('/user', (req, res, next) => {
 		res.status(400).json({ message: '{Please fill all fields}' });
 		return;
 	}
-	User.findOne({ username }).then((userDoc) => {
-		if (userDoc !== null) {
-			res.status(409).json({ message: 'The username already exists' });
-			return;
-		}
-		const salt = bcrypt.genSaltSync(bcryptSalt);
-		const hashPass = bcrypt.hashSync(password, salt);
-		const newUser = new User({
-			username,
-			password: hashPass,
-			firstName,
-			lastName,
-			profilePic,
-			email,
-			phoneNumber,
-			address
+	User.findOne({ username })
+		.then((userDoc) => {
+			if (userDoc !== null) {
+				res.status(409).json({ message: 'The username already exists' });
+				return;
+			}
+			const salt = bcrypt.genSaltSync(bcryptSalt);
+			const hashPass = bcrypt.hashSync(password, salt);
+			const newUser = new User({
+				username,
+				password: hashPass,
+				firstName,
+				lastName,
+				profilePic,
+				email,
+				phoneNumber,
+				address
+			});
+			return newUser.save();
+		})
+		.then((userSaved) => {
+			req.logIn(userSaved, () => {
+				// hide "encryptedPassword" before sending the JSON (it's a security risk)
+				userSaved.password = undefined;
+				res.json(userSaved);
+			});
 		});
-		return newUser.save();
-	});
 });
 
 router.post('/groomer', (req, res, next) => {
