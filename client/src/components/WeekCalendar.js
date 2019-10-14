@@ -8,7 +8,7 @@ export default class WeekCalendar extends Component {
 	};
 
 	componentWillMount() {
-		axios.get(`http://localhost:5000/read/groomer/${'5da3d2060746979f0ea46d11'}`).then((groomer) => {
+		axios.get(`http://localhost:5000/read/groomer/${'5da478786b0d84a504022fb2'}`).then((groomer) => {
 			this.setState({
 				groomer: groomer.data
 			});
@@ -64,7 +64,7 @@ export default class WeekCalendar extends Component {
 		for (let i = 0; i < Monday.length; i++) {
 			console.log(Monday[0].clientID);
 			arr.push(
-				<tr className="headcol">
+				<tr className="headcol" data-toggle="modal" data-target="#myModall">
 					<td>{Monday[i].time}</td>
 					<td>{Monday[i].clientID}</td>
 					<td>{Tuesday[i].clientID}</td>
