@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import api from '../../api'
 
+
 export default class Signup extends Component {
 
   //CHANGE MODEL
@@ -12,11 +13,12 @@ export default class Signup extends Component {
       message: null,
       firstName: '',
       lastName: '',
-      profilepicture: '',
+      profilePic: '',
       about: '',
-      phone: '',
+      phoneNumber: '',
       address: '',
-      groomer: false
+      groomer: false,
+      email: ''
     }
     this.handleInputChange = this.handleInputChange.bind(this)
   }
@@ -27,6 +29,8 @@ export default class Signup extends Component {
     })
   }
 
+
+
   handleClick(e) {
     e.preventDefault()
     let data = {
@@ -35,19 +39,14 @@ export default class Signup extends Component {
       password: this.state.password,
       firstName: this.state.firstName,
       lastName: this.state.lastName,
-      profilepicture: this.state.pfp,
-      about: this.state.about,
-      phone: this.state.phone,
+      profilePic: this.state.profilePic,
+      phoneNumber: this.state.phoneNumber,
       address: this.state.address,
     }
     api
       .signup(data)
-      .then(result => {
-        console.log('SUCCESS!')
-        this.props.history.push('/') // Redirect to the home page
-      })
-      .catch(err => this.setState({ message: err.toString() }))
   }
+
 
   //RENDERS FIRST SIGN UP SLIDE
   //UNCOMMENT hancleClick WHEN ROUTING
@@ -68,8 +67,8 @@ export default class Signup extends Component {
                   <div className="panel-heading">
                     <h3 className="panel-title">Owner User info</h3>
                   </div>
-                  <input onChange={this.handleInputChange} type="text" name="owner-username" className="form-control" placeholder="Username" aria-describedby="sizing-addon1" />
-                  <input onChange={this.handleInputChange} type="password" name="owner-password" className="form-control" placeholder="password" aria-describedby="sizing-addon1" />
+                  <input onChange={this.handleInputChange} type="text" name="username" className="form-control" placeholder="Username" aria-describedby="sizing-addon1" />
+                  <input onChange={this.handleInputChange} type="password" name="password" className="form-control" placeholder="password" aria-describedby="sizing-addon1" />
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
                     <label htmlFor='step2' id="continue-step2" className="continue">
                       <div
@@ -85,9 +84,9 @@ export default class Signup extends Component {
                   <div className="panel-heading">
                     <h3 className="panel-title">Owner Personal Info</h3>
                   </div>
-                  <input onChange={this.handleInputChange} type="email" name="owner-email" className="form-control" placeholder="Email" />
-                  <input onChange={this.handleInputChange} type="phone" name="owner-phone" className="form-control" placeholder="Phone" />
-                  <input onChange={this.handleInputChange} type="text" name="owner-address" className="form-control" placeholder="Address" />
+                  <input onChange={this.handleInputChange} type="email" name="email" className="form-control" placeholder="Email" />
+                  <input onChange={this.handleInputChange} type="phone" name="phoneNumber" className="form-control" placeholder="Phone" />
+                  <input onChange={this.handleInputChange} type="text" name="address" className="form-control" placeholder="Address" />
                   <div className="btn-group btn-group-lg btn-group-justified" role="group" aria-label="...">
 
                     <label htmlFor='step2' id="back-step2" className="back">
@@ -110,8 +109,8 @@ export default class Signup extends Component {
                   <div className="panel-heading">
                     <h3 className="panel-title">Owner Full Name</h3>
                   </div>
-                  <input onChange={this.handleInputChange} type="text" name="firstname" className="form-control" placeholder="FirstName" />
-                  <input onChange={this.handleInputChange} type="text" name="lastname" className="form-control" placeholder="LastName" />
+                  <input onChange={this.handleInputChange} type="text" name="firstName" className="form-control" placeholder="FirstName" />
+                  <input onChange={this.handleInputChange} type="text" name="lastName" className="form-control" placeholder="LastName" />
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
 
                     <label htmlFor='step3' id="back-step3" className="back">
@@ -133,14 +132,14 @@ export default class Signup extends Component {
                   <div className="panel-heading">
                     <h3 className="panel-title">Profile Picture</h3>
                   </div>
-                  <input onChange={this.handleInputChange} type="text" name="PFP" className="form-control" placeholder="Profile Picture"></input>
+                  <input onChange={this.handleInputChange} type="text" name="profilePic" className="form-control" placeholder="Profile Picture"></input>
                   {/* IMAGE UPLOAD TO BE ADDED */}
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
                     <label htmlFor='step4' id="back-step4" className="back">
                       <div className="btn btn-default btn-primary btn-lg">Back</div>
                     </label>
                     <label className="continue">
-                      <button type="submit" className="btn btn-default btn-success btn-lg">Submit</button>
+                      <button onClick={e => this.handleClick(e)} type="submit" className="btn btn-default btn-success btn-lg">Submit</button>
                     </label>
                   </div>
                 </div>
@@ -176,7 +175,7 @@ export default class Signup extends Component {
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
                     <label htmlFor='step2' id="continue-step2" className="continue">
                       <div
-                        onClick={e => this.handleClick(e)}
+                        //onClick={e => this.handleClick(e)}
                         className="btn btn-default btn-success btn-lg">Continue</div>
                     </label>
                   </div>
@@ -244,7 +243,7 @@ export default class Signup extends Component {
                     </label>
                     <label className="continue">
                       <button
-                        // onClick={e => this.handleClick(e)}
+                        onClick={e => this.handleClick(e)}
                         type="submit" className="btn btn-default btn-success btn-lg">Submit</button>
                     </label>
                   </div>

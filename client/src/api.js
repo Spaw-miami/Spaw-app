@@ -34,11 +34,13 @@ export default {
 
   // This method signs up and logs in the user
   signup(userInfo) {
+    console.log("UI_+_+_+_+_+_+_+_+_+_", userInfo)
     return service
-      .post('/signup', userInfo)
+      .post('/create/user', userInfo)
       .then(res => {
         // If we have localStorage.getItem('user') saved, the application will consider we are loggedin
         localStorage.setItem('user', JSON.stringify(res.data))
+        console.log(" resdata }{}{}{}{}{}{}{}{}{}{}{", res.data)
         return res.data
       })
       .catch(errHandler)
