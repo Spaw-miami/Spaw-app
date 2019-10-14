@@ -97,41 +97,38 @@ export default class Dashboard extends Component {
 						type="text"
 						name="username"
 						placeholder="Groomer's Username"
-						value={this.state.groomer.username}
+						onChange={this.handleInputChange}
 					/>
 					<input
 						type="text"
 						name="firstname"
 						placeholder="Groomer's First Name"
-						value={this.state.groomer.firstName}
+						onChange={this.handleInputChange}
 					/>
 					<input
 						type="text"
 						name="lastname"
 						placeholder="Groomer's Last Name"
-						value={this.state.groomer.lastName}
+						onChange={this.handleInputChange}
 					/>
 					<input
 						type="text"
 						name="address"
 						placeholder="Groomer's Address"
-						value={this.state.groomer.address}
+						onChange={this.handleInputChange}
 					/>
 					<input
 						type="text"
 						name="phone"
 						placeholder="Groomer's Phone Number"
-						value={this.state.groomer.phoneNumber}
+						onChange={this.handleInputChange}
 					/>
 					{/* <input type="text" name="phone" placeholder="Groomer's radius" value={this.state.groomer.} /> */}
 					<br />
 					<label>From</label>
-					<select id="start-hours">
-						<option value={this.state.groomer.startingTime} selected disabled>
-							{this.state.groomer.startingTime}
-						</option>
-						<option>9:00 am</option>
+					<select name="startTime" id="start-hours" onChange={this.handleInputChange}>
 						<option>8:00 am</option>
+						<option>9:00 am</option>
 						<option>10:00 am</option>
 						<option>11:00 am</option>
 						<option>12:00 pm</option>
@@ -143,10 +140,7 @@ export default class Dashboard extends Component {
 						<option>6:00 pm</option>
 					</select>
 					<label>To</label>
-					<select id="end-hours">
-						<option value={this.state.groomer.endTime} selected disabled>
-							{this.state.groomer.endTime}
-						</option>
+					<select name="endTime" id="end-hours" onChange={this.handleInputChange}>
 						<option>8:00 am</option>
 						<option>9:00 am</option>
 						<option>10:00 am</option>
