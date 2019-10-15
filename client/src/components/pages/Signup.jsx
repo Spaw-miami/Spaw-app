@@ -25,7 +25,7 @@ export default class Signup extends Component {
 
 
 
-  saveNewThing (newThing) {
+  saveNewThing(newThing) {
     // console.log('new thing is: ', newThing)
     return axios.post('http://localhost:5000/create/user', newThing)
       .then(res => res.data)
@@ -265,11 +265,7 @@ export default class Signup extends Component {
 
               <div id="part4" className="form-group">
                 <div className="panel panel-primary">
-<<<<<<< HEAD
-                  <div className="panel-heading">
-=======
                   {/* <div className="panel-heading">
->>>>>>> f8824201c672af4d75d290ea77d263f3e6d1eb20
                     <h3 className="panel-title">Profile Picture</h3>
                   </div>
                   <input
@@ -278,11 +274,7 @@ export default class Signup extends Component {
                     name="profilePic"
                     className="form-control"
                     placeholder="Profile Picture"
-<<<<<<< HEAD
-                  />
-=======
                   /> */}
->>>>>>> f8824201c672af4d75d290ea77d263f3e6d1eb20
                   {/* IMAGE UPLOAD TO BE ADDED */}
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
                     <label htmlFor="step4" id="back-step4" className="back">
@@ -525,11 +517,8 @@ export default class Signup extends Component {
   };
 
   render() {
-<<<<<<< HEAD
     console.log("_+_+_+_+_+_+_+_+", this.state);
-=======
     console.log(this.state, this.handleClick);
->>>>>>> f8824201c672af4d75d290ea77d263f3e6d1eb20
     return (
       <div className="Signup">
         <div className="container-contact100">

@@ -187,11 +187,14 @@ export default class Home extends Component {
   updateUser = event => {
     event.preventDefault()
     let data = {
+      "userID": "5d9f9c2e8afcf44f5676895b",
       "username": `${this.state.username}`,
       "firstName": `${this.state.firstName}`,
       "lastName": `${this.state.lastName}`,
-      "phone": `${this.state.phone}`,
+      "phoneNumber": `${this.state.phoneNumber}`,
       "address": `${this.state.address}`,
+      "profilePic": `${this.state.profilePic}`,
+      "email": `${this.state.email}`,
 
     }
 
