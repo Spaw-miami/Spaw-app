@@ -350,6 +350,7 @@ h3 {
 	.row {
 		margin-left: 0;
 		margin-right: 0;
+		background: white;
 	}
 	div.col-md-6 {
 		padding: 0px;
@@ -455,6 +456,9 @@ h3 {
     width: 95%;
 }
 .groomer-db {
+	.next-apt, .mod-box, .settings-box, .map{
+		background: white
+	}
 	.container {
 		padding-right: 0;
 		padding-left: 0;
@@ -465,6 +469,7 @@ h3 {
 	.col-md-6 {
 		width: 50%;
 		height: 80%;
+
 	}
 	.row {
 		height: 600px;

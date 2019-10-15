@@ -7,14 +7,24 @@ export default class Home extends Component {
 	state = {};
 
 	componentWillMount() {
-		axios.get(`http://localhost:5000/read/groomer/${'5da478786b0d84a504022fb2'}`).then((groomer) => {
+		axios.get(`http://localhost:5000/read/groomer/5da478786b0d84a504022fb2`).then((groomer) => {
 			this.setState({
-				groomer: groomer.data
+				groomer: groomer.data,
+				username: this.state.username,
+				firstName: this.state.firstName,
+				lastName: this.state.lastName,
+				address: this.state.address,
+				message: null,
+				switch: true,
+				phone: this.state.phone,
+				startTime: this.state.startTime,
+				endTime: this.state.endTime
 			});
 		});
 	}
 
 	render() {
+		console.log("-=-=-=-=-=-=-", this.state.groomer)
 		if (!this.state.groomer) {
 			return <div>Loading</div>;
 		}
@@ -43,7 +53,7 @@ export default class Home extends Component {
 						<p>{this.state.groomer.about}</p>
 					</div>
 				</div>
-			
+
 				<div className="containerr">
 					<div className="avatar-flip">
 						<img alt="" src={this.state.groomer.profilePic} height="150" width="150" />
@@ -78,12 +88,12 @@ export default class Home extends Component {
 					</div>
 					<br />
 					<div className="containerr-calendar">
-					<div>
-						<h2>WEEK SCHEDULE</h2>
+						<div>
+							<h2>WEEK SCHEDULE</h2>
+						</div>
+						<br />
+						<WeekCalendar />
 					</div>
-					<br />
-					<WeekCalendar />
-				</div>
 					<div className="modal fade" id="myModal" role="dialog">
 						<div className="modal-dialog">
 							<div className="modal-content">
