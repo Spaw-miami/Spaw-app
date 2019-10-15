@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import api from '../../api'
 import Signup from './Signup'
 import { Route, Link, NavLink, Switch } from 'react-router-dom';
+import Footer from '../Footer'
 
 export default class Landing extends Component {
   constructor(props) {
@@ -66,8 +67,8 @@ export default class Landing extends Component {
         <div className="para2">
           3. APPOINMENTS
             <p className="p3">FINDING THE RIGHT DOG GROOMER IS ONLY HALF THE BATTLE, WITH SPAWS YOU WILL BE ABLE TO BOOK AN APPOINMENT IN THE COMFORT OF YOUR HOME. DOG GROOMER WILL BE PROVINDING THEIR SERVICES IN THE COMFORT OF YOUR HOME.  </p>
-        </div>
-        <p className="para"></p>
+        </div><p className="par"></p>
+        <Footer></Footer>
       
 </div>
     )

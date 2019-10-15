@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import api from '../../api';
 import axios from 'axios';
 import GoogleMap from '../GoogleMap'
+import Footer from '../Footer'
 
 export default class Dashboard extends Component {
 	constructor(props) {
@@ -195,8 +196,11 @@ export default class Dashboard extends Component {
 									)}
 							</div>
 						</div>
+						
 					</div>
+					
 				</div>
+				<Footer></Footer>
 			</div>
 		);
 	}
