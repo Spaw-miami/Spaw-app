@@ -18,13 +18,13 @@ export default class App extends Component {
 		};
 	}
 
-	componentDidMount() {
-		axios.get(`http://localhost:5000/read/groomer/${'5d9f9cdc581f3d4fa89445d9'}`).then((groomer) => {
-			this.setState({
-				groomer: groomer.data
-			});
-		});
-	}
+	// componentDidMount() {
+	// 	axios.get(`http://localhost:5000/read/groomer/${'5d9f9cdc581f3d4fa89445d9'}`).then((groomer) => {
+	// 		this.setState({
+	// 			groomer: groomer.data
+	// 		});
+	// 	});
+	// }
 
 	handleLogoutClick(e) {
 		api.logout();

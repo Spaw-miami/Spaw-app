@@ -11,7 +11,7 @@ const { isLoggedIn } = require('../middlewares');
 // http://localhost:5000/read/user/5da48a6c9b06d7a953d176ab
 
 // Route to add a country
-router.get('/user/:id', isLoggedIn, (req, res, next) => {
+router.get('/user/:id', (req, res, next) => {
 	// console.log(req.user);
 	let userID = req.params.id;
 	User.findById(userID)
@@ -25,7 +25,7 @@ router.get('/user/:id', isLoggedIn, (req, res, next) => {
 		});
 });
 
-router.get('/groomer/:id', isLoggedIn, (req, res, next) => {
+router.get('/groomer/:id', (req, res, next) => {
 	let groomerID = req.params.id;
 	Groomer.findById(groomerID)
 		.populate({ path: 'reviews', populate: { path: 'author' } })
@@ -39,10 +39,12 @@ router.get('/groomer/:id', isLoggedIn, (req, res, next) => {
 		.populate('pricing')
 		.then((groomer) => {
 			res.json(groomer);
-		});
+		})
+		.catch((err) => console.error(err));
 });
 
-router.get('/current', isLoggedIn, (req, res, next) => {
+router.get('/current', (req, res, next) => {
+	console.log(req.user, '=-=-=-=-=-=');
 	res.json(req.user);
 });
 
