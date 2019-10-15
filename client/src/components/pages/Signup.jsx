@@ -170,7 +170,7 @@ export default class Signup extends Component {
                     className="form-control"
                     placeholder="Address"
                   />
-                  <Images></Images>
+                  <Images name="profilePic"></Images>
                   <div
                     className="btn-group btn-group-lg btn-group-justified"
                     role="group"
@@ -234,7 +234,7 @@ export default class Signup extends Component {
 
               <div id="part4" className="form-group">
                 <div className="panel panel-primary">
-                  <div className="panel-heading">
+                  {/* <div className="panel-heading">
                     <h3 className="panel-title">Profile Picture</h3>
                   </div>
                   <input
@@ -243,7 +243,7 @@ export default class Signup extends Component {
                     name="profilePic"
                     className="form-control"
                     placeholder="Profile Picture"
-                  />
+                  /> */}
                   {/* IMAGE UPLOAD TO BE ADDED */}
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
                     <label htmlFor="step4" id="back-step4" className="back">

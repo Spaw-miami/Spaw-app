@@ -179,7 +179,7 @@ export default class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <div className="row">
+        <div className="">
           <div className="col-md-3 ">
             {/* USER PROFILE CARD */}
 
@@ -217,7 +217,7 @@ export default class Home extends Component {
             {/* GEO LIST + EVENTS */}
 
             <div>
-              <div className="row">
+              <div className="roww">
                 <h2>Groomers near you!</h2>
                 <div className="col">
                   <ul>
@@ -243,7 +243,7 @@ export default class Home extends Component {
             </div>
             {/* <div className="container"> */}
             <div className="hold-down">
-              <div className="row ">
+              <div className="roww ">
                 <h2>Events in Miami</h2>
                 <div className="col">
                   <ul>

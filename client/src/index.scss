@@ -23,7 +23,7 @@ body {
 }
 .a {
 	font-size: 12px;
-	color: #fff;
+	color: #518edd;
 }
 .bye {
 	background: rgb(81, 142, 221);
@@ -177,8 +177,8 @@ body {
 	float: left;
 }
 h3 {
-	background-color: rgba(36, 36, 39, 0.9);
-	color: white;
+	background-color:lemonchiffon;
+	color: black;
 	margin: 0 auto;
 }
 .landing-image {
@@ -204,25 +204,25 @@ h3 {
 	box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 	margin-left: 2%;
 	margin-right: 5%;
-	margin-top: -12%;
+	margin-top: -8%;
 	background-image: url('http://cypressvets.com/wp-content/uploads/2015/03/dog-being-bathed.jpg');
 	opacity: 0.8;
-	min-height: 100vh;
+	min-height: 90vh;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	border: 16px solid white;
-	border-top: 100px solid white;
+	border: 16px solid lemonchiffon;
+	border-top: 100px solid lemonchiffon;
 }
 .parallax2 {
 	box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 	margin-right: 2%;
 	margin-left: 5%;
-	margin-top: -4%;
+	margin-top: -14%;
 	background-image: url("http://cypressvets.com/wp-content/uploads/2015/03/dog-being-bathed.jpg");
-	opacity: 0.8;
-	min-height: 100vh;
+	// opacity: 0.8;
+	min-height: 90vh;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -231,58 +231,62 @@ h3 {
 	border-top: 100px solid white;
 }
 .parallax3 {
+  margin-top:-12%;
 	box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 	margin-left: 2%;
 	margin-right: 5%;
 	background-image: url("https://www.ryslip.com/wp-content/uploads/2019/02/dog-groomer-grooming-a-cavalier-king-charles-spaniel-dog-969077342-5c113de946e0fb0001eb892e-1500x1000.jpg");
 	opacity: 0.8;
-	min-height: 100vh;
+	min-height: 90vh;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	border: 16px solid white;
-	border-top: 100px solid white;
+	border: 16px solid lemonchiffon;
+	border-top: 100px solid lemonchiffon;
 }
 .para {
-	font-weight: bold;
-	padding-right: 4%;
-	padding-top: 13%;
-	height: 100vh;
-	background: rgb(81, 142, 221);
-	color: white;
-	font-size: 36px;
+	padding-bottom: 48%;
+    font-weight: bold;
+    padding-right: 4%;
+    padding-top: 9%;
+    height: 100vh;
+    background: white;
+    color: #518edd;
+    font-size: 36px;
 }
+
 .para1 {
-	font-weight: bold;
-	padding-left: 3%;
-	padding-top: 33%;
-	height: 100vh;
-	background: rgb(81, 142, 221);
-	color: white;
-	font-size: 36px;
+	padding-bottom: 40%;
+    font-weight: bold;
+    padding-left: 3%;
+    padding-top: 17%;
+    height: 100vh;
+    background: #518edd;
+    color: lemonchiffon;
+    font-size: 36px;
 }
 .para2 {
 	font-weight: bold;
-	padding-top: 50%;
-	height: 100vh;
-	background: rgb(81, 142, 221);
-	color: white;
-	font-size: 36px;
+    padding-top: 18%;
+    height: 100vh;
+    background: white;
+    color: #518edd;
+    font-size: 36px;
 }
 .p1 {
 	font-size: 21px;
-	line-height: 40px;
-	margin-bottom: 20px;
-	color: white;
-	font-weight: 100;
-	padding-left: 73%;
+    line-height: 40px;
+    margin-bottom: 20px;
+    color: #518edd;
+    font-weight: 100;
+    padding-left: 73%;
 }
 .p2 {
 	font-size: 21px;
 	line-height: 40px;
 	margin-bottom: 20px;
-	color: white;
+	color: lemonchiffon;
 	font-weight: 100;
 	padding-left: 0%;
 }
@@ -290,7 +294,7 @@ h3 {
 	font-size: 21px;
 	line-height: 40px;
 	margin-bottom: 20px;
-	color: white;
+	color: #518edd;
 	font-weight: 100;
 	padding-left: 70%;
 }
@@ -331,6 +335,8 @@ h3 {
 	}
 }
 //////////////////////////////////////COLE CSS////////////////////////////////////////////////////////////////
+
+
 .Home {
 	p {
 		font-size: 1.2em;
@@ -350,7 +356,7 @@ h3 {
 		display: flex;
 		flex-direction: column;
 		margin: 8% 0% 0% 0%;
-	}
+  }
 	div.row {
 		border-radius: 10px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
@@ -399,14 +405,17 @@ h3 {
 		opacity: 0;
 	}
 	.card {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		height: 60%;
-		width: 60%;
-		border-radius: 10px;
-		box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
+    text-align: center;
+    background: white;
+    position: absolute;
+    top: 49%;
+    left: 60%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 69%;
+    width: 107%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
 	}
 	li {
 		list-style-type: none;
@@ -417,7 +426,10 @@ h3 {
 		margin-left: 0;
 	}
 	.settings-box {
-		border-radius: 10px;
+    padding-right: 10%;
+    padding-left: 8%;
+    background: white;
+		border-radius: 6px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
 		display: flex;
 		margin: 32% 0% 0% 15%;
@@ -434,7 +446,14 @@ h3 {
 		background: #c7c5c5;
 	}
 }
-
+.roww{
+  background: white;
+    padding-top: 1%;
+    padding-left: 2%;
+    border-radius: 5px;
+    margin-left: 10%;
+    width: 95%;
+}
 .groomer-db {
 	.container {
 		padding-right: 0;
@@ -597,19 +616,19 @@ h3 {
 	background-color: rgb(255, 255, 255);
 	padding: 0 20px 20px;
 	border-radius: 6px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+	box-shadow: 0 2px 5px rgba(163, 163, 163, 0.85);
 	text-align: center;
 }
 .containerr-two {
 	float: right;
-	margin-top: 10px;
+	margin-top: 0%;
 	margin-right: 3%;
 	height: 60%;
 	width: 60%;
 	background-color: rgb(255, 255, 255);
 	padding: 0 20px 20px;
 	border-radius: 6px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+	box-shadow: 0 2px 5px rgba(0, 60, 255, 0.075);
 	text-align: center;
 }
 .containerr-calendar{
@@ -817,7 +836,7 @@ thead th {
 }
 header {
   background: linear-gradient(to right, #dae2f8, #d6a4a4);
-  background:rgb(81, 142, 221);
+  background:lemonchiffon;
 	color: rgba(0, 0, 0, 0.7);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	position: relative;
@@ -1045,7 +1064,8 @@ tr td:nth-child(3),
 			min-height: 150px;
 		}
 		.panel {
-			background: rgba(0, 0, 0, .2);
+      background: rgba(0, 0, 0, .2);
+      font-size:40px;
 			.panel-heading {
 				margin-bottom: 20px;
 			}
@@ -1062,11 +1082,11 @@ tr td:nth-child(3),
 		}
 	}
 	div.pet-owner {
-		background: linear-gradient(
-			to right,
-			#dae2f8,
-			#d6a4a4
-		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		// background: linear-gradient(
+		// 	to right,
+		// 	#dae2f8,
+		// 	#d6a4a4
+		// ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 		min-height: 100vh;
 		background-attachment: fixed;
 		background-position: center;
@@ -1074,16 +1094,13 @@ tr td:nth-child(3),
 		background-size: cover;
 	}
 	.btn {
-		background: linear-gradient(
-			to right,
-			#dae2f8,
-			#d6a4a4
-		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		background: white ;/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 		background-attachment: fixed;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		border: none;
+    border: none;
+    color:blue;
 	}
 	.panel-primary {
 		border-color: none;
