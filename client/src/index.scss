@@ -205,45 +205,57 @@ h3 {
 	margin-left: 2%;
 	margin-right: 5%;
 	margin-top: -8%;
-	background-image: url('http://cypressvets.com/wp-content/uploads/2015/03/dog-being-bathed.jpg');
-	opacity: 0.8;
+	background-image: url('https://photos.demandstudios.com/getty/article/187/161/86522010.jpg');
+	// opacity: 0.8;
 	min-height: 90vh;
 	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
+	background-position: 800% 75%;
+  background-repeat: no-repeat;
+  
 	background-size: cover;
-	border: 16px solid lemonchiffon;
-	border-top: 100px solid lemonchiffon;
+	border: 16px solid #518edd;;
+	border-top: 100px solid #518edd;;
 }
 .parallax2 {
 	box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 	margin-right: 2%;
 	margin-left: 5%;
 	margin-top: -14%;
-	background-image: url("http://cypressvets.com/wp-content/uploads/2015/03/dog-being-bathed.jpg");
+	background-image: url("https://www.galachoveterinarios.com/wp-content/uploads/2016/03/Peluqueria-canina-felina.jpg");
 	// opacity: 0.8;
 	min-height: 90vh;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	border: 16px solid white;
-	border-top: 100px solid white;
+	border: 16px solid snow;
+	border-top: 100px solid snow;
 }
 .parallax3 {
-  margin-top:-12%;
+  margin-top:-8%;
 	box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 	margin-left: 2%;
 	margin-right: 5%;
-	background-image: url("https://www.ryslip.com/wp-content/uploads/2019/02/dog-groomer-grooming-a-cavalier-king-charles-spaniel-dog-969077342-5c113de946e0fb0001eb892e-1500x1000.jpg");
-	opacity: 0.8;
+	background-image: url("https://www.petplan.com.au/blog/wp-content/uploads/2019/07/Dog-Grooming.jpg");
+	// opacity: 0.8;
 	min-height: 90vh;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
-	border: 16px solid lemonchiffon;
-	border-top: 100px solid lemonchiffon;
+	background-size: 96%;
+	border: 16px solid #518edd;
+	border-top: 100px solid #518edd;
+}
+.par {
+  margin-bottom:0%;
+	padding-bottom: 8%;
+    font-weight: bold;
+    padding-right: 4%;
+  
+ 
+    background: snow;
+    color: #518edd;
+    font-size: 36px;
 }
 .para {
 	padding-bottom: 48%;
@@ -251,26 +263,27 @@ h3 {
     padding-right: 4%;
     padding-top: 9%;
     height: 100vh;
-    background: white;
+    background: snow;
     color: #518edd;
     font-size: 36px;
 }
 
 .para1 {
+  margin-bottom:5%;
 	padding-bottom: 40%;
     font-weight: bold;
     padding-left: 3%;
     padding-top: 17%;
     height: 100vh;
     background: #518edd;
-    color: lemonchiffon;
+    color: snow;
     font-size: 36px;
 }
 .para2 {
 	font-weight: bold;
     padding-top: 18%;
     height: 100vh;
-    background: white;
+    background: snow;
     color: #518edd;
     font-size: 36px;
 }
@@ -286,7 +299,7 @@ h3 {
 	font-size: 21px;
 	line-height: 40px;
 	margin-bottom: 20px;
-	color: lemonchiffon;
+	color: snow;
 	font-weight: 100;
 	padding-left: 0%;
 }
@@ -298,11 +311,11 @@ h3 {
 	font-weight: 100;
 	padding-left: 70%;
 }
-@media only screen and (max-device-width: 1366px) {
-	.parallax {
-		background-attachment: scroll;
-	}
-}
+// @media only screen and (max-device-width: 1366px) {
+// 	.parallax {
+// 		background-attachment: scroll;
+// 	}
+// }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .info {
 	padding: 10px 20px;
@@ -467,19 +480,29 @@ h3 {
 		margin: 0% 0% 0% 6.5%;
 	}
 	.col-md-6 {
+    margin-bottom:14%;
 		width: 50%;
+<<<<<<< HEAD
 		height: 80%;
 
+=======
+		height: 89%;
+>>>>>>> f8824201c672af4d75d290ea77d263f3e6d1eb20
 	}
 	.row {
 		height: 600px;
 	}
 	.next-apt {
+    padding-top:1%;
+    padding-bottom:1%;
+    padding-left:40%;
+    background:snow;
 		border-radius: 10px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
 		margin: 22% 0% 0% 0%;
 	}
 	.all-apt {
+    background: snow;
 		height: 50%;
 		display: flex;
 		justify-content: center;
@@ -493,7 +516,7 @@ h3 {
 		margin: 2% 0% 0% 0%;
 	}
 	.td-apt-sch {
-		position: fixed;
+		margin-left:13%;
 		display: flex;
 		justify-content: center;
 	}
@@ -504,7 +527,7 @@ h3 {
 		margin: -4% 0% 0% 18%;
 	}
 	.list {
-		margin: 10% 0% 0% 0%;
+		margin: 10% 0% 0% -39%;
 		overflow-y: scroll;
 		height: 150%;
 	}
@@ -601,6 +624,7 @@ h3 {
 		justify-content: center;
 	}
 	.mod-box {
+    background:snow;
 		margin: 15% 0% 0% 0%;
 		border-radius: 10px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
@@ -713,43 +737,43 @@ p {
 #book {
 	float: right;
 }
-@media screen and (max-width: 500px) {
-	body {
-		display: flex;
-		align-items: center;
-		background-color: rgb(255, 255, 255);
-		color: white;
-	}
-	.containerr {
-		width: 320px;
-		margin: 120px auto 120px;
-		background-color: rgb(255, 255, 255);
-		padding: 0 20px 20px;
-		border-radius: 6px;
-		-webkit-border-radius: 6px;
-		-moz-border-radius: 6px;
-		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
-		-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
-		-moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
-		text-align: center;
-	}
-	.containerr-two {
-		float: right;
-		margin-top: 10px;
-		margin-right: 3%;
-		height: 60%;
-		width: 100%;
-		background-color: rgb(255, 255, 255);
-		padding: 0 20px 20px;
-		border-radius: 6px;
-		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
-		text-align: center;
-	}
-	// \--------------------------------------
-	#book {
-		display: flex;
-	}
-}
+// @media screen and (max-width: 500px) {
+// 	body {
+// 		display: flex;
+// 		align-items: center;
+// 		background-color: rgb(255, 255, 255);
+// 		color: white;
+// 	}
+// 	.containerr {
+// 		width: 320px;
+// 		margin: 120px auto 120px;
+// 		background-color: rgb(255, 255, 255);
+// 		padding: 0 20px 20px;
+// 		border-radius: 6px;
+// 		-webkit-border-radius: 6px;
+// 		-moz-border-radius: 6px;
+// 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+// 		-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+// 		-moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+// 		text-align: center;
+// 	}
+// 	.containerr-two {
+// 		float: right;
+// 		margin-top: 10px;
+// 		margin-right: 3%;
+// 		height: 60%;
+// 		width: 100%;
+// 		background-color: rgb(255, 255, 255);
+// 		padding: 0 20px 20px;
+// 		border-radius: 6px;
+// 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+// 		text-align: center;
+// 	}
+// 	// \--------------------------------------
+// 	#book {
+// 		display: flex;
+// 	}
+// }
 
 ////////////////////////////RATING////////////////////////////////
 .star-ratings-css {
@@ -1269,4 +1293,219 @@ tr td:nth-child(3),
 	top: 0px;
 	// box-shadow: 0px 0px 0px rgb(255, 255, 255);
 	background: #d3e8f0;
+}
+////////////////////////////////////////FOOOTER////////////////////////////
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #333;
+  height: 50vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+	background: linen;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+.footer-distributed h3::before{
+  content:url('./Spaws_black.png');
+  width: 10%;
+}
+
+
+.footer-distributed h3{
+  background: none;
+	color:black;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #518edd;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  #518edd;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #518edd;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #518edd;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: black;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  black;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: black;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #518edd;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+#footer{
+  margin-top: 57%;
+    background: linen;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
 }

@@ -7,11 +7,14 @@ const Review = require('../models/Review');
 const Week = require('../models/Week');
 const Price = require('../models/Price');
 const Appointment = require('../models/Appointment');
+const uploader = require('../configs/Cloudinary');
+
 
 const bcrypt = require('bcrypt');
 const bcryptSalt = 10;
 // Route to add a country
-router.post('/user', (req, res, next) => {
+router.post('/user', uploader.single("profilePic"), (req, res, next) => {
+	const imgPath = req.files.url;
 	const { username, password, firstName, lastName, profilePic, email, phoneNumber, address } = req.body;
 	if (!username || !password || !firstName || !lastName || !profilePic || !email || !phoneNumber || !address) {
 		res.status(400).json({ message: '{Please fill all fields}' });
@@ -30,7 +33,7 @@ router.post('/user', (req, res, next) => {
 				password: hashPass,
 				firstName,
 				lastName,
-				profilePic,
+				profilePic:imgPath,
 				email,
 				phoneNumber,
 				address

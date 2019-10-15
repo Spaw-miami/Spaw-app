@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import api from '../../api'
 import axios from 'axios';
+import Footer from '../Footer'
 
 export default class Home extends Component {
   constructor(props) {
@@ -298,105 +299,111 @@ export default class Home extends Component {
     // console.log("_+_+_+_+_+_+_+_+", this.state.dogs[0]);
 
     return (
-      <div className="Home">
-        <div className="">
-          <div className="col-md-3 ">
-            {/* USER PROFILE CARD */}
+      <div>
+        <div className="Home">
+          <div className="">
+            <div className="col-md-3 ">
+              {/* USER PROFILE CARD */}
 
-            <div className="card">
-              <div className="avatar-flip">
-                <img
-                  src="http://media.idownloadblog.com/wp-content/uploads/2012/04/Phil-Schiller-headshot-e1362692403868.jpg"
-                  alt=""
-                  height="150"
-                  width="150"
-                />
-                <img
-                  src="https://s3-media1.fl.yelpcdn.com/bphoto/8brydl3V-sxA3i58-xx9tw/o.jpg"
-                  alt=""
-                  height="150"
-                  width="150"
-                />
-              </div>
-              <div className="card-body">
-                <p className="card-title">{this.state.username}</p>
+              <div className="card">
+                <div className="avatar-flip">
+                  <img
+                    src="http://media.idownloadblog.com/wp-content/uploads/2012/04/Phil-Schiller-headshot-e1362692403868.jpg"
+                    alt=""
+                    height="150"
+                    width="150"
+                  />
+                  <img
+                    src="https://s3-media1.fl.yelpcdn.com/bphoto/8brydl3V-sxA3i58-xx9tw/o.jpg"
+                    alt=""
+                    height="150"
+                    width="150"
+                  />
+                </div>
+                <div className="card-body">
+                  <p className="card-title">{this.state.username}</p>
 
-                <h5 className="card-text">{this.state.address}</h5>
+                  <h5 className="card-text">{this.state.address}</h5>
 
-              </div>
-              <div className="card-body">
-                {this.state.petSettings || this.state.userSettings ? (
-                  this.switchSettings()
-                ) : (
-                    this.switchSettings2()
-                  )}
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6">
-            {/* GEO LIST + EVENTS */}
-
-            <div>
-              <div className="roww">
-                <h2>Groomers near you!</h2>
-                <div className="col">
-                  <ul>
-                    <li>
-                      Username , Distance , Rate
-											<hr />
-                    </li>
-                    <li>
-                      Christian , 10mi , 40$/hr
-											<hr />
-                    </li>
-                    <li>
-                      Jose , 7mi , 50$/hr
-											<hr />
-                    </li>
-                    <li>
-                      Santa , 2000mi , 1,000$/hr
-											<hr />
-                    </li>
-                  </ul>
+                </div>
+                <div className="card-body">
+                  {this.state.petSettings || this.state.userSettings ? (
+                    this.switchSettings()
+                  ) : (
+                      this.switchSettings2()
+                    )}
                 </div>
               </div>
             </div>
-            {/* <div className="container"> */}
-            <div className="hold-down">
-              <div className="roww ">
-                <h2>Events in Miami</h2>
-                <div className="col">
-                  <ul>
-                    <li>
-                      Username , Content , Link
-											<hr />
-                    </li>
-                    <li>
-                      Christian , Dog park party at 7pm at hyde park , www.aspca.com
-											<hr />
-                    </li>
-                    <li>
-                      Jose , Free grooming at petsmart monday the 17th all day , www.petsmart.com
-											<hr />
-                    </li>
-                    <li>
-                      Santa , Dog day care special rate next week 50% off , www.doggydaycare.com
-											<hr />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="settings-box">
+            <div className="col-md-6">
+              {/* GEO LIST + EVENTS */}
+
               <div>
-                <h1>Settings</h1>
+                <div className="roww">
+                  <h2>Groomers near you!</h2>
+                  <div className="col">
+                    <ul>
+                      <li>
+                        Username , Distance , Rate
+											<hr />
+                      </li>
+                      <li>
+                        Christian , 10mi , 40$/hr
+											<hr />
+                      </li>
+                      <li>
+                        Jose , 7mi , 50$/hr
+											<hr />
+                      </li>
+                      <li>
+                        Santa , 2000mi , 1,000$/hr
+											<hr />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              {this.state.petSettings || this.state.userSettings ? this.petInfo() : this.userInfo()}
+              {/* <div className="container"> */}
+              <div className="hold-down">
+                <div className="roww ">
+                  <h2>Events in Miami</h2>
+                  <div className="col">
+                    <ul>
+                      <li>
+                        Username , Content , Link
+											<hr />
+                      </li>
+                      <li>
+                        Christian , Dog park party at 7pm at hyde park , www.aspca.com
+											<hr />
+                      </li>
+                      <li>
+                        Jose , Free grooming at petsmart monday the 17th all day , www.petsmart.com
+											<hr />
+                      </li>
+                      <li>
+                        Santa , Dog day care special rate next week 50% off , www.doggydaycare.com
+											<hr />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div className="col-md-3">
+              <div className="settings-box">
+                <div>
+                  <h1>Settings</h1>
+                </div>
+                {this.state.petSettings || this.state.userSettings ? this.petInfo() : this.userInfo()}
+              </div>
+
+            </div>
+
           </div>
+          <Footer id="footer"></Footer>
         </div>
+
       </div>
     );
 

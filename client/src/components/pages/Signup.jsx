@@ -23,6 +23,16 @@ export default class Signup extends Component {
     groomer: false,
   };
 
+
+
+  saveNewThing (newThing) {
+    // console.log('new thing is: ', newThing)
+    return axios.post('http://localhost:5000/create/user', newThing)
+      .then(res => res.data)
+      .catch();
+  };
+
+
   handleInputChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
@@ -102,6 +112,27 @@ export default class Signup extends Component {
   signupOne = () => {
     return (
       <Fragment>
+        {/* <div>
+            <h2>New Thing</h2>
+            <form onSubmit={e => this.handleSubmit(e)}>
+                <label>Name</label>
+                <input 
+                    type="text" 
+                    name="name" 
+                    value={ this.state.name } 
+                    onChange={ e => this.handleChange(e)} />
+                <label>Description</label>
+                <textarea 
+                    type="text" 
+                    name="description" 
+                    value={ this.state.description } 
+                    onChange={ e => this.handleChange(e)} />
+                <input 
+                    type="file" 
+                    onChange={(e) => this.handleFileUpload(e)} /> 
+                <button type="submit">Save new thing</button>
+            </form>
+          </div> */}
         <div className="pet-owner">
           <h1 className="page-header">Sign Up Now!</h1>
           <button onClick={this.groomerOrUser}>Are you a Pet Groomer?</button>
@@ -234,7 +265,11 @@ export default class Signup extends Component {
 
               <div id="part4" className="form-group">
                 <div className="panel panel-primary">
+<<<<<<< HEAD
                   <div className="panel-heading">
+=======
+                  {/* <div className="panel-heading">
+>>>>>>> f8824201c672af4d75d290ea77d263f3e6d1eb20
                     <h3 className="panel-title">Profile Picture</h3>
                   </div>
                   <input
@@ -243,7 +278,11 @@ export default class Signup extends Component {
                     name="profilePic"
                     className="form-control"
                     placeholder="Profile Picture"
+<<<<<<< HEAD
                   />
+=======
+                  /> */}
+>>>>>>> f8824201c672af4d75d290ea77d263f3e6d1eb20
                   {/* IMAGE UPLOAD TO BE ADDED */}
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
                     <label htmlFor="step4" id="back-step4" className="back">
@@ -486,7 +525,11 @@ export default class Signup extends Component {
   };
 
   render() {
+<<<<<<< HEAD
     console.log("_+_+_+_+_+_+_+_+", this.state);
+=======
+    console.log(this.state, this.handleClick);
+>>>>>>> f8824201c672af4d75d290ea77d263f3e6d1eb20
     return (
       <div className="Signup">
         <div className="container-contact100">
