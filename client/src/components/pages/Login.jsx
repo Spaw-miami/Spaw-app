@@ -59,21 +59,23 @@ export default class Login extends Component {
         <div className="groomer-login">
           <button className="groomer-button" onClick={this.switching}>Are you a Owner?</button>
           <form onSubmit={this.handleClickGroomer}>
-            Groomer Username:{' '}
+            <br />
             <input
               type="text"
               value={this.state.username}
               name="username"
+              placeholder="Groomer Username"
               onChange={this.handleInputChange}
             />{' '}
             <br />
-            Groomer Password:{' '}
             <input
               type="password"
               value={this.state.password}
               name="password"
+              placeholder="Groomer Password"
               onChange={this.handleInputChange}
             />{' '}
+            <br />
             <button onClick={e => this.handleClickGroomer(e)}>Login</button>
           </form>
         </div>
@@ -90,6 +92,9 @@ export default class Login extends Component {
       })
       .then((user) => {
         console.log(user);
+        this.props.setUser(user.data)
+        this.props.history.push('/profile')
+
       })
       .catch((error) => {
         console.log(error);
@@ -105,6 +110,8 @@ export default class Login extends Component {
       })
       .then((user) => {
         console.log(user);
+        this.props.setUser(user.data)
+
       })
       .catch((error) => {
         console.log(error);

@@ -38,4 +38,10 @@ router.get('/groomer/:id', (req, res, next) => {
 		});
 });
 
+
+router.get('/getUser/something/please', (req, res, next) => {
+	console.log('GETTING USER?????????????????', req.user)
+	res.json({ user: req.user })
+})
+
 module.exports = router;
