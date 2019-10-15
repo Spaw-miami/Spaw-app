@@ -23,9 +23,18 @@ export default class Dashboard extends Component {
 	}
 
 	componentWillMount() {
-		axios.get(`http://localhost:5000/read/groomer/${'5d9f9cdc581f3d4fa89445d9'}`).then((groomer) => {
+		axios.get(`http://localhost:5000/read/groomer/5da4d019f4a8a00239151614`).then((groomer) => {
 			this.setState({
-				groomer: groomer.data
+				groomer: groomer.data,
+				username: this.state.username,
+				firstName: this.state.firstName,
+				lastName: this.state.lastName,
+				address: this.state.address,
+				message: null,
+				switch: true,
+				phone: this.state.phone,
+				startTime: this.state.startTime,
+				endTime: this.state.endTime
 			});
 		});
 	}
@@ -162,11 +171,11 @@ export default class Dashboard extends Component {
 			</div>
 		);
 	};
-
+	//REPLACE
 	render() {
-		// if (!this.state.groomer) {
-		// 	return <div>Loading</div>;
-		// }
+		if (!this.state.groomer) {
+			return <div>Loading</div>;
+		}
 		return (
 			<div className="groomer-db">
 				<div className="container">
@@ -184,9 +193,9 @@ export default class Dashboard extends Component {
 						</div>
 						<div className="col-md-6">
 							<div className="map">
-							<GoogleMap></GoogleMap>
+								<GoogleMap></GoogleMap>
 								<h2>Google Map</h2>
-								
+
 							</div>
 							<div className="settings-box">
 								{this.state.switch ? (
@@ -196,9 +205,9 @@ export default class Dashboard extends Component {
 									)}
 							</div>
 						</div>
-						
+
 					</div>
-					
+
 				</div>
 				<Footer></Footer>
 			</div>

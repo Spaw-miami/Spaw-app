@@ -2,29 +2,33 @@ import React, { Component } from 'react';
 import Calendar from '../Calendar';
 import WeekCalendar from '../WeekCalendar';
 import axios from 'axios';
-import Footer from '../Footer'
+import Footer from '../Footer';
 
 export default class Home extends Component {
 	state = {};
 
-	componentWillMount = () => {
-		// console.log('hello');
-		// axios.get('http://localhost:5000/read/current').then((current) => {
-		// 	console.log(current);
-		// }, { withCredentials: true });
-		// axios.get(`http://localhost:5000/read/groomer/${'5da478786b0d84a504022fb2'}`).then((groomer) => {
-		// 	console.log(groomer);
-		// 	this.setState({
-		// 		groomer: groomer.data
-		// 	});
-		// 	console.log('WE HIT IT');
-		// });
-	};
+	componentWillMount() {
+		axios.get(`http://localhost:5000/read/groomer/5da478786b0d84a504022fb2`).then((groomer) => {
+			this.setState({
+				groomer: groomer.data,
+				username: this.state.username,
+				firstName: this.state.firstName,
+				lastName: this.state.lastName,
+				address: this.state.address,
+				message: null,
+				switch: true,
+				phone: this.state.phone,
+				startTime: this.state.startTime,
+				endTime: this.state.endTime
+			});
+		});
+	}
 
 	render() {
-		// if (!this.state.groomer) {
-		// 	return <div>Loading</div>;
-		// }
+		console.log('-=-=-=-=-=-=-', this.state.groomer);
+		if (!this.state.groomer) {
+			return <div>Loading</div>;
+		}
 		return (
 			<div className="entire-content">
 				<div className="containerr-two">
@@ -138,7 +142,7 @@ export default class Home extends Component {
 						</div>
 					</div>
 				</div>
-				<Footer></Footer>
+				<Footer />
 			</div>
 		);
 	}

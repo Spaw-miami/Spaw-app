@@ -39,7 +39,6 @@ export default class Signup extends Component {
     });
   };
 
-
   handleClick = (e) => {
     e.preventDefault();
     console.log(this.state);
@@ -57,6 +56,7 @@ export default class Signup extends Component {
       profilePic: this.state.profilePic,
 
       phoneNumber: this.state.phone,
+
       address: this.state.address
     };
     axios

@@ -1,11 +1,11 @@
 body {
-  background:rgb(81, 142, 221);
+	background: rgb(81, 142, 221);
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
 }
-.fileContainer{
-  background-color: red;
+.fileContainer {
+	background-color: red;
 }
 
 .h1 {
@@ -177,7 +177,7 @@ body {
 	float: left;
 }
 h3 {
-	background-color:lemonchiffon;
+	background-color: lemonchiffon;
 	color: black;
 	margin: 0 auto;
 }
@@ -210,11 +210,11 @@ h3 {
 	min-height: 90vh;
 	background-attachment: fixed;
 	background-position: 800% 75%;
-  background-repeat: no-repeat;
-  
+	background-repeat: no-repeat;
+
 	background-size: cover;
-	border: 16px solid #518edd;;
-	border-top: 100px solid #518edd;;
+	border: 16px solid #518edd;
+	border-top: 100px solid #518edd;
 }
 .parallax2 {
 	box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
@@ -232,7 +232,7 @@ h3 {
 	border-top: 100px solid snow;
 }
 .parallax3 {
-  margin-top:-8%;
+	margin-top: -8%;
 	box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 	margin-left: 2%;
 	margin-right: 5%;
@@ -247,53 +247,52 @@ h3 {
 	border-top: 100px solid #518edd;
 }
 .par {
-  margin-bottom:0%;
+	margin-bottom: 0%;
 	padding-bottom: 8%;
-    font-weight: bold;
-    padding-right: 4%;
-  
- 
-    background: snow;
-    color: #518edd;
-    font-size: 36px;
+	font-weight: bold;
+	padding-right: 4%;
+
+	background: snow;
+	color: #518edd;
+	font-size: 36px;
 }
 .para {
 	padding-bottom: 48%;
-    font-weight: bold;
-    padding-right: 4%;
-    padding-top: 9%;
-    height: 100vh;
-    background: snow;
-    color: #518edd;
-    font-size: 36px;
+	font-weight: bold;
+	padding-right: 4%;
+	padding-top: 9%;
+	height: 100vh;
+	background: snow;
+	color: #518edd;
+	font-size: 36px;
 }
 
 .para1 {
-  margin-bottom:5%;
+	margin-bottom: 5%;
 	padding-bottom: 40%;
-    font-weight: bold;
-    padding-left: 3%;
-    padding-top: 17%;
-    height: 100vh;
-    background: #518edd;
-    color: snow;
-    font-size: 36px;
+	font-weight: bold;
+	padding-left: 3%;
+	padding-top: 17%;
+	height: 100vh;
+	background: #518edd;
+	color: snow;
+	font-size: 36px;
 }
 .para2 {
 	font-weight: bold;
-    padding-top: 18%;
-    height: 100vh;
-    background: snow;
-    color: #518edd;
-    font-size: 36px;
+	padding-top: 18%;
+	height: 100vh;
+	background: snow;
+	color: #518edd;
+	font-size: 36px;
 }
 .p1 {
 	font-size: 21px;
-    line-height: 40px;
-    margin-bottom: 20px;
-    color: #518edd;
-    font-weight: 100;
-    padding-left: 73%;
+	line-height: 40px;
+	margin-bottom: 20px;
+	color: #518edd;
+	font-weight: 100;
+	padding-left: 73%;
 }
 .p2 {
 	font-size: 21px;
@@ -349,7 +348,6 @@ h3 {
 }
 //////////////////////////////////////COLE CSS////////////////////////////////////////////////////////////////
 
-
 .Home {
 	p {
 		font-size: 1.2em;
@@ -363,13 +361,14 @@ h3 {
 	.row {
 		margin-left: 0;
 		margin-right: 0;
+		background: white;
 	}
 	div.col-md-6 {
 		padding: 0px;
 		display: flex;
 		flex-direction: column;
 		margin: 8% 0% 0% 0%;
-  }
+	}
 	div.row {
 		border-radius: 10px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
@@ -418,17 +417,17 @@ h3 {
 		opacity: 0;
 	}
 	.card {
-    text-align: center;
-    background: white;
-    position: absolute;
-    top: 49%;
-    left: 60%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    height: 69%;
-    width: 107%;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+		text-align: center;
+		background: white;
+		position: absolute;
+		top: 49%;
+		left: 60%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		height: 69%;
+		width: 107%;
+		border-radius: 10px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
 	}
 	li {
 		list-style-type: none;
@@ -439,9 +438,9 @@ h3 {
 		margin-left: 0;
 	}
 	.settings-box {
-    padding-right: 10%;
-    padding-left: 8%;
-    background: white;
+		padding-right: 10%;
+		padding-left: 8%;
+		background: white;
 		border-radius: 6px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
 		display: flex;
@@ -459,15 +458,21 @@ h3 {
 		background: #c7c5c5;
 	}
 }
-.roww{
-  background: white;
-    padding-top: 1%;
-    padding-left: 2%;
-    border-radius: 5px;
-    margin-left: 10%;
-    width: 95%;
+.roww {
+	background: white;
+	padding-top: 1%;
+	padding-left: 2%;
+	border-radius: 5px;
+	margin-left: 10%;
+	width: 95%;
 }
 .groomer-db {
+	.next-apt,
+	.mod-box,
+	.settings-box,
+	.map {
+		background: white;
+	}
 	.container {
 		padding-right: 0;
 		padding-left: 0;
@@ -476,7 +481,7 @@ h3 {
 		margin: 0% 0% 0% 6.5%;
 	}
 	.col-md-6 {
-    margin-bottom:14%;
+		margin-bottom: 14%;
 		width: 50%;
 		height: 89%;
 	}
@@ -484,16 +489,16 @@ h3 {
 		height: 600px;
 	}
 	.next-apt {
-    padding-top:1%;
-    padding-bottom:1%;
-    padding-left:40%;
-    background:snow;
+		padding-top: 1%;
+		padding-bottom: 1%;
+		padding-left: 40%;
+		background: snow;
 		border-radius: 10px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
 		margin: 22% 0% 0% 0%;
 	}
 	.all-apt {
-    background: snow;
+		background: snow;
 		height: 50%;
 		display: flex;
 		justify-content: center;
@@ -507,7 +512,7 @@ h3 {
 		margin: 2% 0% 0% 0%;
 	}
 	.td-apt-sch {
-		margin-left:13%;
+		margin-left: 13%;
 		display: flex;
 		justify-content: center;
 	}
@@ -615,7 +620,7 @@ h3 {
 		justify-content: center;
 	}
 	.mod-box {
-    background:snow;
+		background: snow;
 		margin: 15% 0% 0% 0%;
 		border-radius: 10px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
@@ -651,17 +656,17 @@ h3 {
 	box-shadow: 0 2px 5px rgba(0, 60, 255, 0.075);
 	text-align: center;
 }
-.containerr-calendar{
-  float: right;
-    margin-top: -25%;
-    margin-right: -240%;
-    height: 60%;
-    width: 220%;
-    background-color: white;
-    padding: 0 20px 20px;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
-    text-align: center;
+.containerr-calendar {
+	float: right;
+	margin-top: -25%;
+	margin-right: -240%;
+	height: 60%;
+	width: 220%;
+	background-color: white;
+	padding: 0 20px 20px;
+	border-radius: 6px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+	text-align: center;
 }
 .containerr:hover .avatar-flip {
 	transform: rotateY(180deg);
@@ -855,8 +860,8 @@ thead th {
 	width: 100%;
 }
 header {
-  background: linear-gradient(to right, #dae2f8, #d6a4a4);
-  background:lemonchiffon;
+	background: linear-gradient(to right, #dae2f8, #d6a4a4);
+	background: lemonchiffon;
 	color: rgba(0, 0, 0, 0.7);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	position: relative;
@@ -1015,55 +1020,56 @@ tr td:nth-child(3),
 .icon:hover {
 	color: red;
 }
-.Login{
+.Login {
 	display: flex;
 	justify-items: center;
 	flex-direction: column;
 	background: linear-gradient(
-			to right,
-			#dae2f8,
-			#d6a4a4
-		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		min-height: 100vh;
-		background-attachment: fixed;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+		to right,
+		#dae2f8,
+		#d6a4a4
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	min-height: 100vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	// div{
 	// 	display: flex;
 	// 	justify-content: center;
 	// 	flex-direction: column;
-		
+
 	// }
-	form{
+	form {
 		display: flex;
 		flex-direction: column;
 		width: 25vw;
 		justify-content: center;
 	}
-	.owner-button{
+	.owner-button {
 		width: 25vw;
 	}
-	.groomer-button{
+	.groomer-button {
 		width: 25vw;
 	}
-	.owner-login{
+	.owner-login {
 		width: 25vw;
 	}
-	 .center{
-	margin: 15% 0% 0% 0%;
-	display: flex;
-	flex-direction: column;
-	margin-left: auto;
-	margin-right: auto;
+	.center {
+		margin: 15% 0% 0% 0%;
+		display: flex;
+		flex-direction: column;
+		margin-left: auto;
+		margin-right: auto;
 	}
-	.logo{
+	.logo {
 		margin-left: auto;
 		margin-right: auto;
 	}
 }
 
-.Signup, .Login{
+.Signup,
+.Login {
 	body {
 		text-align: center;
 		background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/upfeathers.png);
@@ -1085,15 +1091,15 @@ tr td:nth-child(3),
 			border: 1px solid white;
 			box-shadow: 0 0 1px 1px white;
 		}
-		.logo{
+		.logo {
 			margin-left: auto;
 			margin-right: auto;
 		}
-		.work{
+		.work {
 			display: contents;
 			margin: 15% 0% 0% 0%;
 		}
-		.switchbutton{
+		.switchbutton {
 			width: 90%;
 			margin-left: auto;
 			margin-right: auto;
@@ -1102,8 +1108,8 @@ tr td:nth-child(3),
 			min-height: 150px;
 		}
 		.panel {
-      background: rgba(0, 0, 0, .2);
-      font-size:40px;
+			background: rgba(0, 0, 0, .2);
+			font-size: 40px;
 			.panel-heading {
 				margin-bottom: 20px;
 			}
@@ -1133,13 +1139,13 @@ tr td:nth-child(3),
 		background-size: cover;
 	}
 	.btn {
-		background: white ;/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		background: white; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 		background-attachment: fixed;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-    border: none;
-    color:blue;
+		border: none;
+		color: blue;
 	}
 	.panel-primary {
 		border-color: none;
@@ -1289,21 +1295,21 @@ tr td:nth-child(3),
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
 
 * {
-  font-family: Open Sans;
+	font-family: Open Sans;
 }
 
 section {
-  width: 100%;
-  display: inline-block;
-  background: #333;
-  height: 50vh;
-  text-align: center;
-  font-size: 22px;
-  font-weight: 700;
-  text-decoration: underline;
+	width: 100%;
+	display: inline-block;
+	background: #333;
+	height: 50vh;
+	text-align: center;
+	font-size: 22px;
+	font-weight: 700;
+	text-decoration: underline;
 }
 
-.footer-distributed{
+.footer-distributed {
 	background: linen;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
@@ -1315,53 +1321,52 @@ section {
 
 .footer-distributed .footer-left,
 .footer-distributed .footer-center,
-.footer-distributed .footer-right{
+.footer-distributed .footer-right {
 	display: inline-block;
 	vertical-align: top;
 }
 
 /* Footer left */
 
-.footer-distributed .footer-left{
+.footer-distributed .footer-left {
 	width: 40%;
 }
 
 /* The company logo */
-.footer-distributed h3::before{
-  content:url('./Spaws_black.png');
-  width: 10%;
+.footer-distributed h3::before {
+	content: url('./Spaws_black.png');
+	width: 10%;
 }
 
-
-.footer-distributed h3{
-  background: none;
-	color:black;
+.footer-distributed h3 {
+	background: none;
+	color: black;
 	font: normal 36px 'Open Sans', cursive;
 	margin: 0;
 }
 
-.footer-distributed h3 span{
-	color:  lightseagreen;
+.footer-distributed h3 span {
+	color: lightseagreen;
 }
 
 /* Footer links */
 
-.footer-distributed .footer-links{
-	color:  #518edd;
+.footer-distributed .footer-links {
+	color: #518edd;
 	margin: 20px 0 12px;
 	padding: 0;
 }
 
-.footer-distributed .footer-links a{
-	display:inline-block;
+.footer-distributed .footer-links a {
+	display: inline-block;
 	line-height: 1.8;
-  font-weight:400;
+	font-weight: 400;
 	text-decoration: none;
-	color:  #518edd;
+	color: #518edd;
 }
 
-.footer-distributed .footer-company-name{
-	color:  #518edd;
+.footer-distributed .footer-company-name {
+	color: #518edd;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
@@ -1369,12 +1374,12 @@ section {
 
 /* Footer Center */
 
-.footer-distributed .footer-center{
+.footer-distributed .footer-center {
 	width: 35%;
 }
 
-.footer-distributed .footer-center i{
-	background-color:  #33383b;
+.footer-distributed .footer-center i {
+	background-color: #33383b;
 	color: #518edd;
 	font-size: 25px;
 	width: 38px;
@@ -1386,77 +1391,77 @@ section {
 	vertical-align: middle;
 }
 
-.footer-distributed .footer-center i.fa-envelope{
+.footer-distributed .footer-center i.fa-envelope {
 	font-size: 17px;
 	line-height: 38px;
 }
 
-.footer-distributed .footer-center p{
+.footer-distributed .footer-center p {
 	display: inline-block;
 	color: black;
-  font-weight:400;
+	font-weight: 400;
 	vertical-align: middle;
-	margin:0;
+	margin: 0;
 }
 
-.footer-distributed .footer-center p span{
-	display:block;
+.footer-distributed .footer-center p span {
+	display: block;
 	font-weight: normal;
-	font-size:14px;
-	line-height:2;
+	font-size: 14px;
+	line-height: 2;
 }
 
-.footer-distributed .footer-center p a{
-	color:  black;
-	text-decoration: none;;
+.footer-distributed .footer-center p a {
+	color: black;
+	text-decoration: none;
 }
 
 .footer-distributed .footer-links a:before {
-  content: "|";
-  font-weight:300;
-  font-size: 20px;
-  left: 0;
-  color: black;
-  display: inline-block;
-  padding-right: 5px;
+	content: "|";
+	font-weight: 300;
+	font-size: 20px;
+	left: 0;
+	color: black;
+	display: inline-block;
+	padding-right: 5px;
 }
 
 .footer-distributed .footer-links .link-1:before {
-  content: none;
+	content: none;
 }
 
 /* Footer Right */
 
-.footer-distributed .footer-right{
+.footer-distributed .footer-right {
 	width: 20%;
 }
 
-.footer-distributed .footer-company-about{
+.footer-distributed .footer-company-about {
 	line-height: 20px;
-	color:  #92999f;
+	color: #92999f;
 	font-size: 13px;
 	font-weight: normal;
 	margin: 0;
 }
 
-.footer-distributed .footer-company-about span{
+.footer-distributed .footer-company-about span {
 	display: block;
-	color:  #518edd;
+	color: #518edd;
 	font-size: 14px;
 	font-weight: bold;
 	margin-bottom: 20px;
 }
 
-.footer-distributed .footer-icons{
+.footer-distributed .footer-icons {
 	margin-top: 25px;
 }
 
-.footer-distributed .footer-icons a{
+.footer-distributed .footer-icons a {
 	display: inline-block;
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-	background-color:  #33383b;
+	background-color: #33383b;
 	border-radius: 2px;
 
 	font-size: 20px;
@@ -1467,36 +1472,34 @@ section {
 	margin-right: 3px;
 	margin-bottom: 5px;
 }
-#footer{
-  margin-top: 57%;
-    background: linen;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
-    width: 100%;
-    text-align: left;
-    font: bold 16px sans-serif;
-    padding: 55px 50px;
+#footer {
+	margin-top: 57%;
+	background: linen;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
 }
 
 /* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 880px) {
-
-	.footer-distributed{
+	.footer-distributed {
 		font: bold 14px sans-serif;
 	}
 
 	.footer-distributed .footer-left,
 	.footer-distributed .footer-center,
-	.footer-distributed .footer-right{
+	.footer-distributed .footer-right {
 		display: block;
 		width: 100%;
 		margin-bottom: 40px;
 		text-align: center;
 	}
 
-	.footer-distributed .footer-center i{
+	.footer-distributed .footer-center i {
 		margin-left: 0;
 	}
-
 }

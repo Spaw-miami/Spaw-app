@@ -405,8 +405,8 @@ router.post('/review', (req, res, next) => {
 		})
 		.then((reviewSaved) => {
 			// LOG IN THIS USER
-			User.findByIdAndUpdate(author, { $push: { reviews: reviewSaved._id } }).then((user) => {});
-			Groomer.findByIdAndUpdate(groomer, { $push: { reviews: reviewSaved._id } }).then((groomer) => {});
+			User.findByIdAndUpdate(author, { $push: { reviews: reviewSaved._id } }).then((user) => { });
+			Groomer.findByIdAndUpdate(groomer, { $push: { reviews: reviewSaved._id } }).then((groomer) => { });
 
 			res.json(reviewSaved);
 		})
