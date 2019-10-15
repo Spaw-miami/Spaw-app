@@ -15,7 +15,7 @@ export default class Home extends Component {
       lastName: '',
       profilepicture: '',
       about: '',
-      phone: '',
+      phoneNumber: '',
       address: '',
       groomer: false,
       petName: '',
@@ -124,10 +124,10 @@ export default class Home extends Component {
       <div className="edit-pet">
         <form>
           <input onChange={this.handleInputChange} type="text" name="username" placeholder="User's Username" />
-          <input onChange={this.handleInputChange} type="text" name="firstname" placeholder="User's First Name" />
-          <input onChange={this.handleInputChange} type="text" name="lastname" placeholder="User's Last Name" />
+          <input onChange={this.handleInputChange} type="text" name="firstName" placeholder="User's First Name" />
+          <input onChange={this.handleInputChange} type="text" name="lastName" placeholder="User's Last Name" />
           <input onChange={this.handleInputChange} type="text" name="address" placeholder="User's Address" />
-          <input onChange={this.handleInputChange} type="text" name="phone" placeholder="User's Phone Number" />
+          <input onChange={this.handleInputChange} type="text" name="phoneNumber" placeholder="User's Phone Number" />
           <br></br>
           <button>Submit</button>
         </form>

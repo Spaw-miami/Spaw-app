@@ -995,14 +995,17 @@ tr td:nth-child(3),
 	form{
 		display: flex;
 		flex-direction: column;
-		width: 50vw;
+		width: 25vw;
 		justify-content: center;
 	}
 	.owner-button{
-		width: 50vw;
+		width: 25vw;
+	}
+	.groomer-button{
+		width: 25vw;
 	}
 	.owner-login{
-		width: 50vw;
+		width: 25vw;
 	}
 	 .center{
 	margin: 15% 0% 0% 0%;
@@ -1025,7 +1028,9 @@ tr td:nth-child(3),
 	.form-container {
 		width: 100%;
 		max-width: 320px;
-		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		margin: 10% 0% 0% 37%;
 		input[type=text],
 		input[type=email],
 		input[type=phone],
@@ -1036,6 +1041,19 @@ tr td:nth-child(3),
 			margin: 20px auto;
 			border: 1px solid white;
 			box-shadow: 0 0 1px 1px white;
+		}
+		.logo{
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.work{
+			display: contents;
+			margin: 15% 0% 0% 0%;
+		}
+		.switchbutton{
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
 		}
 		textarea {
 			min-height: 150px;
@@ -1057,6 +1075,7 @@ tr td:nth-child(3),
 			float: right;
 		}
 	}
+
 	div.pet-owner {
 		background: linear-gradient(
 			to right,
@@ -1069,17 +1088,23 @@ tr td:nth-child(3),
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
-	.btn {
+	div.pet-groomer {
 		background: linear-gradient(
 			to right,
 			#dae2f8,
 			#d6a4a4
 		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		min-height: 100vh;
 		background-attachment: fixed;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		border: none;
+	}
+	.btn {
+		background: -webkit-gradient(linear, right top, left top, from(#dae2f8), to(#d6a4a4));
+    background: linear-gradient(to left, #dae2f8, #d6a4a4);
+    border: none;
+    border-radius: 2px;
 	}
 	.panel-primary {
 		border-color: none;
