@@ -471,11 +471,16 @@ h3 {
 		height: 600px;
 	}
 	.next-apt {
+    padding-top:1%;
+    padding-bottom:1%;
+    padding-left:40%;
+    background:snow;
 		border-radius: 10px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
 		margin: 22% 0% 0% 0%;
 	}
 	.all-apt {
+    background: snow;
 		height: 50%;
 		display: flex;
 		justify-content: center;
@@ -597,6 +602,7 @@ h3 {
 		justify-content: center;
 	}
 	.mod-box {
+    background:snow;
 		margin: 15% 0% 0% 0%;
 		border-radius: 10px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
