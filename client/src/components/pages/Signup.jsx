@@ -461,7 +461,7 @@ export default class Signup extends Component {
           </div>
         </div>
 
-        {this.state.message && <div className="info info-danger">{this.state.message}</div>}
+        {/* {this.state.message && <div className="info info-danger">{this.state.message}</div>} */}
       </Fragment>
     );
   };

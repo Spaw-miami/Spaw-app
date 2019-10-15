@@ -205,45 +205,46 @@ h3 {
 	margin-left: 2%;
 	margin-right: 5%;
 	margin-top: -8%;
-	background-image: url('http://cypressvets.com/wp-content/uploads/2015/03/dog-being-bathed.jpg');
-	opacity: 0.8;
+	background-image: url('https://photos.demandstudios.com/getty/article/187/161/86522010.jpg');
+	// opacity: 0.8;
 	min-height: 90vh;
 	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
+	background-position: 2000% 75%;
+  background-repeat: no-repeat;
+  
 	background-size: cover;
-	border: 16px solid lemonchiffon;
-	border-top: 100px solid lemonchiffon;
+	border: 16px solid #518edd;;
+	border-top: 100px solid #518edd;;
 }
 .parallax2 {
 	box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 	margin-right: 2%;
 	margin-left: 5%;
 	margin-top: -14%;
-	background-image: url("http://cypressvets.com/wp-content/uploads/2015/03/dog-being-bathed.jpg");
+	background-image: url("https://www.galachoveterinarios.com/wp-content/uploads/2016/03/Peluqueria-canina-felina.jpg");
 	// opacity: 0.8;
 	min-height: 90vh;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	border: 16px solid white;
-	border-top: 100px solid white;
+	border: 16px solid snow;
+	border-top: 100px solid snow;
 }
 .parallax3 {
   margin-top:-12%;
 	box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 	margin-left: 2%;
 	margin-right: 5%;
-	background-image: url("https://www.ryslip.com/wp-content/uploads/2019/02/dog-groomer-grooming-a-cavalier-king-charles-spaniel-dog-969077342-5c113de946e0fb0001eb892e-1500x1000.jpg");
-	opacity: 0.8;
+	background-image: url("https://www.petplan.com.au/blog/wp-content/uploads/2019/07/Dog-Grooming.jpg");
+	// opacity: 0.8;
 	min-height: 90vh;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
-	border: 16px solid lemonchiffon;
-	border-top: 100px solid lemonchiffon;
+	background-size: 96%;
+	border: 16px solid #518edd;
+	border-top: 100px solid #518edd;
 }
 .para {
 	padding-bottom: 48%;
@@ -251,7 +252,7 @@ h3 {
     padding-right: 4%;
     padding-top: 9%;
     height: 100vh;
-    background: white;
+    background: snow;
     color: #518edd;
     font-size: 36px;
 }
@@ -263,14 +264,14 @@ h3 {
     padding-top: 17%;
     height: 100vh;
     background: #518edd;
-    color: lemonchiffon;
+    color: snow;
     font-size: 36px;
 }
 .para2 {
 	font-weight: bold;
     padding-top: 18%;
     height: 100vh;
-    background: white;
+    background: snow;
     color: #518edd;
     font-size: 36px;
 }
@@ -286,7 +287,7 @@ h3 {
 	font-size: 21px;
 	line-height: 40px;
 	margin-bottom: 20px;
-	color: lemonchiffon;
+	color: snow;
 	font-weight: 100;
 	padding-left: 0%;
 }
@@ -298,11 +299,11 @@ h3 {
 	font-weight: 100;
 	padding-left: 70%;
 }
-@media only screen and (max-device-width: 1366px) {
-	.parallax {
-		background-attachment: scroll;
-	}
-}
+// @media only screen and (max-device-width: 1366px) {
+// 	.parallax {
+// 		background-attachment: scroll;
+// 	}
+// }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .info {
 	padding: 10px 20px;
@@ -708,43 +709,43 @@ p {
 #book {
 	float: right;
 }
-@media screen and (max-width: 500px) {
-	body {
-		display: flex;
-		align-items: center;
-		background-color: rgb(255, 255, 255);
-		color: white;
-	}
-	.containerr {
-		width: 320px;
-		margin: 120px auto 120px;
-		background-color: rgb(255, 255, 255);
-		padding: 0 20px 20px;
-		border-radius: 6px;
-		-webkit-border-radius: 6px;
-		-moz-border-radius: 6px;
-		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
-		-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
-		-moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
-		text-align: center;
-	}
-	.containerr-two {
-		float: right;
-		margin-top: 10px;
-		margin-right: 3%;
-		height: 60%;
-		width: 100%;
-		background-color: rgb(255, 255, 255);
-		padding: 0 20px 20px;
-		border-radius: 6px;
-		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
-		text-align: center;
-	}
-	// \--------------------------------------
-	#book {
-		display: flex;
-	}
-}
+// @media screen and (max-width: 500px) {
+// 	body {
+// 		display: flex;
+// 		align-items: center;
+// 		background-color: rgb(255, 255, 255);
+// 		color: white;
+// 	}
+// 	.containerr {
+// 		width: 320px;
+// 		margin: 120px auto 120px;
+// 		background-color: rgb(255, 255, 255);
+// 		padding: 0 20px 20px;
+// 		border-radius: 6px;
+// 		-webkit-border-radius: 6px;
+// 		-moz-border-radius: 6px;
+// 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+// 		-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+// 		-moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+// 		text-align: center;
+// 	}
+// 	.containerr-two {
+// 		float: right;
+// 		margin-top: 10px;
+// 		margin-right: 3%;
+// 		height: 60%;
+// 		width: 100%;
+// 		background-color: rgb(255, 255, 255);
+// 		padding: 0 20px 20px;
+// 		border-radius: 6px;
+// 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+// 		text-align: center;
+// 	}
+// 	// \--------------------------------------
+// 	#book {
+// 		display: flex;
+// 	}
+// }
 
 ////////////////////////////RATING////////////////////////////////
 .star-ratings-css {
