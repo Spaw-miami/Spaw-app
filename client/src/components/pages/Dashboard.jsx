@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import api from '../../api';
 import axios from 'axios';
+import GoogleMap from '../GoogleMap'
+import Footer from '../Footer'
 
 export default class Dashboard extends Component {
 	constructor(props) {
@@ -162,9 +164,9 @@ export default class Dashboard extends Component {
 	};
 
 	render() {
-		if (!this.state.groomer) {
-			return <div>Loading</div>;
-		}
+		// if (!this.state.groomer) {
+		// 	return <div>Loading</div>;
+		// }
 		return (
 			<div className="groomer-db">
 				<div className="container">
@@ -182,7 +184,9 @@ export default class Dashboard extends Component {
 						</div>
 						<div className="col-md-6">
 							<div className="map">
+							<GoogleMap></GoogleMap>
 								<h2>Google Map</h2>
+								
 							</div>
 							<div className="settings-box">
 								{this.state.switch ? (
@@ -192,8 +196,11 @@ export default class Dashboard extends Component {
 									)}
 							</div>
 						</div>
+						
 					</div>
+					
 				</div>
+				<Footer></Footer>
 			</div>
 		);
 	}

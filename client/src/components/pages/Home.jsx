@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../api'
+import Footer from '../Footer'
 
 export default class Home extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ export default class Home extends Component {
       lastName: '',
       profilepicture: '',
       about: '',
-      phone: '',
+      phoneNumber: '',
       address: '',
       groomer: false,
       petName: '',
@@ -124,10 +125,10 @@ export default class Home extends Component {
       <div className="edit-pet">
         <form>
           <input onChange={this.handleInputChange} type="text" name="username" placeholder="User's Username" />
-          <input onChange={this.handleInputChange} type="text" name="firstname" placeholder="User's First Name" />
-          <input onChange={this.handleInputChange} type="text" name="lastname" placeholder="User's Last Name" />
+          <input onChange={this.handleInputChange} type="text" name="firstName" placeholder="User's First Name" />
+          <input onChange={this.handleInputChange} type="text" name="lastName" placeholder="User's Last Name" />
           <input onChange={this.handleInputChange} type="text" name="address" placeholder="User's Address" />
-          <input onChange={this.handleInputChange} type="text" name="phone" placeholder="User's Phone Number" />
+          <input onChange={this.handleInputChange} type="text" name="phoneNumber" placeholder="User's Phone Number" />
           <br></br>
           <button>Submit</button>
         </form>
@@ -178,8 +179,9 @@ export default class Home extends Component {
 
   render() {
     return (
+    <div>
       <div className="Home">
-        <div className="row">
+        <div className="">
           <div className="col-md-3 ">
             {/* USER PROFILE CARD */}
 
@@ -217,7 +219,7 @@ export default class Home extends Component {
             {/* GEO LIST + EVENTS */}
 
             <div>
-              <div className="row">
+              <div className="roww">
                 <h2>Groomers near you!</h2>
                 <div className="col">
                   <ul>
@@ -243,7 +245,7 @@ export default class Home extends Component {
             </div>
             {/* <div className="container"> */}
             <div className="hold-down">
-              <div className="row ">
+              <div className="roww ">
                 <h2>Events in Miami</h2>
                 <div className="col">
                   <ul>
@@ -275,9 +277,14 @@ export default class Home extends Component {
               </div>
               {this.state.petSettings || this.state.userSettings ? this.petInfo() : this.userInfo()}
             </div>
+           
           </div>
+         
         </div>
+        <Footer id="footer"></Footer>
       </div>
+       
+</div>
     );
   }
 }

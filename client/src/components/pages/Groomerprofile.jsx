@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Calendar from '../Calendar';
 import WeekCalendar from '../WeekCalendar';
 import axios from 'axios';
+import Footer from '../Footer'
 
 export default class Home extends Component {
 	state = {};
@@ -137,6 +138,7 @@ export default class Home extends Component {
 						</div>
 					</div>
 				</div>
+				<Footer></Footer>
 			</div>
 		);
 	}

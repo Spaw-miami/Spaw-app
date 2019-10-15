@@ -4,6 +4,10 @@ body {
 	padding: 0;
 	font-family: sans-serif;
 }
+.fileContainer{
+  background-color: red;
+}
+
 .h1 {
 	text-align: center;
 	font-size: 20px;
@@ -19,7 +23,7 @@ body {
 }
 .a {
 	font-size: 12px;
-	color: #fff;
+	color: #518edd;
 }
 .bye {
 	background: rgb(81, 142, 221);
@@ -173,8 +177,8 @@ body {
 	float: left;
 }
 h3 {
-	background-color: rgba(36, 36, 39, 0.9);
-	color: white;
+	background-color:lemonchiffon;
+	color: black;
 	margin: 0 auto;
 }
 .landing-image {
@@ -200,85 +204,102 @@ h3 {
 	box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 	margin-left: 2%;
 	margin-right: 5%;
-	margin-top: -12%;
-	background-image: url('http://cypressvets.com/wp-content/uploads/2015/03/dog-being-bathed.jpg');
-	opacity: 0.8;
-	min-height: 100vh;
+	margin-top: -8%;
+	background-image: url('https://photos.demandstudios.com/getty/article/187/161/86522010.jpg');
+	// opacity: 0.8;
+	min-height: 90vh;
 	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
+	background-position: 800% 75%;
+  background-repeat: no-repeat;
+  
 	background-size: cover;
-	border: 16px solid white;
-	border-top: 100px solid white;
+	border: 16px solid #518edd;;
+	border-top: 100px solid #518edd;;
 }
 .parallax2 {
 	box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 	margin-right: 2%;
 	margin-left: 5%;
-	margin-top: -4%;
-	background-image: url("http://cypressvets.com/wp-content/uploads/2015/03/dog-being-bathed.jpg");
-	opacity: 0.8;
-	min-height: 100vh;
+	margin-top: -14%;
+	background-image: url("https://www.galachoveterinarios.com/wp-content/uploads/2016/03/Peluqueria-canina-felina.jpg");
+	// opacity: 0.8;
+	min-height: 90vh;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	border: 16px solid white;
-	border-top: 100px solid white;
+	border: 16px solid snow;
+	border-top: 100px solid snow;
 }
 .parallax3 {
+  margin-top:-8%;
 	box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 	margin-left: 2%;
 	margin-right: 5%;
-	background-image: url("https://www.ryslip.com/wp-content/uploads/2019/02/dog-groomer-grooming-a-cavalier-king-charles-spaniel-dog-969077342-5c113de946e0fb0001eb892e-1500x1000.jpg");
-	opacity: 0.8;
-	min-height: 100vh;
+	background-image: url("https://www.petplan.com.au/blog/wp-content/uploads/2019/07/Dog-Grooming.jpg");
+	// opacity: 0.8;
+	min-height: 90vh;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
-	border: 16px solid white;
-	border-top: 100px solid white;
+	background-size: 96%;
+	border: 16px solid #518edd;
+	border-top: 100px solid #518edd;
+}
+.par {
+  margin-bottom:0%;
+	padding-bottom: 8%;
+    font-weight: bold;
+    padding-right: 4%;
+  
+ 
+    background: snow;
+    color: #518edd;
+    font-size: 36px;
 }
 .para {
-	font-weight: bold;
-	padding-right: 4%;
-	padding-top: 13%;
-	height: 100vh;
-	background: rgb(81, 142, 221);
-	color: white;
-	font-size: 36px;
+	padding-bottom: 48%;
+    font-weight: bold;
+    padding-right: 4%;
+    padding-top: 9%;
+    height: 100vh;
+    background: snow;
+    color: #518edd;
+    font-size: 36px;
 }
+
 .para1 {
-	font-weight: bold;
-	padding-left: 3%;
-	padding-top: 33%;
-	height: 100vh;
-	background: rgb(81, 142, 221);
-	color: white;
-	font-size: 36px;
+  margin-bottom:5%;
+	padding-bottom: 40%;
+    font-weight: bold;
+    padding-left: 3%;
+    padding-top: 17%;
+    height: 100vh;
+    background: #518edd;
+    color: snow;
+    font-size: 36px;
 }
 .para2 {
 	font-weight: bold;
-	padding-top: 50%;
-	height: 100vh;
-	background: rgb(81, 142, 221);
-	color: white;
-	font-size: 36px;
+    padding-top: 18%;
+    height: 100vh;
+    background: snow;
+    color: #518edd;
+    font-size: 36px;
 }
 .p1 {
 	font-size: 21px;
-	line-height: 40px;
-	margin-bottom: 20px;
-	color: white;
-	font-weight: 100;
-	padding-left: 73%;
+    line-height: 40px;
+    margin-bottom: 20px;
+    color: #518edd;
+    font-weight: 100;
+    padding-left: 73%;
 }
 .p2 {
 	font-size: 21px;
 	line-height: 40px;
 	margin-bottom: 20px;
-	color: white;
+	color: snow;
 	font-weight: 100;
 	padding-left: 0%;
 }
@@ -286,15 +307,15 @@ h3 {
 	font-size: 21px;
 	line-height: 40px;
 	margin-bottom: 20px;
-	color: white;
+	color: #518edd;
 	font-weight: 100;
 	padding-left: 70%;
 }
-@media only screen and (max-device-width: 1366px) {
-	.parallax {
-		background-attachment: scroll;
-	}
-}
+// @media only screen and (max-device-width: 1366px) {
+// 	.parallax {
+// 		background-attachment: scroll;
+// 	}
+// }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .info {
 	padding: 10px 20px;
@@ -327,6 +348,8 @@ h3 {
 	}
 }
 //////////////////////////////////////COLE CSS////////////////////////////////////////////////////////////////
+
+
 .Home {
 	p {
 		font-size: 1.2em;
@@ -346,7 +369,7 @@ h3 {
 		display: flex;
 		flex-direction: column;
 		margin: 8% 0% 0% 0%;
-	}
+  }
 	div.row {
 		border-radius: 10px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
@@ -395,14 +418,17 @@ h3 {
 		opacity: 0;
 	}
 	.card {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		height: 60%;
-		width: 60%;
-		border-radius: 10px;
-		box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
+    text-align: center;
+    background: white;
+    position: absolute;
+    top: 49%;
+    left: 60%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 69%;
+    width: 107%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
 	}
 	li {
 		list-style-type: none;
@@ -413,7 +439,10 @@ h3 {
 		margin-left: 0;
 	}
 	.settings-box {
-		border-radius: 10px;
+    padding-right: 10%;
+    padding-left: 8%;
+    background: white;
+		border-radius: 6px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
 		display: flex;
 		margin: 32% 0% 0% 15%;
@@ -430,7 +459,14 @@ h3 {
 		background: #c7c5c5;
 	}
 }
-
+.roww{
+  background: white;
+    padding-top: 1%;
+    padding-left: 2%;
+    border-radius: 5px;
+    margin-left: 10%;
+    width: 95%;
+}
 .groomer-db {
 	.container {
 		padding-right: 0;
@@ -440,18 +476,24 @@ h3 {
 		margin: 0% 0% 0% 6.5%;
 	}
 	.col-md-6 {
+    margin-bottom:14%;
 		width: 50%;
-		height: 80%;
+		height: 89%;
 	}
 	.row {
 		height: 600px;
 	}
 	.next-apt {
+    padding-top:1%;
+    padding-bottom:1%;
+    padding-left:40%;
+    background:snow;
 		border-radius: 10px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
 		margin: 22% 0% 0% 0%;
 	}
 	.all-apt {
+    background: snow;
 		height: 50%;
 		display: flex;
 		justify-content: center;
@@ -465,7 +507,7 @@ h3 {
 		margin: 2% 0% 0% 0%;
 	}
 	.td-apt-sch {
-		position: fixed;
+		margin-left:13%;
 		display: flex;
 		justify-content: center;
 	}
@@ -476,7 +518,7 @@ h3 {
 		margin: -4% 0% 0% 18%;
 	}
 	.list {
-		margin: 10% 0% 0% 0%;
+		margin: 10% 0% 0% -39%;
 		overflow-y: scroll;
 		height: 150%;
 	}
@@ -573,6 +615,7 @@ h3 {
 		justify-content: center;
 	}
 	.mod-box {
+    background:snow;
 		margin: 15% 0% 0% 0%;
 		border-radius: 10px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
@@ -593,19 +636,19 @@ h3 {
 	background-color: rgb(255, 255, 255);
 	padding: 0 20px 20px;
 	border-radius: 6px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+	box-shadow: 0 2px 5px rgba(163, 163, 163, 0.85);
 	text-align: center;
 }
 .containerr-two {
 	float: right;
-	margin-top: 10px;
+	margin-top: 0%;
 	margin-right: 3%;
 	height: 60%;
 	width: 60%;
 	background-color: rgb(255, 255, 255);
 	padding: 0 20px 20px;
 	border-radius: 6px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+	box-shadow: 0 2px 5px rgba(0, 60, 255, 0.075);
 	text-align: center;
 }
 .containerr-calendar{
@@ -685,43 +728,43 @@ p {
 #book {
 	float: right;
 }
-@media screen and (max-width: 500px) {
-	body {
-		display: flex;
-		align-items: center;
-		background-color: rgb(255, 255, 255);
-		color: white;
-	}
-	.containerr {
-		width: 320px;
-		margin: 120px auto 120px;
-		background-color: rgb(255, 255, 255);
-		padding: 0 20px 20px;
-		border-radius: 6px;
-		-webkit-border-radius: 6px;
-		-moz-border-radius: 6px;
-		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
-		-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
-		-moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
-		text-align: center;
-	}
-	.containerr-two {
-		float: right;
-		margin-top: 10px;
-		margin-right: 3%;
-		height: 60%;
-		width: 100%;
-		background-color: rgb(255, 255, 255);
-		padding: 0 20px 20px;
-		border-radius: 6px;
-		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
-		text-align: center;
-	}
-	// \--------------------------------------
-	#book {
-		display: flex;
-	}
-}
+// @media screen and (max-width: 500px) {
+// 	body {
+// 		display: flex;
+// 		align-items: center;
+// 		background-color: rgb(255, 255, 255);
+// 		color: white;
+// 	}
+// 	.containerr {
+// 		width: 320px;
+// 		margin: 120px auto 120px;
+// 		background-color: rgb(255, 255, 255);
+// 		padding: 0 20px 20px;
+// 		border-radius: 6px;
+// 		-webkit-border-radius: 6px;
+// 		-moz-border-radius: 6px;
+// 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+// 		-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+// 		-moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+// 		text-align: center;
+// 	}
+// 	.containerr-two {
+// 		float: right;
+// 		margin-top: 10px;
+// 		margin-right: 3%;
+// 		height: 60%;
+// 		width: 100%;
+// 		background-color: rgb(255, 255, 255);
+// 		padding: 0 20px 20px;
+// 		border-radius: 6px;
+// 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+// 		text-align: center;
+// 	}
+// 	// \--------------------------------------
+// 	#book {
+// 		display: flex;
+// 	}
+// }
 
 ////////////////////////////RATING////////////////////////////////
 .star-ratings-css {
@@ -813,7 +856,7 @@ thead th {
 }
 header {
   background: linear-gradient(to right, #dae2f8, #d6a4a4);
-  background:rgb(81, 142, 221);
+  background:lemonchiffon;
 	color: rgba(0, 0, 0, 0.7);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	position: relative;
@@ -995,14 +1038,17 @@ tr td:nth-child(3),
 	form{
 		display: flex;
 		flex-direction: column;
-		width: 50vw;
+		width: 25vw;
 		justify-content: center;
 	}
 	.owner-button{
-		width: 50vw;
+		width: 25vw;
+	}
+	.groomer-button{
+		width: 25vw;
 	}
 	.owner-login{
-		width: 50vw;
+		width: 25vw;
 	}
 	 .center{
 	margin: 15% 0% 0% 0%;
@@ -1025,7 +1071,9 @@ tr td:nth-child(3),
 	.form-container {
 		width: 100%;
 		max-width: 320px;
-		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		margin: 10% 0% 0% 37%;
 		input[type=text],
 		input[type=email],
 		input[type=phone],
@@ -1037,11 +1085,25 @@ tr td:nth-child(3),
 			border: 1px solid white;
 			box-shadow: 0 0 1px 1px white;
 		}
+		.logo{
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.work{
+			display: contents;
+			margin: 15% 0% 0% 0%;
+		}
+		.switchbutton{
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+		}
 		textarea {
 			min-height: 150px;
 		}
 		.panel {
-			background: rgba(0, 0, 0, .2);
+      background: rgba(0, 0, 0, .2);
+      font-size:40px;
 			.panel-heading {
 				margin-bottom: 20px;
 			}
@@ -1057,12 +1119,13 @@ tr td:nth-child(3),
 			float: right;
 		}
 	}
+
 	div.pet-owner {
-		background: linear-gradient(
-			to right,
-			#dae2f8,
-			#d6a4a4
-		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		// background: linear-gradient(
+		// 	to right,
+		// 	#dae2f8,
+		// 	#d6a4a4
+		// ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 		min-height: 100vh;
 		background-attachment: fixed;
 		background-position: center;
@@ -1070,16 +1133,13 @@ tr td:nth-child(3),
 		background-size: cover;
 	}
 	.btn {
-		background: linear-gradient(
-			to right,
-			#dae2f8,
-			#d6a4a4
-		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		background: white ;/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 		background-attachment: fixed;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		border: none;
+    border: none;
+    color:blue;
 	}
 	.panel-primary {
 		border-color: none;
@@ -1224,4 +1284,219 @@ tr td:nth-child(3),
 	top: 0px;
 	// box-shadow: 0px 0px 0px rgb(255, 255, 255);
 	background: #d3e8f0;
+}
+////////////////////////////////////////FOOOTER////////////////////////////
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #333;
+  height: 50vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+	background: linen;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+.footer-distributed h3::before{
+  content:url('./Spaws_black.png');
+  width: 10%;
+}
+
+
+.footer-distributed h3{
+  background: none;
+	color:black;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #518edd;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  #518edd;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #518edd;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #518edd;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: black;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  black;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: black;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #518edd;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+#footer{
+  margin-top: 57%;
+    background: linen;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
 }

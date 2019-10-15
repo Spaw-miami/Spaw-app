@@ -33,21 +33,23 @@ export default class Login extends Component {
         <div className="owner-login">
           <button className="owner-button" onClick={this.switching}>Are you a Groomer?</button>
           <form onSubmit={this.handleClick}>
-            Owner Username:{' '}
+            <br />
             <input
               type="text"
               value={this.state.username}
               name="username"
+              placeholder="Owner Username"
               onChange={this.handleInputChange}
             />{' '}
             <br />
-            Owner Password:{' '}
             <input
               type="password"
               value={this.state.password}
               name="password"
+              placeholder="Owner Password"
               onChange={this.handleInputChange}
             />{' '}
+            <br />
             <button onClick={e => this.handleClick(e)}>Login</button>
           </form>
         </div>

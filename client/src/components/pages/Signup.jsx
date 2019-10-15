@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import api from '../../api';
 import axios from 'axios';
+import Images from '../Images';
 
 
 export default class Signup extends Component {
@@ -21,6 +22,16 @@ export default class Signup extends Component {
     address: '',
     groomer: false,
   };
+
+
+
+  saveNewThing (newThing) {
+    // console.log('new thing is: ', newThing)
+    return axios.post('http://localhost:5000/create/user', newThing)
+      .then(res => res.data)
+      .catch();
+  };
+
 
   handleInputChange = (event) => {
     this.setState({
@@ -101,6 +112,27 @@ export default class Signup extends Component {
   signupOne = () => {
     return (
       <Fragment>
+        {/* <div>
+            <h2>New Thing</h2>
+            <form onSubmit={e => this.handleSubmit(e)}>
+                <label>Name</label>
+                <input 
+                    type="text" 
+                    name="name" 
+                    value={ this.state.name } 
+                    onChange={ e => this.handleChange(e)} />
+                <label>Description</label>
+                <textarea 
+                    type="text" 
+                    name="description" 
+                    value={ this.state.description } 
+                    onChange={ e => this.handleChange(e)} />
+                <input 
+                    type="file" 
+                    onChange={(e) => this.handleFileUpload(e)} /> 
+                <button type="submit">Save new thing</button>
+            </form>
+          </div> */}
         <div className="pet-owner">
           <h1 className="page-header">Sign Up Now!</h1>
           <button onClick={this.groomerOrUser}>Are you a Pet Groomer?</button>
@@ -169,6 +201,7 @@ export default class Signup extends Component {
                     className="form-control"
                     placeholder="Address"
                   />
+                  <Images name="profilePic"></Images>
                   <div
                     className="btn-group btn-group-lg btn-group-justified"
                     role="group"
@@ -232,7 +265,7 @@ export default class Signup extends Component {
 
               <div id="part4" className="form-group">
                 <div className="panel panel-primary">
-                  <div className="panel-heading">
+                  {/* <div className="panel-heading">
                     <h3 className="panel-title">Profile Picture</h3>
                   </div>
                   <input
@@ -241,7 +274,7 @@ export default class Signup extends Component {
                     name="profilePic"
                     className="form-control"
                     placeholder="Profile Picture"
-                  />
+                  /> */}
                   {/* IMAGE UPLOAD TO BE ADDED */}
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
                     <label htmlFor="step4" id="back-step4" className="back">
@@ -459,7 +492,7 @@ export default class Signup extends Component {
           </div>
         </div>
 
-        {this.state.message && <div className="info info-danger">{this.state.message}</div>}
+        {/* {this.state.message && <div className="info info-danger">{this.state.message}</div>} */}
       </Fragment>
     );
   };
