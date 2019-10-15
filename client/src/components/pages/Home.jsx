@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../api'
+import Footer from '../Footer'
 
 export default class Home extends Component {
   constructor(props) {
@@ -178,6 +179,7 @@ export default class Home extends Component {
 
   render() {
     return (
+    <div>
       <div className="Home">
         <div className="">
           <div className="col-md-3 ">
@@ -275,9 +277,14 @@ export default class Home extends Component {
               </div>
               {this.state.petSettings || this.state.userSettings ? this.petInfo() : this.userInfo()}
             </div>
+           
           </div>
+         
         </div>
+        <Footer id="footer"></Footer>
       </div>
+       
+</div>
     );
   }
 }

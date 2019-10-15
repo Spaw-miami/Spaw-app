@@ -23,6 +23,16 @@ export default class Signup extends Component {
     groomer: false,
   };
 
+
+
+  saveNewThing (newThing) {
+    // console.log('new thing is: ', newThing)
+    return axios.post('http://localhost:5000/create/user', newThing)
+      .then(res => res.data)
+      .catch();
+  };
+
+
   handleInputChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
@@ -102,6 +112,27 @@ export default class Signup extends Component {
   signupOne = () => {
     return (
       <Fragment>
+        {/* <div>
+            <h2>New Thing</h2>
+            <form onSubmit={e => this.handleSubmit(e)}>
+                <label>Name</label>
+                <input 
+                    type="text" 
+                    name="name" 
+                    value={ this.state.name } 
+                    onChange={ e => this.handleChange(e)} />
+                <label>Description</label>
+                <textarea 
+                    type="text" 
+                    name="description" 
+                    value={ this.state.description } 
+                    onChange={ e => this.handleChange(e)} />
+                <input 
+                    type="file" 
+                    onChange={(e) => this.handleFileUpload(e)} /> 
+                <button type="submit">Save new thing</button>
+            </form>
+          </div> */}
         <div className="pet-owner">
           <h1 className="page-header">Sign Up Now!</h1>
           <button onClick={this.groomerOrUser}>Are you a Pet Groomer?</button>

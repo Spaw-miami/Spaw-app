@@ -476,6 +476,7 @@ h3 {
 		margin: 0% 0% 0% 6.5%;
 	}
 	.col-md-6 {
+    margin-bottom:14%;
 		width: 50%;
 		height: 89%;
 	}
@@ -506,7 +507,7 @@ h3 {
 		margin: 2% 0% 0% 0%;
 	}
 	.td-apt-sch {
-		position: fixed;
+		margin-left:13%;
 		display: flex;
 		justify-content: center;
 	}
@@ -517,7 +518,7 @@ h3 {
 		margin: -4% 0% 0% 18%;
 	}
 	.list {
-		margin: 10% 0% 0% 0%;
+		margin: 10% 0% 0% -39%;
 		overflow-y: scroll;
 		height: 150%;
 	}
@@ -1465,6 +1466,16 @@ section {
 
 	margin-right: 3px;
 	margin-bottom: 5px;
+}
+#footer{
+  margin-top: 57%;
+    background: linen;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
 }
 
 /* If you don't want the footer to be responsive, remove these media queries */
