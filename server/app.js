@@ -11,8 +11,6 @@ const nocache = require('nocache');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 
-
-
 require('./configs/database');
 
 const app_name = require('./package.json').name;
@@ -53,8 +51,7 @@ app.use(
 require('./passport')(app);
 
 app.use('/', require('./routes/index'));
-// MY ROUTES :: JOSE
-// app.use('/api', require('./routes/file-upload-routes'));
+
 // MY ROUTES :: CHRISTIAN
 app.use('/auth', require('./routes/auth'));
 app.use('/create', require('./routes/create'));

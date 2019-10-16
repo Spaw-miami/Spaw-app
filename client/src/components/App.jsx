@@ -10,31 +10,55 @@ import Groomerprofile from './pages/Groomerprofile';
 import api from '../api';
 import Dashboard from './pages/Dashboard';
 
-
 export default class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			countries: []
+			countries: [],
+			user: {}
 		};
 	}
 
-	// componentDidMount() {
-	// 	axios.get(`http://localhost:5000/read/groomer/${'5d9f9cdc581f3d4fa89445d9'}`).then((groomer) => {
-	// 		this.setState({
-	// 			groomer: groomer.data
-	// 		});
-	// 	});
-	// }
+	componentDidMount() {
+		// axios.get(`http://localhost:5000/read/groomer/${'5d9f9cdc581f3d4fa89445d9'}`).then((groomer) => {
+		// 	this.setState({
+		// 		groomer: groomer.data
+		// 	});
+		// });
+		this.getUser();
+	}
+
+	getUser = () => {
+		//http://localhost:5000/read/getUser
+
+		//axios.get('http://localhost:5000/read/user/5d9f9c2e8afcf44f5676895b')
+		axios
+			.get('http://localhost:5000/read/getUser/something/please')
+			.then((res) => {
+				console.log(res);
+				this.setUser(res.data.user);
+			})
+			.catch((err) => console.error(err));
+	};
+
+	setUser = (user) => {
+		console.log(user, '-=-=-');
+		user = user ? user : {};
+		console.log('user', user);
+		this.setState({ user });
+	};
 
 	handleLogoutClick(e) {
-		api.logout();
+		console.log('log out????????');
+		api.logout().then((res) => {
+			console.log('log out');
+			this.setState({ user: {} });
+		});
 	}
 
 	render() {
 		return (
 			<div className="App">
-	
 				{/* <header className="App-header"> */}
 
 				{/* <h1 className="App-title">Welcome to Spaws</h1> */}
@@ -44,21 +68,21 @@ export default class App extends Component {
 				<NavLink to="/groomerprofile">Profile</NavLink>
 				<NavLink to="/landing">Landing</NavLink>
 				<NavLink to="/dashboard">Groomer Dash-Board</NavLink>
-				{!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
-				{!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
-				{api.isLoggedIn() && (
-					<Link to="/" onClick={(e) => this.handleLogoutClick(e)}>
-						Logout
-					</Link>
-				)}
+				<NavLink to="/signup">Signup</NavLink>
+				<NavLink to="/login">Login</NavLink>
+				<Link to="/" onClick={(e) => this.handleLogoutClick(e)}>
+					Logout
+				</Link>
+
 				<NavLink to="/secret">Secret</NavLink>
+				{this.state.user.username}
 				{/* </header> */}
 				<Switch>
-					<Route path="/" exact component={Home} />
+					<Route path="/" exact render={(props) => <Home user={this.state.user} {...props} />} />
 					<Route path="/landing" component={Landing} />
-					<Route path="/dashboard" component={Dashboard} />
-					<Route path="/signup" component={Signup} />
-					<Route path="/login" component={Login} />
+					<Route path="/dashboard" render={(props) => <Dashboard user={this.state.user} {...props} />} />
+					<Route path="/signup" render={(props) => <Signup setUser={this.setUser} {...props} />} />
+					<Route path="/login" render={(props) => <Login setUser={this.setUser} {...props} />} />
 					<Route path="/groomerprofile" component={Groomerprofile} />
 					<Route path="/secret" component={Secret} />
 					<Route render={() => <h2>404</h2>} />

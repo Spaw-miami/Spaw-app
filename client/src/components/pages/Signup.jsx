@@ -26,7 +26,7 @@ export default class Signup extends Component {
 
 
   saveNewThing(newThing) {
-    // console.log('new thing is: ', newThing)
+    // //console.log('new thing is: ', newThing)
     return axios.post('http://localhost:5000/create/user', newThing)
       .then(res => res.data)
       .catch();
@@ -41,7 +41,7 @@ export default class Signup extends Component {
 
   handleClick = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    //console.log(this.state);
     let data = {
       username: this.state.username,
 
@@ -63,6 +63,7 @@ export default class Signup extends Component {
       .post('http://localhost:5000/create/user', data)
       .then((user) => {
         console.log(user);
+        this.props.setUser(user.data)
       })
       .catch((error) => {
         console.log(error);
@@ -265,7 +266,7 @@ export default class Signup extends Component {
 
               <div id="part4" className="form-group">
                 <div className="panel panel-primary">
-                  {/* <div className="panel-heading">
+                  <div className="panel-heading">
                     <h3 className="panel-title">Profile Picture</h3>
                   </div>
                   <input
@@ -274,8 +275,7 @@ export default class Signup extends Component {
                     name="profilePic"
                     className="form-control"
                     placeholder="Profile Picture"
-                  /> */}
-                  {/* IMAGE UPLOAD TO BE ADDED */}
+                  />
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
                     <label htmlFor="step4" id="back-step4" className="back">
                       <div className="btn btn-default btn-primary btn-lg">Back</div>
@@ -517,8 +517,8 @@ export default class Signup extends Component {
   };
 
   render() {
-    console.log("_+_+_+_+_+_+_+_+", this.state);
-    console.log(this.state, this.handleClick);
+    //console.log("_+_+_+_+_+_+_+_+", this.state);
+    //console.log(this.state, this.handleClick);
     return (
       <div className="Signup">
         <div className="container-contact100">

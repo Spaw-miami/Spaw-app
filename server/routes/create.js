@@ -14,7 +14,7 @@ const bcrypt = require('bcrypt');
 const bcryptSalt = 10;
 // Route to add a country
 router.post('/user', uploader.single("profilePic"), (req, res, next) => {
-	const imgPath = req.files.url;
+	//const imgPath = req.files.url;
 	const { username, password, firstName, lastName, profilePic, email, phoneNumber, address } = req.body;
 	if (!username || !password || !firstName || !lastName || !profilePic || !email || !phoneNumber || !address) {
 		res.status(400).json({ message: '{Please fill all fields}' });
@@ -33,7 +33,7 @@ router.post('/user', uploader.single("profilePic"), (req, res, next) => {
 				password: hashPass,
 				firstName,
 				lastName,
-				profilePic:imgPath,
+				//profilePic: imgPath,
 				email,
 				phoneNumber,
 				address

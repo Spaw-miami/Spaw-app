@@ -178,6 +178,7 @@ export default class Home extends Component {
 	petInfo = () => {
 		return <div className="petInfo">{this.state.showEdit ? this.editPet() : this.dogInfo()}</div>;
 	};
+
 	//SHOW EDIT PET AND SETTINGS BOX ^
 
 	// USER SWTTINGS BOX SWITCH v
@@ -283,8 +284,7 @@ export default class Home extends Component {
 				) : (
 					<div>
 						<h3>
-							{this.state.firstName}
-							{this.state.lastName}
+							{this.state.firstName} {this.state.lastName}
 						</h3>
 						{/* {this.state.user.firstName}{this.state.user.lastName} */}
 						<h2>{this.state.address}</h2>
