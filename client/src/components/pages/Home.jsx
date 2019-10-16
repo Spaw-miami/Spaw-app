@@ -188,10 +188,10 @@ export default class Home extends Component {
 			username: `${this.state.username}`,
 			firstName: `${this.state.firstName}`,
 			lastName: `${this.state.lastName}`,
-			profilePic: `${this.state.profilepicture}`,
-			email: `${this.state.email}`,
-			phoneNumber: `${this.state.phone}`,
-			address: `${this.state.address}`
+			phoneNumber: `${this.state.phoneNumber}`,
+			address: `${this.state.address}`,
+			profilePic: `${this.state.profilePic}`,
+			email: `${this.state.email}`
 		};
 
 		axios.post('http://localhost:5000/update/user/', data).then((data) => {

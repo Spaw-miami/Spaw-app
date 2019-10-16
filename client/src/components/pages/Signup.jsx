@@ -25,7 +25,7 @@ export default class Signup extends Component {
 
 
 
-  saveNewThing (newThing) {
+  saveNewThing(newThing) {
     // console.log('new thing is: ', newThing)
     return axios.post('http://localhost:5000/create/user', newThing)
       .then(res => res.data)
@@ -517,6 +517,7 @@ export default class Signup extends Component {
   };
 
   render() {
+    console.log("_+_+_+_+_+_+_+_+", this.state);
     console.log(this.state, this.handleClick);
     return (
       <div className="Signup">
