@@ -8,7 +8,7 @@ export default class Home extends Component {
 	state = {};
 
 	componentWillMount() {
-		axios.get(`http://localhost:5000/read/groomer/5da478786b0d84a504022fb2`).then((groomer) => {
+		axios.get(`https://spaws.herokuapp.com/read/groomer/5da478786b0d84a504022fb2`).then((groomer) => {
 			this.setState({
 				groomer: groomer.data,
 				username: this.state.username,
