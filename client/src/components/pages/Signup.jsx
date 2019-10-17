@@ -135,9 +135,9 @@ export default class Signup extends Component {
                 <button type="submit">Save new thing</button>
             </form>
           </div> */}
-        <div className="pet-owner">
-          <h1 className="page-header">Sign Up Now!</h1>
-          <button onClick={this.groomerOrUser}>Are you a Pet Groomer?</button>
+        <div className="">
+          <h1 className="">Sign Up Now!</h1>
+          <button className="boton" onClick={this.groomerOrUser}>Are you a Pet Groomer?<p className="boton1">click Here</p></button>
           <div className="form-container">
             <form onSubmit={this.handleClick}>
               <input id="step2" type="checkbox" />
@@ -279,10 +279,10 @@ export default class Signup extends Component {
                   />
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
                     <label htmlFor="step4" id="back-step4" className="back">
-                      <div className="btn btn-default btn-primary btn-lg">Back</div>
+                      <div className="ultimo">Back</div>
                     </label>
                     <label className="continue">
-                      <button type="submit" className="btn btn-default btn-success btn-lg">
+                      <button type="submit" className="btn  btn-lg">
                         Submit
 											</button>
                     </label>
@@ -302,9 +302,9 @@ export default class Signup extends Component {
   signupGroomer = () => {
     return (
       <Fragment>
-        <div className="pet-groomer">
-          <h1 className="page-header">Sign Up Now!</h1>
-          <button onClick={this.groomerOrUser}>Are you a Pet Owner?</button>
+        <div className="">
+          <h1 className="">Sign Up Now!</h1>
+          <button className="boton" onClick={this.groomerOrUser}>Are you a Pet Owner?<p className="boton1">click Here</p></button>
           <div className="form-container">
             <form onSubmit={this.handleClickGroomer}>
               <input id="step2" type="checkbox" />
@@ -498,7 +498,7 @@ export default class Signup extends Component {
         </div>
 
         {this.state.message && <div className="info info-danger">{this.state.message}</div>}
-        
+        <Footer></Footer>
       </Fragment>
     );
   };

@@ -1088,7 +1088,17 @@ tr td:nth-child(3),
 		margin-right: auto;
 	}
 }
-
+.ultimo{
+  width:100%;
+  font-weight: 400;
+  font-size:30px;
+  background: snow;
+    margin-left: 17%;
+    /* width: 65%; */
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10%;
+}
 .Signup,
 .Login {
 	body {
@@ -1096,6 +1106,7 @@ tr td:nth-child(3),
 		background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/upfeathers.png);
 	}
 	.form-container {
+
 		width: 100%;
 		max-width: 320px;
 		display: flex;
@@ -1129,6 +1140,8 @@ tr td:nth-child(3),
 			min-height: 150px;
 		}
 		.panel {
+      margin-top:-1%;
+      margin-bottom:20%;
 			background: rgba(0, 0, 0, .2);
 			font-size: 40px;
 			.panel-heading {
@@ -1146,18 +1159,30 @@ tr td:nth-child(3),
 			float: right;
 		}
 	}
-
+.boton{
+  line-height: .5em;
+  font-weight: bold;
+  font-size: 14px;
+  padding-top:12px;
+  margin-bottom:-10%;
+  width:20%;
+  margin-left:38%;
+}
+.boton1{
+  font-size:10px;
+}
 	div.pet-owner {
 		// background: linear-gradient(
 		// 	to right,
 		// 	#dae2f8,
 		// 	#d6a4a4
 		// ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		min-height: 100vh;
+		min-height: 80vh;
 		background-attachment: fixed;
 		background-position: center;
 		background-repeat: no-repeat;
-		background-size: cover;
+    background-size: cover;
+    margin-top:-10%;
 	}
 	.btn {
 		background: white; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
