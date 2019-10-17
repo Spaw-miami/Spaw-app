@@ -20,15 +20,23 @@ export default class App extends Component {
 	}
 
 	componentDidMount() {
+		// axios.get(`http://localhost:5000/read/groomer/${'5d9f9cdc581f3d4fa89445d9'}`).then((groomer) => {
+		// 	this.setState({
+		// 		groomer: groomer.data
+		// 	});
+		// });
 		this.getUser();
 	}
 
 	getUser = () => {
+		//http://localhost:5000/read/getUser
+
+		//axios.get('http://localhost:5000/read/user/5d9f9c2e8afcf44f5676895b')
 		axios
 			.get('http://localhost:5000/read/current')
 			.then((res) => {
-				console.log(res, 'RESSSSS <<<<<<<');
-				this.setUser(res.data);
+				console.log(res);
+				this.setUser(res.data.user);
 			})
 			.catch((err) => console.error(err));
 	};
@@ -38,7 +46,7 @@ export default class App extends Component {
 		user = user ? user : {};
 		console.log('user', user);
 		this.setState({ user });
-		console.log(this.state);
+		console.log(this.state)
 	};
 
 	handleLogoutClick(e) {
@@ -48,6 +56,7 @@ export default class App extends Component {
 			this.setState({ user: {} });
 		});
 	}
+
 
 	render() {
 		return (
