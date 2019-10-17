@@ -247,6 +247,13 @@ export default class Signup extends Component {
                     className="form-control"
                     placeholder="LastName"
                   />
+                  <input
+                    onChange={this.handleInputChange}
+                    type="text"
+                    name="profilePic"
+                    className="form-control"
+                    placeholder="Profile Picture"
+                  />
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
                     <label htmlFor="step3" id="back-step3" className="back">
                       <div className="btn btn-default btn-success btn-lg">Back</div>
@@ -270,13 +277,6 @@ export default class Signup extends Component {
                   <div className="panel-heading">
                     <h3 className="">Profile Picture</h3>
                   </div>
-                  <input
-                    onChange={this.handleInputChange}
-                    type="text"
-                    name="profilePic"
-                    className="form-control"
-                    placeholder="Profile Picture"
-                  />
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
                     <label htmlFor="step4" id="back-step4" className="back">
                       <div className="ultimo">Back</div>

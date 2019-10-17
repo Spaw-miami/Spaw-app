@@ -20,23 +20,15 @@ export default class App extends Component {
 	}
 
 	componentDidMount() {
-		// axios.get(`http://localhost:5000/read/groomer/${'5d9f9cdc581f3d4fa89445d9'}`).then((groomer) => {
-		// 	this.setState({
-		// 		groomer: groomer.data
-		// 	});
-		// });
 		this.getUser();
 	}
 
 	getUser = () => {
-		//http://localhost:5000/read/getUser
-
-		//axios.get('http://localhost:5000/read/user/5d9f9c2e8afcf44f5676895b')
 		axios
-			.get('http://localhost:5000/read/getUser/something/please')
+			.get('http://localhost:5000/read/current')
 			.then((res) => {
-				console.log(res);
-				this.setUser(res.data.user);
+				console.log(res, 'RESSSSS <<<<<<<');
+				this.setUser(res.data);
 			})
 			.catch((err) => console.error(err));
 	};
