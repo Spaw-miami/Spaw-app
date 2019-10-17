@@ -38,6 +38,7 @@ export default class Login extends Component {
 					<form onSubmit={this.handleClick}>
 						<br />
 						<input
+						className="lo"
 							type="text"
 							value={this.state.username}
 							name="username"
@@ -46,6 +47,7 @@ export default class Login extends Component {
 						/>{' '}
 						<br />
 						<input
+						className="lo"
 							type="password"
 							value={this.state.password}
 							name="password"
@@ -68,6 +70,7 @@ export default class Login extends Component {
 					<form onSubmit={this.handleClickGroomer}>
 						<br />
 						<input
+						className="lo"
 							type="text"
 							value={this.state.username}
 							name="username"
@@ -76,6 +79,7 @@ export default class Login extends Component {
 						/>{' '}
 						<br />
 						<input
+						className="lo"
 							type="password"
 							value={this.state.password}
 							name="password"
