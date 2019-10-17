@@ -61,11 +61,12 @@ export default class Home extends Component {
 					<li>
 						<p>
 							{' '}
-							{each.firstName}, TBC, {each.pricing}{' '}
+							<Link to={`/groomerprofile/${each._id}`}>{each.firstName}</Link>, TBC, {each.pricing}{' '}
 						</p>
 					</li>
 				);
 			});
+			console.log(display, 'this is the display for the groomers list');
 
 			this.setState({
 				groomersDisplay: display,
@@ -313,9 +314,7 @@ export default class Home extends Component {
 							<div className="roww">
 								<h2>Groomers near you!</h2>
 								<div className="col">
-									<ul>
-										<li>HERE GOES</li>
-									</ul>
+									<ul>{this.state.groomersDisplay}</ul>
 								</div>
 							</div>
 						</div>

@@ -5,14 +5,21 @@ import axios from 'axios';
 import Footer from '../Footer';
 
 export default class Home extends Component {
-	state = {};
+	state = {
+		groomer: {}
+	};
+
+	componentWillMount = () => {
+		let id = this.props.location.pathname.split('/groomerprofile/')[1];
+		axios.get(`http://localhost:5000/read/groomer/${id}`).then((groomer) => {
+			console.log(groomer);
+			this.setState({
+				groomer: groomer
+			});
+		});
+	};
 
 	render() {
-		console.log('-=-=-=-=-=-=-', this.state.groomer);
-		if (!this.state.groomer) {
-			return <div>Loading</div>;
-		}
-
 		return (
 			<div>
 				<div className="entire">
