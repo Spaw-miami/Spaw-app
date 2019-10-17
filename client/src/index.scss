@@ -472,7 +472,8 @@ h3 {
 		margin: 32% 0% 0% 15%;
 		width: 70%;
 		height: 60%;
-		flex-direction: column;
+    flex-direction: column;
+    border: 2px solid;
 	}
 	.hold-down {
 		margin: 5% 0% 0% 0%;
@@ -484,6 +485,7 @@ h3 {
 	}
 }
 .roww {
+  border:2px solid;
 	background: white;
     padding-top: 1%;
     padding-left: 2%;
@@ -1631,6 +1633,7 @@ section {
     margin-top: 24%;
   }
   .Home .card {
+    border:2px solid;
     text-align: center;
     background: white;
     position: absolute;
@@ -1896,6 +1899,7 @@ section {
       padding-bottom: 1%;
    }
    .Home .card {
+    border: 2px solid;
     text-align: center;
     background: white;
     position: absolute;
@@ -1921,6 +1925,7 @@ section {
     width: 83%;
     height: 60%;
     flex-direction: column;
+    border: 2px solid;
   }
   .Signup button, .Login button {
     background: snow;
@@ -1938,6 +1943,7 @@ section {
 
 @media screen and (max-width: 1000px){
   .Home .card {
+    border: 2px solid;
       text-align: center;
       background: white;
       position: absolute;
@@ -1956,5 +1962,23 @@ section {
   @media screen and (max-width: 1199px){
     .set{
       margin-top:-96%;
+    }
+  }
+
+  @media screen and (max-width: 990px){
+    .roww{
+      margin-top:0%;
+      border:2px solid;
+      padding-bottom: 14%;
+    }
+    .Home div.col-md-3 {
+
+      height:60vh;
+      margin-top:-10%;
+      margin-bottom:-34%;
+    }
+    .set{
+      margin-top:-100%;
+      
     }
   }
