@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import Calendar from '../Calendar';
 import WeekCalendar from '../WeekCalendar';
 import axios from 'axios';
-import Footer from '../Footer'
+import Footer from '../Footer';
 
 export default class Home extends Component {
 	state = {};
 
 	componentWillMount() {
-		axios.get(`http://localhost:5000/read/groomer/5da478786b0d84a504022fb2`).then((groomer) => {
+		axios.get(`https://spaws.herokuapp.com/read/groomer/5da478786b0d84a504022fb2`).then((groomer) => {
 			this.setState({
 				groomer: groomer.data,
 				username: this.state.username,
@@ -25,7 +25,7 @@ export default class Home extends Component {
 	}
 
 	render() {
-		console.log("-=-=-=-=-=-=-", this.state.groomer)
+		console.log('-=-=-=-=-=-=-', this.state.groomer);
 		if (!this.state.groomer) {
 			return <div>Loading</div>;
 		}
@@ -35,9 +35,7 @@ export default class Home extends Component {
 
 			<div className="entire">
 				<div className="containerr-two">
-					<div>
-						<h2>{this.state.groomer.username}</h2>
-					</div>
+					<div>{/* <h2>{this.state.groomer.username}</h2> */}</div>
 					<div id="book">
 						{/* <button
 							type="button"
@@ -52,15 +50,12 @@ export default class Home extends Component {
 					<div>
 						<h4>BEST GROOMER IN MIAMI</h4>
 					</div>
-					<div>
-						{' '}
-						<p>{this.state.groomer.about}</p>
-					</div>
+					<div> {/* <p>{this.state.groomer.about}</p> */}</div>
 				</div>
 
 				<div className="containerr">
 					<div className="avatar-flip">
-						<img alt="" src={this.state.groomer.profilePic} height="150" width="150" />
+						{/* <img alt="" src={this.state.groomer.profilePic} height="150" width="150" /> */}
 						<img
 							alt=""
 							src="http://media.idownloadblog.com/wp-content/uploads/2012/04/Phil-Schiller-headshot-e1362692403868.jpg"
@@ -69,8 +64,8 @@ export default class Home extends Component {
 							/>
 					</div>
 					<h2>CONTACT INFO</h2>
-					<h4>{this.state.groomer.phoneNumber}</h4>
-					<p>{this.state.groomer.email}</p>
+					{/* <h4>{this.state.groomer.phoneNumber}</h4>
+					<p>{this.state.groomer.email}</p> */}
 					<h2>
 						<em />(84% rating)
 					</h2>

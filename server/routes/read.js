@@ -6,9 +6,13 @@ const Dog = require('../models/Dog');
 const Review = require('../models/Review');
 const Week = require('../models/Week');
 const Price = require('../models/Price');
+const { isLoggedIn } = require('../middlewares');
+
+// http://localhost:5000/read/user/5da48a6c9b06d7a953d176ab
 
 // Route to add a country
 router.get('/user/:id', (req, res, next) => {
+	// console.log(req.user);
 	let userID = req.params.id;
 	User.findById(userID)
 		.populate({ path: 'reviews', populate: { path: 'author' } })
@@ -35,7 +39,13 @@ router.get('/groomer/:id', (req, res, next) => {
 		.populate('pricing')
 		.then((groomer) => {
 			res.json(groomer);
-		});
+		})
+		.catch((err) => console.error(err));
+});
+
+router.get('/current', (req, res, next) => {
+	console.log(req.user, '=-=-=-=-=-=');
+	res.json(req.user);
 });
 
 

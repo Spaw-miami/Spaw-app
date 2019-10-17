@@ -7,12 +7,13 @@ const Review = require('../models/Review');
 const Week = require('../models/Week');
 const Appointment = require('../models/Appointment');
 const Price = require('../models/Price');
+const { isLoggedIn } = require('../middlewares');
 
 const bcrypt = require('bcrypt');
 const bcryptSalt = 10;
 // Route to add a country
 
-router.post('/appointment', (req, res, next) => {
+router.post('/appointment', isLoggedIn, (req, res, next) => {
 	// information passed through the body of the front end
 	const { userID, dogID, appID } = req.body;
 	// prevents update if body does not contain all fields
@@ -33,7 +34,7 @@ router.post('/appointment', (req, res, next) => {
 		.catch((err) => next(err));
 });
 
-router.post('/user', (req, res, next) => {
+router.post('/user', isLoggedIn, (req, res, next) => {
 	// information passed through the body of the front end
 	const { userID, username, firstName, lastName, profilePic, email, phoneNumber, address } = req.body;
 	// prevents update if body does not contain all fields
@@ -64,7 +65,7 @@ router.post('/user', (req, res, next) => {
 		.catch((err) => next(err));
 });
 
-router.post('/groomer', (req, res, next) => {
+router.post('/groomer', isLoggedIn, (req, res, next) => {
 	// info taken from post request
 	const {
 		groomerID,
@@ -122,7 +123,7 @@ router.post('/groomer', (req, res, next) => {
 		.catch((err) => next(err));
 });
 
-router.post('/prices', (req, res, next) => {
+router.post('/prices', isLoggedIn, (req, res, next) => {
 	// prices info
 	const { priceID, groomerID, small, medium, large } = req.body;
 	// required fields
@@ -157,7 +158,7 @@ router.post('/dog', (req, res, next) => {
 		.catch((err) => next(err));
 });
 
-router.post('/review', (req, res, next) => {
+router.post('/review', isLoggedIn, (req, res, next) => {
 	const { reviewID, starNumber, content, date, groomer, author, dog } = req.body;
 	if (!reviewID || !starNumber || !content || !date || !groomer || !author || !dog) {
 		res.status(400).json({ message: '{Please fill all fields}' });

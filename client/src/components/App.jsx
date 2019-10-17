@@ -10,7 +10,6 @@ import Groomerprofile from './pages/Groomerprofile';
 import api from '../api';
 import Dashboard from './pages/Dashboard';
 
-
 export default class App extends Component {
 	constructor(props) {
 		super(props);
@@ -26,41 +25,40 @@ export default class App extends Component {
 		// 		groomer: groomer.data
 		// 	});
 		// });
-		this.getUser()
+		this.getUser();
 	}
 
 	getUser = () => {
 		//http://localhost:5000/read/getUser
 
 		//axios.get('http://localhost:5000/read/user/5d9f9c2e8afcf44f5676895b')
-		axios.get('http://localhost:5000/read/getUser/something/please')
-
-			.then(res => {
-				console.log(res)
-				this.setUser(res.data.user)
-			}).catch(err => console.error(err))
-	}
-
+		axios
+			.get('http://localhost:5000/read/getUser/something/please')
+			.then((res) => {
+				console.log(res);
+				this.setUser(res.data.user);
+			})
+			.catch((err) => console.error(err));
+	};
 
 	setUser = (user) => {
-		console.log(user, '-=-=-')
-		user = user ? user : {}
-		console.log('user', user)
-		this.setState({ user })
-	}
+		console.log(user, '-=-=-');
+		user = user ? user : {};
+		console.log('user', user);
+		this.setState({ user });
+	};
 
 	handleLogoutClick(e) {
-		console.log('log out????????')
-		api.logout().then(res => {
-			console.log('log out')
-			this.setState({ user: {} })
-		})
+		console.log('log out????????');
+		api.logout().then((res) => {
+			console.log('log out');
+			this.setState({ user: {} });
+		});
 	}
 
 	render() {
 		return (
 			<div className="App">
-
 				{/* <header className="App-header"> */}
 
 				{/* <h1 className="App-title">Welcome to Spaws</h1> */}
@@ -74,7 +72,7 @@ export default class App extends Component {
 				<NavLink to="/login">Login</NavLink>
 				<Link to="/" onClick={(e) => this.handleLogoutClick(e)}>
 					Logout
-					</Link>
+				</Link>
 
 				<NavLink to="/secret">Secret</NavLink>
 				{this.state.user.username}

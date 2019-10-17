@@ -98,11 +98,11 @@ router.post('/login-with-passport-local-strategy', (req, res, next) => {
 });
 
 router.get('/logout', (req, res) => {
-	console.log('logout not working')
+	console.log('logout not working');
 	req.logout();
-	req.session.destroy(function () {
+	req.session.destroy(function() {
 		res.json({ message: 'You are out!' });
-	})
+	});
 });
 
 module.exports = router;

@@ -8,11 +8,11 @@ export default class WeekCalendar extends Component {
 	};
 
 	componentWillMount() {
-		axios.get(`http://localhost:5000/read/groomer/${'5da478786b0d84a504022fb2'}`).then((groomer) => {
-			this.setState({
-				groomer: groomer.data
-			});
-		});
+		// axios.get(`http://localhost:5000/read/groomer/${'5da478786b0d84a504022fb2'}`).then((groomer) => {
+		// 	this.setState({
+		// 		groomer: groomer.data
+		// 	});
+		// });
 	}
 
 	nextWeek = () => {
