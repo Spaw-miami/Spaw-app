@@ -29,8 +29,11 @@ export default class Home extends Component {
 		if (!this.state.groomer) {
 			return <div>Loading</div>;
 		}
+	
 		return (
-			<div className="entire-content">
+			<div>
+
+			<div className="entire">
 				<div className="containerr-two">
 					<div>
 						<h2>{this.state.groomer.username}</h2>
@@ -41,7 +44,7 @@ export default class Home extends Component {
 							className="btn btn-info btn-md"
 							data-toggle="modal"
 							data-target="#myModal"
-						>
+							>
 							{this.state.groomer.firstName} {this.state.groomer.lastName}
 						</button> */}
 					</div>
@@ -63,7 +66,7 @@ export default class Home extends Component {
 							src="http://media.idownloadblog.com/wp-content/uploads/2012/04/Phil-Schiller-headshot-e1362692403868.jpg"
 							height="150"
 							width="150"
-						/>
+							/>
 					</div>
 					<h2>CONTACT INFO</h2>
 					<h4>{this.state.groomer.phoneNumber}</h4>
@@ -147,8 +150,10 @@ export default class Home extends Component {
 						</div>
 					</div>
 				</div>
-				<Footer></Footer>
+			
 			</div>
+			<Footer></Footer>
+							</div>
 		);
 	}
 }

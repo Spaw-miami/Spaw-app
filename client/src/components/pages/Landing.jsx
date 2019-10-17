@@ -4,6 +4,8 @@ import Signup from './Signup'
 import { Route, Link, NavLink, Switch } from 'react-router-dom';
 import Footer from '../Footer'
 
+
+
 export default class Landing extends Component {
   constructor(props) {
     super(props)
@@ -11,9 +13,15 @@ export default class Landing extends Component {
       countries: [],
     }
   }
+
+  
   render() {
+
+
+    
     return (
-<div >    
+  <div>
+
         <div className="">
           <img id="logo2"src="./images/Spaws_white.png"></img>
           <div className="bye">

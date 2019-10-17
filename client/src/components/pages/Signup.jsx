@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import api from '../../api';
 import axios from 'axios';
 import Images from '../Images';
+import Footer from '../Footer'
 
 
 export default class Signup extends Component {
@@ -289,9 +290,12 @@ export default class Signup extends Component {
                 </div>
               </div>
             </form>
+            
             {this.state.message && <div className="info info-danger">{this.state.message}</div>}
           </div>
+
         </div>
+        <Footer></Footer>
       </Fragment>
     );
   };
@@ -490,9 +494,11 @@ export default class Signup extends Component {
             </form>
             {this.state.message && <div className="info info-danger">{this.state.message}</div>}
           </div>
+         
         </div>
 
-        {/* {this.state.message && <div className="info info-danger">{this.state.message}</div>} */}
+        {this.state.message && <div className="info info-danger">{this.state.message}</div>}
+        
       </Fragment>
     );
   };
