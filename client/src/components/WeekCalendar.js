@@ -8,7 +8,7 @@ export default class WeekCalendar extends Component {
 	};
 
 	componentDidMount() {
-		console.log(this.props.data.data, 'inside of calendar');
+		console.log(this.props.user.user._id, 'inside of calendar');
 		this.setState({
 			groomer: this.props.data.data
 		});
@@ -37,8 +37,35 @@ export default class WeekCalendar extends Component {
 		}
 	};
 
+	changeApp = (e) => {
+		let data = {
+			appID: this.state.appID,
+			dogID: this.state.dogID,
+			userID: this.state.customerID
+		};
+
+		axios.post('http://localhost:5000/update/appointment', data).then((app) => {});
+	};
+
 	modalOpen = (e) => {
-		console.log(e.target.innerText);
+		// INCLUDE FORM HERE
+		let eArr = e.target.innerText.split(' ');
+		this.setState({
+			appID: eArr[0],
+			time: eArr[1],
+			customerID: eArr[2]
+		});
+		// let appID = eArr[0];
+		// let time = eArr[1];
+		// let customerID = eArr[2];
+
+		let inputDisplay = {
+			display: 'none'
+		};
+		let color = {
+			color: '#518edd'
+		};
+
 		let modal = (
 			<div className="modal fade" id="myModall" role="dialog">
 				<div className="modal-dialog">
@@ -49,15 +76,16 @@ export default class WeekCalendar extends Component {
 							</button>
 							<h4 className="modal-title">Book</h4>
 						</div>
-						<form>
+						<form onClick={this.changeApp}>
 							<div className="modal-body">
 								<div className="custom">
-									<select defaultValue="default">
-										<option value="DEFAULT" disabled>
-											Select dog
-										</option>
-										<option value="1"> (NAME)</option>
-										<option value="3"> (NAME)</option>
+									<h5>Appointment at: </h5>
+									<h5 style={color}>{this.state.time} </h5>
+									<h5>for </h5>
+
+									<select>
+										<option>First Dog</option>
+										<option>Second Dog</option>
 									</select>
 								</div>
 								<div className="modal-footer">
@@ -86,7 +114,8 @@ export default class WeekCalendar extends Component {
 
 	Monday = (n) => {
 		let pStyle = {
-			display: 'none'
+			opacity: 0,
+			height: 40
 		};
 
 		let arr = [];
@@ -115,28 +144,42 @@ export default class WeekCalendar extends Component {
 
 		for (let i = 0; i < Monday.length; i++) {
 			arr.push(
-				<tr className="headcol" data-toggle="modal" data-target="#myModall">
+				<tr className="headcol" data-toggle="modal" data-target="#myModall" key={i}>
 					<td>{Monday[i].time}</td>
-					<td value={Monday[i]._id} onClick={this.modalOpen}>
-						{}
+					<td onClick={this.modalOpen}>
+						<p style={pStyle}>
+							{Monday[i]._id} {Monday[i].time} {this.props.user.user._id}
+						</p>
 					</td>
 					<td onClick={this.modalOpen}>
-						<p style={pStyle}> {Tuesday[i]._id} </p>
+						<p style={pStyle}>
+							{Tuesday[i]._id} {Tuesday[i].time} {this.props.user.user._id}
+						</p>
 					</td>
 					<td onClick={this.modalOpen}>
-						<p style={pStyle}> {Wednesday[i]._id} </p>
+						<p style={pStyle}>
+							{Wednesday[i]._id} {Wednesday[i].time} {this.props.user.user._id}
+						</p>
 					</td>
 					<td onClick={this.modalOpen}>
-						<p style={pStyle}> {Thursday[i]._id} </p>
+						<p style={pStyle}>
+							{Thursday[i]._id} {Thursday[i].time} {this.props.user.user._id}
+						</p>
 					</td>
 					<td onClick={this.modalOpen}>
-						<p style={pStyle}> {Friday[i]._id} </p>
+						<p style={pStyle}>
+							{Friday[i]._id} {Friday[i].time} {this.props.user.user._id}
+						</p>
 					</td>
 					<td onClick={this.modalOpen}>
-						<p style={pStyle}> {Saturday[i]._id} </p>
+						<p style={pStyle}>
+							{Saturday[i]._id} {Saturday[i].time} {this.props.user.user._id}
+						</p>
 					</td>
 					<td onClick={this.modalOpen}>
-						<p style={pStyle}> {Sunday[i]._id} </p>
+						<p style={pStyle}>
+							{Sunday[i]._id} {Sunday[i].time} {this.props.user.user._id}
+						</p>
 					</td>
 				</tr>
 			);
