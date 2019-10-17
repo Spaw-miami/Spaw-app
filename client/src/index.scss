@@ -4,16 +4,17 @@ body {
 	padding: 0;
 	font-family: sans-serif;
 }
-<<<<<<< HEAD
+.Home{
+  margin-top:10%;
+}
+.end{
+  margin-top:10%;
+}
 .entire{
   margin-bottom:50%;
 }
 .fileContainer{
   background-color: red;
-=======
-.fileContainer {
-	background-color: red;
->>>>>>> 237a3585c6595d373e11ca4073e83c53e6a1ebfc
 }
 
 .h1 {
@@ -355,7 +356,13 @@ h3 {
 	}
 }
 //////////////////////////////////////COLE CSS////////////////////////////////////////////////////////////////
+.set{
+  margin-top:-78.5%;
+  width:30%;
+  margin-left:72%;
+  padding-bottom: 1%;
 
+}
 .Home {
 	p {
 		font-size: 1.2em;
@@ -378,8 +385,12 @@ h3 {
 		margin: 8% 0% 0% 0%;
 	}
 	div.row {
-		border-radius: 10px;
-		box-shadow: 0 2px 5px rgba(0, 0, 0, .075);
+		width: 47%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+    float: right;
+    margin-top: -26%;
+    margin-right: 23%;
 	}
 	.card:hover .avatar-flip {
 		transform: rotateY(180deg);
@@ -425,17 +436,18 @@ h3 {
 		opacity: 0;
 	}
 	.card {
-		text-align: center;
-		background: white;
-		position: absolute;
-		top: 49%;
-		left: 60%;
-		-webkit-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
-		height: 69%;
-		width: 107%;
-		border-radius: 10px;
-		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+    text-align: center;
+    background: white;
+    position: absolute;
+    top: 49%;
+    left: 60%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 69%;
+    width: 107%;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+    margin-top: -23%;
 	}
 	li {
 		list-style-type: none;
@@ -446,6 +458,7 @@ h3 {
 		margin-left: 0;
 	}
 	.settings-box {
+    padding-bottom:3%;
 		padding-right: 10%;
 		padding-left: 8%;
 		background: white;
@@ -468,11 +481,13 @@ h3 {
 }
 .roww {
 	background: white;
-	padding-top: 1%;
-	padding-left: 2%;
-	border-radius: 5px;
-	margin-left: 10%;
-	width: 95%;
+    padding-top: 1%;
+    padding-left: 2%;
+    border-radius: 5px;
+    margin-left: 30%;
+    width: 45%;
+    margin-bottom: 4%;
+    margin-top: -4%;
 }
 .groomer-db {
 	.next-apt,
