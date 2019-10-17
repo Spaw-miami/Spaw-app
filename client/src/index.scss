@@ -1723,7 +1723,7 @@ section {
  }
  .footer-distributed {
   background: snow;
-  width:129%;
+  width:151%;
   padding: 43px 50px;
   margin-right: -26%;
  }
@@ -1754,9 +1754,9 @@ section {
       padding-left: 2%;
       border-radius: 5px;
       margin-left: 5%;
-      width: 120%;
+      width: 164%;
       margin-bottom: 4%;
-      margin-top: -4%;
+      margin-top: 50%;
     }
     .containerr {
       width: 123%;
@@ -1796,4 +1796,37 @@ section {
     .entire {
       margin-bottom: 130%;
     }
+    .set {
+      margin-top: -626.5%;
+      width: 203%;
+      margin-left: -26%;
+      padding-bottom: 1%;
+   }
+   .Home .card {
+    text-align: center;
+    background: white;
+    position: absolute;
+    top: 49%;
+    left: 84%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 69%;
+    width: 149%;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+    margin-top: -23%;
+  }
+  .Home .settings-box {
+    padding-bottom: 3%;
+    padding-right: 10%;
+    padding-left: 8%;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+    display: flex;
+    margin: 32% 0% 0% 15%;
+    width: 83%;
+    height: 60%;
+    flex-direction: column;
+  }
 }
