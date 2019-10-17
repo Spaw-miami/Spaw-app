@@ -7,31 +7,28 @@ export default class WeekCalendar extends Component {
 		number: 1
 	};
 
-	componentWillMount() {
-		// axios.get(`http://localhost:5000/read/groomer/${'5da478786b0d84a504022fb2'}`).then((groomer) => {
-		// 	this.setState({
-		// 		groomer: groomer.data
-		// 	});
-		// });
+	componentDidMount() {
+		console.log(this.props.data.data, 'inside of calendar');
+		this.setState({
+			groomer: this.props.data.data
+		});
 	}
 
 	nextWeek = () => {
-		console.log('next');
 		if (this.state.number != 52) {
 			let n = this.state.number + 1;
 			this.setState({
 				number: n
 			});
 		}
+		return;
 	};
 
-	modalOpen = (e) => {
-		console.log(e.target);
+	modalInsert = (data) => {
+		return this.state.modal;
 	};
 
 	previousWeek = () => {
-		console.log('previous');
-
 		if (this.state.number != 1) {
 			let n = this.state.number - 1;
 			this.setState({
@@ -40,7 +37,58 @@ export default class WeekCalendar extends Component {
 		}
 	};
 
+	modalOpen = (e) => {
+		console.log(e.target.innerText);
+		let modal = (
+			<div className="modal fade" id="myModall" role="dialog">
+				<div className="modal-dialog">
+					<div className="modal-content">
+						<div className="modal-header">
+							<button type="button" className="close" data-dismiss="modal">
+								&times;
+							</button>
+							<h4 className="modal-title">Book</h4>
+						</div>
+						<form>
+							<div className="modal-body">
+								<div className="custom">
+									<select defaultValue="default">
+										<option value="DEFAULT" disabled>
+											Select dog
+										</option>
+										<option value="1"> (NAME)</option>
+										<option value="3"> (NAME)</option>
+									</select>
+								</div>
+								<div className="modal-footer">
+									<button onClick={this.boxClick} type="submit" className="btn btn-primary">
+										Submit
+									</button>
+									<button
+										onClick={this.boxClick}
+										type="button"
+										className="btn btn-default"
+										data-dismiss="modal"
+									>
+										Close
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		);
+		this.setState({
+			modal: modal
+		});
+	};
+
 	Monday = (n) => {
+		let pStyle = {
+			display: 'none'
+		};
+
 		let arr = [];
 		let number = 0;
 		let Monday = [
@@ -66,24 +114,34 @@ export default class WeekCalendar extends Component {
 		];
 
 		for (let i = 0; i < Monday.length; i++) {
-			console.log(Monday[i]);
 			arr.push(
 				<tr className="headcol" data-toggle="modal" data-target="#myModall">
 					<td>{Monday[i].time}</td>
 					<td value={Monday[i]._id} onClick={this.modalOpen}>
 						{}
 					</td>
-					<td onClick={this.modalOpen}>{Tuesday[i]._id}</td>
-					<td onClick={this.modalOpen}>{Wednesday[i]._id}</td>
-					<td onClick={this.modalOpen}>{Thursday[i]._id}</td>
-					<td onClick={this.modalOpen}>{Friday[i]._id}</td>
-					<td onClick={this.modalOpen}>{Saturday[i]._id}</td>
-					<td onClick={this.modalOpen}>{Sunday[i]._id}</td>
+					<td onClick={this.modalOpen}>
+						<p style={pStyle}> {Tuesday[i]._id} </p>
+					</td>
+					<td onClick={this.modalOpen}>
+						<p style={pStyle}> {Wednesday[i]._id} </p>
+					</td>
+					<td onClick={this.modalOpen}>
+						<p style={pStyle}> {Thursday[i]._id} </p>
+					</td>
+					<td onClick={this.modalOpen}>
+						<p style={pStyle}> {Friday[i]._id} </p>
+					</td>
+					<td onClick={this.modalOpen}>
+						<p style={pStyle}> {Saturday[i]._id} </p>
+					</td>
+					<td onClick={this.modalOpen}>
+						<p style={pStyle}> {Sunday[i]._id} </p>
+					</td>
 				</tr>
 			);
 		}
 
-		console.log(arr);
 		return arr;
 	};
 
@@ -143,45 +201,7 @@ export default class WeekCalendar extends Component {
 								<tbody>{this.Monday(this.state.number)}</tbody>
 							</table>
 						</div>
-					</div>
-				</div>
-
-				<div className="modal fade" id="myModall" role="dialog">
-					<div className="modal-dialog">
-						<div className="modal-content">
-							<div className="modal-header">
-								<button type="button" className="close" data-dismiss="modal">
-									&times;
-								</button>
-								<h4 className="modal-title">BOOKING</h4>
-							</div>
-							<form>
-								<div className="modal-body">
-									<div className="custom">
-										<select defaultValue="default">
-											<option value="DEFAULT" disabled>
-												Select dog
-											</option>
-											<option value="1"> (NAME)</option>
-											<option value="3"> (NAME)</option>
-										</select>
-									</div>
-									<div className="modal-footer">
-										<button onClick={this.boxClick} type="submit" className="btn btn-primary">
-											Submit
-										</button>
-										<button
-											onClick={this.boxClick}
-											type="button"
-											className="btn btn-default"
-											data-dismiss="modal"
-										>
-											Close
-										</button>
-									</div>
-								</div>
-							</form>
-						</div>
+						{this.state.modal}
 					</div>
 				</div>
 			</div>
