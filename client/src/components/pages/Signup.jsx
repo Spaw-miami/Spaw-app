@@ -22,6 +22,7 @@ export default class Signup extends Component {
     phone: '',
     address: '',
     groomer: false,
+    pricing: '',
   };
 
 
@@ -30,6 +31,7 @@ export default class Signup extends Component {
     this.setState({
       [event.target.name]: event.target.value
     });
+
   };
 
   handleClick = (e) => {
@@ -92,6 +94,8 @@ export default class Signup extends Component {
       endTime: this.state.endTime,
 
       profilePic: this.state.profilePic,
+
+      pricing: this.state.pricing,
     };
     axios
       .post('http://localhost:5000/create/groomer', data)
@@ -452,6 +456,15 @@ export default class Signup extends Component {
                     <option>5:00 pm</option>
                     <option>6:00 pm</option>
                   </select>
+                  <br></br>
+                  <input
+                    onChange={this.handleInputChange}
+                    type="text"
+                    name="pricing"
+                    className="form-control"
+                    placeholder="Rate"
+
+                  />
                   {/* IMAGE UPLOAD TO BE ADDED */}
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
                     <label htmlFor="step4" id="back-step4" className="back">

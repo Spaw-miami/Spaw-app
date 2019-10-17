@@ -14,59 +14,59 @@ export default class Landing extends Component {
     }
   }
 
-  
+
   render() {
 
 
-    
+
     return (
-  <div>
+      <div>
 
         <div className="">
-          <img id="logo2"src="./images/Spaws_white.png"></img>
+          <img id="logo2" src="./images/Spaws_white.png"></img>
           <div className="bye">
-          
-          <img id="logo1"src="https://media.giphy.com/media/l4FGtAXjRFvOs3UyY/giphy.gif" className=""alt="Norway"></img>
-          <img id="logo" src="https://media1.giphy.com/media/3oKIPtwX904KOvjCEw/giphy.gif?cid=790b7611e05d7d57d340fd6969a8fe54979e60257c6968d3&rid=giphy.gif" className="w3-hover-opacity" alt="Norway"></img>
-          <img  id="logo" src="https://media1.giphy.com/media/3o7buc7sAR6NEfAzTi/giphy.gif?cid=790b761140bbb9ca0c9bf9e2a78a9f1f1e678a681ac1306d&rid=giphy.gif" className="w3-hover-opacity"alt="Norway"></img>
-          <div  className="box fade-in two" >   
-                
-            
-            
-            
-            <div className="hello">
-            <br></br>
-           
-            <h1 className="h1" >SPAWS IS THE FIRST OF ITS KIND PLATFORM TO FINALLY BRIDGE THE GAP BETWEEN DOG GROOMERS AND PET OWNERS. SPAWS IS BUILT WITH COMMUNITY IN MIND, FACILITATING APPOINTMENTS ON BOTH ENDS OF USERS. LOVE YOUR DOG THEN YOU'LL LOVE SPAWS. 
+
+            <img id="logo1" src="https://media.giphy.com/media/l4FGtAXjRFvOs3UyY/giphy.gif" className="" alt="Norway"></img>
+            <img id="logo" src="https://media1.giphy.com/media/3oKIPtwX904KOvjCEw/giphy.gif?cid=790b7611e05d7d57d340fd6969a8fe54979e60257c6968d3&rid=giphy.gif" className="w3-hover-opacity" alt="Norway"></img>
+            <img id="logo" src="https://media1.giphy.com/media/3o7buc7sAR6NEfAzTi/giphy.gif?cid=790b761140bbb9ca0c9bf9e2a78a9f1f1e678a681ac1306d&rid=giphy.gif" className="w3-hover-opacity" alt="Norway"></img>
+            <div className="box fade-in two" >
+
+
+
+
+              <div className="hello">
+                <br></br>
+
+                <h1 className="h1" >SPAWS IS THE FIRST OF ITS KIND PLATFORM TO FINALLY BRIDGE THE GAP BETWEEN DOG GROOMERS AND PET OWNERS. SPAWS IS BUILT WITH COMMUNITY IN MIND, FACILITATING APPOINTMENTS ON BOTH ENDS OF USERS. LOVE YOUR DOG THEN YOU'LL LOVE SPAWS.
             </h1>
-            <a className="buttonn"><Link to="/login">Login</Link></a>
-            <a className="button"><Link to="/signup">SignUp</Link></a>
-        </div>
-          </div>
+                <a className="buttonn"><Link to="/login">Login</Link></a>
+                <a className="button"><Link to="/signup">SignUp</Link></a>
+              </div>
+            </div>
 
           </div>
-         
-        </div>  
-       
+
+        </div>
+
         <div className="test1">
           <div className="parallax1"></div>
-        </div>              
-        <div className="test2">
-            <h1></h1>
         </div>
         <div className="test2">
-            <div className="parallax2"></div>
+          <h1></h1>
+        </div>
+        <div className="test2">
+          <div className="parallax2"></div>
         </div>
         <div className="test1">
-            <h1></h1>
+          <h1></h1>
         </div>
-            <div className="test1">
+        <div className="test1">
           <div className="parallax3"></div>
-        </div> 
+        </div>
         <div className="para">
-            CREATE AN ACCOUNT
-        <p className="p1">WETHER YOU ARE A DOG GROOMER LOOKIN TO MAXIMIZE YOUR TIME/CUSTOMERS BASED OR A PET OWNER LOOKING TO FIND THE BEST POSSIBLE CARE IN AREA NEAR YOU. SPAWS IS HERE FOR YOU. START BY CREATING AN ACCOUNT. <Link className="a"to="/signup">Click Here to Sign Up</Link>
-        </p>
+          CREATE AN ACCOUNT
+        <p className="p1">WETHER YOU ARE A DOG GROOMER LOOKIN TO MAXIMIZE YOUR TIME/CUSTOMERS BASED OR A PET OWNER LOOKING TO FIND THE BEST POSSIBLE CARE IN AREA NEAR YOU. SPAWS IS HERE FOR YOU. START BY CREATING AN ACCOUNT. <Link className="a" to="/signup">Click Here to Sign Up</Link>
+          </p>
         </div>
         <div className="para1">
           STAY LOCAL
@@ -77,8 +77,8 @@ export default class Landing extends Component {
             <p className="p3">FINDING THE RIGHT DOG GROOMER IS ONLY HALF THE BATTLE, WITH SPAWS YOU WILL BE ABLE TO BOOK AN APPOINMENT IN THE COMFORT OF YOUR HOME. DOG GROOMER WILL BE PROVINDING THEIR SERVICES IN THE COMFORT OF YOUR HOME.  </p>
         </div><p className="par"></p>
         <div clasName="phone"><Footer></Footer></div>
-      
-</div>
+
+      </div>
     )
   }
   componentDidMount() {

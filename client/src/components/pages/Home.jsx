@@ -55,7 +55,7 @@ export default class Home extends Component {
 				return <Redirect to="/login" />;
 			}
 		});
-		axios.get('http://localhost:5000/read//allGroomers').then((groomers) => {
+		axios.get('http://localhost:5000/read/allGroomers').then((groomers) => {
 			let display = groomers.data.map((each) => {
 				return (
 					<li>
@@ -79,6 +79,7 @@ export default class Home extends Component {
 		this.setState({
 			[e.target.name]: e.target.value
 		});
+		console.log(this.state)
 	};
 
 	//SHOW EDIT PET AND SETTINGS BOX v
@@ -96,12 +97,21 @@ export default class Home extends Component {
 		});
 	};
 
-	updateDog = () => {
-		axios.post(`http://localhost:5000/update/dog/5da5ebb4f4a8a002391516ba`).then((user) => {});
+	updateDog = (event) => {
+		event.preventDefault();
+		let data = {
+			name: this.state.petName,
+			breed: this.state.petBreed,
+			weight: this.state.petWeight,
+		};
+		console.log(data);
+		axios.post('http://localhost:5000/update/user', data).then((dogdata) => {
+			console.log('AXIOS POST ------HOME>JS', dogdata);
+		});
 	};
 
 	editPet = () => {
-		console.log('_+_+_+_+_+_+_+_+', this.props.state.dogs);
+		console.log('_+_+_+_+_+_+_+_+', this.state.dogs);
 		const pets = this.props.user.dogs.map(
 			(pets, i) => (
 				//return (
@@ -137,7 +147,7 @@ export default class Home extends Component {
 	};
 
 	dogInfo = () => {
-		console.log(')()()()()()()()()(');
+		console.log(')()()()()()()()()(', this.props.user);
 		const dogsInfo = this.props.user.dogs.map((eachDog, j) => (
 			<div key={j}>
 				<h3>{eachDog.name}</h3>
@@ -153,7 +163,8 @@ export default class Home extends Component {
 	};
 
 	petInfo = () => {
-		return <div className="petInfo">{this.state.showEdit ? this.editPet() : this.dogInfo()}</div>;
+		console.log(this.dogInfo)
+		return <div className="petInfo">{!this.state.showEdit ? this.dogInfo() : this.editPet()}</div>;
 	};
 
 	//SHOW EDIT PET AND SETTINGS BOX ^
@@ -232,20 +243,20 @@ export default class Home extends Component {
 				{this.state.showEdit ? (
 					this.editUser()
 				) : (
-					<div>
-						<h3>
-							{this.props.user.firstName} {this.props.user.lastName}
-						</h3>
-						{/* {this.state.user.firstName}{this.state.user.lastName} */}
-						<h2>{this.props.user.address}</h2>
-						{/* this.state.address */}
-						<h4>{this.props.user.phoneNumber}</h4>
-						{/* this.state.phone */}
-						<h5 />
-						{/* this.state.petName */}
-						<button onClick={this.showEditPet}>edit info</button>
-					</div>
-				)}
+						<div>
+							<h3>
+								{this.props.user.firstName} {this.props.user.lastName}
+							</h3>
+							{/* {this.state.user.firstName}{this.state.user.lastName} */}
+							<h2>{this.props.user.address}</h2>
+							{/* this.state.address */}
+							<h4>{this.props.user.phoneNumber}</h4>
+							{/* this.state.phone */}
+							<h5 />
+							{/* this.state.petName */}
+							<button onClick={this.showEditPet}>edit info</button>
+						</div>
+					)}
 			</div>
 		);
 	};
@@ -298,13 +309,7 @@ export default class Home extends Component {
 
 								<h5 className="card-text">{this.props.user.address}</h5>
 							</div>
-							<div className="card-body">
-								{this.state.petSettings || this.state.userSettings ? (
-									this.switchSettings()
-								) : (
-									this.switchSettings2()
-								)}
-							</div>
+
 						</div>
 					</div>
 					<div className="">
@@ -355,6 +360,14 @@ export default class Home extends Component {
 								<h1>Settings</h1>
 							</div>
 							{this.state.petSettings || this.state.userSettings ? this.petInfo() : this.userInfo()}
+							<br></br>
+							<div className="card-body">
+								{this.state.petSettings || this.state.userSettings ? (
+									this.switchSettings()
+								) : (
+										this.switchSettings2()
+									)}
+							</div>
 						</div>
 					</div>
 				</div>

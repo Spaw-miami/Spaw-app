@@ -15,7 +15,9 @@ export default class App extends Component {
 		super(props);
 		this.state = {
 			countries: [],
-			user: {}
+			user: {},
+			username: '',
+			password: '',
 		};
 	}
 
@@ -64,11 +66,11 @@ export default class App extends Component {
 				{/* <header className="App-header"> */}
 
 				{/* <h1 className="App-title">Welcome to Spaws</h1> */}
-				<NavLink to="/" exact>
+				<NavLink to="/home" exact>
 					Home
 				</NavLink>
 				<NavLink to="/groomerprofile">Profile</NavLink>
-				<NavLink to="/landing">Landing</NavLink>
+				<NavLink to="/">Landing</NavLink>
 				<NavLink to="/dashboard">Groomer Dash-Board</NavLink>
 				<NavLink to="/signup">Signup</NavLink>
 				<NavLink to="/login">Login</NavLink>
@@ -80,8 +82,8 @@ export default class App extends Component {
 				{this.state.user.username}
 				{/* </header> */}
 				<Switch>
-					<Route path="/" exact render={(props) => <Home user={this.state.user} {...props} />} />
-					<Route path="/landing" component={Landing} />
+					<Route path="/home" exact render={(props) => <Home user={this.state.user} {...props} />} />
+					<Route path="/" exact component={Landing} />
 					<Route path="/dashboard" render={(props) => <Dashboard user={this.state.user} {...props} />} />
 					<Route path="/signup" render={(props) => <Signup setUser={this.setUser} {...props} />} />
 					<Route path="/login" render={(props) => <Login setUser={this.setUser} {...props} />} />
