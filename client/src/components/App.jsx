@@ -76,7 +76,10 @@ export default class App extends Component {
 					<Route path="/dashboard" render={(props) => <Dashboard user={this.state.user} {...props} />} />
 					<Route path="/signup" render={(props) => <Signup setUser={this.setUser} {...props} />} />
 					<Route path="/login" render={(props) => <Login setUser={this.setUser} {...props} />} />
-					<Route path="/groomerprofile" component={Groomerprofile} />
+					<Route
+						path="/groomerprofile"
+						render={(props) => <Groomerprofile user={this.state.user} {...props} />}
+					/>
 					<Route path="/secret" component={Secret} />
 					<Route render={() => <h2>404</h2>} />
 				</Switch>
