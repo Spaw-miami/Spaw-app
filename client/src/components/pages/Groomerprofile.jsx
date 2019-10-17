@@ -6,13 +6,13 @@ import Footer from '../Footer';
 
 export default class Home extends Component {
 	state = {
-		groomer: {}
+		groomer: false
 	};
 
 	componentWillMount = () => {
 		let id = this.props.location.pathname.split('/groomerprofile/')[1];
 		axios.get(`http://localhost:5000/read/groomer/${id}`).then((groomer) => {
-			console.log(groomer);
+			console.log(groomer, 'this is the groomer in the profile');
 			this.setState({
 				groomer: groomer
 			});
@@ -20,6 +20,9 @@ export default class Home extends Component {
 	};
 
 	render() {
+		if (!this.state.groomer) {
+			return <div> Loading </div>;
+		}
 		return (
 			<div>
 				<div className="entire">
@@ -80,7 +83,7 @@ export default class Home extends Component {
 								<h2>WEEK SCHEDULE</h2>
 							</div>
 							<br />
-							<WeekCalendar />
+							<WeekCalendar data={this.state.groomer} />
 						</div>
 						<div className="modal fade" id="myModal" role="dialog">
 							<div className="modal-dialog">
