@@ -356,6 +356,10 @@ h3 {
 	}
 }
 //////////////////////////////////////COLE CSS////////////////////////////////////////////////////////////////
+.last{
+  margin-top:15%;
+}
+
 .set{
   margin-top:-78.5%;
   width:30%;
@@ -501,7 +505,7 @@ h3 {
 		padding-left: 0;
 		margin-right: 0;
 		margin-left: 0;
-		margin: 0% 0% 0% 6.5%;
+		margin: 0% 0% 5% 6.5%;
 	}
 	.col-md-6 {
 		margin-bottom: 14%;
@@ -1047,11 +1051,7 @@ tr td:nth-child(3),
 	display: flex;
 	justify-items: center;
 	flex-direction: column;
-	background: linear-gradient(
-		to right,
-		#dae2f8,
-		#d6a4a4
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: cornflowerblue;
 	min-height: 100vh;
 	background-attachment: fixed;
 	background-position: center;
@@ -1069,17 +1069,15 @@ tr td:nth-child(3),
 		width: 25vw;
 		justify-content: center;
 	}
-	.owner-button {
-		width: 25vw;
-	}
-	.groomer-button {
-		width: 25vw;
-	}
+	
+	
 	.owner-login {
 		width: 25vw;
 	}
 	.center {
-		margin: 15% 0% 0% 0%;
+    border-radius: 20px;
+    border:2px solid snow;
+		margin: 7% 0% 8% 0%;
 		display: flex;
 		flex-direction: column;
 		margin-left: auto;
@@ -1177,9 +1175,12 @@ tr td:nth-child(3),
 		background: none;
 	}
 	button {
-		background: linear-gradient(to left, #dae2f8, #d6a4a4);
+    background: snow;
+    margin-left:17%;
+    width:65%;
 		border: none;
-		border-radius: 2px;
+    border-radius: 5px;
+    margin-bottom:10%;
 	}
 	/* Multi-Part CSS */
 	input[type=checkbox] {

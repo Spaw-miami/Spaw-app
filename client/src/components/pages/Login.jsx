@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import api from '../../api';
 import axios from 'axios';
+import Footer from '../Footer'
 
 export default class Login extends Component {
 	constructor(props) {
@@ -54,6 +55,8 @@ export default class Login extends Component {
 						<br />
 						<button onClick={(e) => this.handleClick(e)}>Login</button>
 					</form>
+					
+					
 				</div>
 			);
 		} else {
@@ -82,6 +85,7 @@ export default class Login extends Component {
 						<br />
 						<button onClick={(e) => this.handleClickGroomer(e)}>Login</button>
 					</form>
+					
 				</div>
 			);
 		}
@@ -128,6 +132,7 @@ export default class Login extends Component {
 					{this.groomerOrUser()}
 				</div>
 				{this.state.message && <div className="info info-danger">{this.state.message}</div>}
+				<Footer></Footer>
 			</div>
 		);
 	}
