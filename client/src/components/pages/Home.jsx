@@ -185,7 +185,7 @@ export default class Home extends Component {
 
 	editUser = () => {
 		return (
-			<div className="edit-pet">
+			<div className="">
 				<form onSubmit={this.updateUser}>
 					<input
 						onChange={this.handleInputChange}

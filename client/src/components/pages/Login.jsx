@@ -90,8 +90,7 @@ export default class Login extends Component {
 				</div>
 			);
 		}
-	};
-
+};
 	handleClick(e) {
 		e.preventDefault();
 		axios
