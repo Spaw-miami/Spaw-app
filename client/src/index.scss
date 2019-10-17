@@ -1552,7 +1552,7 @@ section {
 
 /* If you don't want the footer to be responsive, remove these media queries */
 
-@media (max-width: 880px) {
+@media (max-width: 500px) {
 	.footer-distributed {
 		font: bold 14px sans-serif;
 	}
@@ -1561,7 +1561,7 @@ section {
 	.footer-distributed .footer-center,
 	.footer-distributed .footer-right {
 		display: block;
-		width: 100%;
+    margin-right:-26%;
 		margin-bottom: 40px;
 		text-align: center;
 	}
@@ -1569,4 +1569,174 @@ section {
 	.footer-distributed .footer-center i {
 		margin-left: 0;
 	}
+}
+
+
+
+
+
+@media screen and (max-width: 500px) {
+  #logo2 {
+    width:100%;
+    margin-left: 17%;
+    position: absolute;
+    background: #518edd;
+    margin-top: 0%;
+    height: 50vh;
+  }
+  #logo {
+    margin-top: 83%;
+    /* padding-top: 5%; */
+    width: 30%;
+    height: 25vh;
+  }
+  #logo1 {
+    margin-left: 11.5%;
+    margin-top: 91%;
+    width: 27%;
+    height: 33vh;
+    }
+  .bye {
+    margin-right: -10%;
+    background: #518edd;
+  }
+  .hello {
+    margin-right: -17%;
+    background: snow;
+    margin-top: 1%;
+    padding-left: 7%;
+    padding-right: 7%;
+    color: #518edd;
+  }
+  .buttonn {
+    /* font-size: 20px; */
+    display: inline-block;
+    width: 100%;
+    margin-top:10%;
+    border: 2px solid black;
+    padding: 7px 30px; 
+    top: 0;
+    font-size: 25px;
+    font-family: "Open Sans", Helvetica;
+    border-radius: 4px;
+    background: snow;
+    color: snow;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+     margin-left: 0%; 
+    text-align: center;
+   }
+   .button {
+     margin-bottom:10%;
+     margin-left: 0%;
+    display: inline-block;
+    margin-top: 2%;
+    width: 100%;
+    border: 2px solid black;
+    padding: 7px 136px;
+    top: 0;
+    font-size: 25px;
+    font-family: "Open Sans", Helvetica;
+    border-radius: 4px;
+    background: snow;
+    color: #fff;
+    box-shadow: 0px 0px 0px rgba(253, 255, 254, 0.1);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .para {
+    margin-left: 6%;
+    margin-top: 10%;
+    padding-bottom: 48%;
+    font-weight: bold;
+    padding-right: 4%;
+    padding-top: 9%;
+    height: 100vh;
+    background: #518edd;
+    color: snow;
+    
+    margin-right: -27%;
+  }
+  .p1 {
+    font-size: 21px;
+    line-height: 33px;
+    margin-bottom: 20px;
+    color: snow;
+    font-weight: 100;
+    padding-left: 0%;
+  }
+  .p2{
+    color:#518edd;
+    padding-right: 5%;
+  }
+  .test1 {
+    display: none;
+   }
+   .para1 {
+     margin-top:-19%;
+    margin-right: -29%;
+    margin-left: 0%;
+    margin-bottom: -11%;
+    padding-bottom: 40%;
+    /* font-weight: bold; */
+    padding-left: 7%;
+    padding-top: 17%;
+    height: 100vh;
+    background: snow;
+    color: #518edd;
+    font-size: 36px;
+  }
+  .parallax1{
+    display: none;
+  }
+  .parallax2{
+    display: none;
+  }
+  .parallax3{
+    display: none;
+  }
+  .para2 {
+    padding-left: 7%;
+    margin-top:11%;
+    font-weight: bold;
+    padding-top: 18%;
+    height: 100vh;
+    background: #518edd;
+    color: snow;
+    font-size: 36px;
+  }
+  .p3 {
+    font-size: 23px;
+    margin-bottom: 20px;
+    color: snow;
+    font-weight: 100;
+    padding-left: 0%;
+    line-height: 1.5em;
+ }
+ .phone{
+   margin-right:10%;
+   background: linen;
+ }
+ .footer-distributed {
+  background: snow;
+  width:129%;
+  padding: 43px 50px;
+  margin-right: -26%;
+ }
+ .footer-distributed .footer-right {
+  width: 100%;
+ }
+ .par{
+    margin-right: -29%;
+    margin-bottom: 0%;
+    padding-bottom: 8%;
+    font-weight: bold;
+    padding-right: 4%;
+    background: snow;
+    color: #518edd;
+ }
 }
