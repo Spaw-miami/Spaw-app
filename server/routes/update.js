@@ -38,7 +38,7 @@ router.post('/user', isLoggedIn, (req, res, next) => {
 	// information passed through the body of the front end
 	const { userID, username, firstName, lastName, profilePic, email, phoneNumber, address } = req.body;
 	// prevents update if body does not contain all fields
-	if (!username || !firstName || !lastName || !profilePic || !email || !phoneNumber || !address) {
+	if (!username || !firstName || !lastName || !email || !phoneNumber || !address) {
 		res.status(400).json({ message: '{Please fill all fields}' });
 		return;
 	}

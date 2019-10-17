@@ -112,7 +112,7 @@ export default class Login extends Component {
 	handleClickGroomer(e) {
 		e.preventDefault();
 		axios
-			.post('https://spaws.herokuapp.com/auth/loginGroomer', {
+			.post('http://localhost:5000/auth/loginGroomer', {
 				username: this.state.username,
 				password: this.state.password
 			})

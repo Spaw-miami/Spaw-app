@@ -26,7 +26,7 @@ export default class Home extends Component {
 		dogs: ''
 	};
 
-	componentDidMount() {
+	componentWillMount() {
 		axios.get('http://localhost:5000/read/current').then((user) => {
 			console.log(user.data, ' <><><><><><><><><><><><><><><><><><> This is it.');
 			if (user.data.address) {
@@ -54,6 +54,23 @@ export default class Home extends Component {
 			} else {
 				return <Redirect to="/login" />;
 			}
+		});
+		axios.get('http://localhost:5000/read//allGroomers').then((groomers) => {
+			let display = groomers.data.map((each) => {
+				return (
+					<li>
+						<p>
+							{' '}
+							{each.firstName}, TBC, {each.pricing}{' '}
+						</p>
+					</li>
+				);
+			});
+
+			this.setState({
+				groomersDisplay: display,
+				groomers: groomers.data
+			});
 		});
 	}
 
@@ -83,7 +100,7 @@ export default class Home extends Component {
 	};
 
 	editPet = () => {
-		console.log('_+_+_+_+_+_+_+_+', this.state.dogs);
+		console.log('_+_+_+_+_+_+_+_+', this.props.state.dogs);
 		const pets = this.props.user.dogs.map(
 			(pets, i) => (
 				//return (
@@ -157,33 +174,6 @@ export default class Home extends Component {
 		axios.post('http://localhost:5000/update/user', data).then((data) => {
 			console.log('AXIOS POST HOME>JS', data);
 		});
-
-		// .post('http://localhost:5000/update/user', {
-		//   userID: "5d9f9c2e8afcf44f5676895b",
-		//   username: this.state.username,
-		//   firstName: this.state.firstName,
-		//   lastName: this.state.lastName,
-		//   address: this.state.address,
-		//   phoneNumber: this.state.phoneNumber,
-		// })
-		// .then((user) => {
-		//   console.log(user);
-		// })
-		// .catch((error) => {
-		//   console.log(error);
-		// });
-		// axios({
-		//   method: 'post',
-		//   url: 'http://localhost:5000/update/user/',
-		//   data: {
-		//     userID: "5d9f9c2e8afcf44f5676895b",
-		//     username: this.state.username,
-		//     firstName: this.state.firstName,
-		//     lastName: this.state.lastName,
-		//     address: this.state.address,
-		//     phoneNumber: this.state.phoneNumber,
-		//   }
-		// });
 	};
 
 	showUser = () => {
@@ -201,31 +191,31 @@ export default class Home extends Component {
 						onChange={this.handleInputChange}
 						type="text"
 						name="username"
-						placeholder={this.state.username}
+						placeholder={this.props.user.username}
 					/>
 					<input
 						onChange={this.handleInputChange}
 						type="text"
 						name="firstName"
-						placeholder={this.state.firstName}
+						placeholder={this.props.user.firstName}
 					/>
 					<input
 						onChange={this.handleInputChange}
 						type="text"
 						name="lastName"
-						placeholder={this.state.lastName}
+						placeholder={this.props.user.lastName}
 					/>
 					<input
 						onChange={this.handleInputChange}
 						type="text"
 						name="address"
-						placeholder={this.state.address}
+						placeholder={this.props.user.address}
 					/>
 					<input
 						onChange={this.handleInputChange}
 						type="text"
 						name="phoneNumber"
-						placeholder={this.state.phoneNumber}
+						placeholder={this.props.user.phoneNumber}
 					/>
 					<br />
 					<input type="submit" name="submit" />
@@ -245,11 +235,11 @@ export default class Home extends Component {
 						<h3>
 							{this.props.user.firstName} {this.props.user.lastName}
 						</h3>
-						{/* {this.props.user.user.firstName}{this.props.user.user.lastName} */}
+						{/* {this.state.user.firstName}{this.state.user.lastName} */}
 						<h2>{this.props.user.address}</h2>
-						{/* this.props.user.address */}
+						{/* this.state.address */}
 						<h4>{this.props.user.phoneNumber}</h4>
-						{/* this.props.user.phone */}
+						{/* this.state.phone */}
 						<h5 />
 						{/* this.state.petName */}
 						<button onClick={this.showEditPet}>edit info</button>
@@ -278,8 +268,9 @@ export default class Home extends Component {
 	// SWITCHES SETTINGS BOX ^
 
 	render() {
-		// console.log("_+_+_+_+_+_+_+_+", this.state.dogs[0]);
-		console.log(this.state, 'Current State.');
+		// if (!this.props.data.user) {
+		// 	return <div>Loading</div>;
+		// }
 		return (
 			<div className="Home">
 				<div className="">
@@ -323,22 +314,7 @@ export default class Home extends Component {
 								<h2>Groomers near you!</h2>
 								<div className="col">
 									<ul>
-										<li>
-											Username , Distance , Rate
-											<hr />
-										</li>
-										<li>
-											Christian , 10mi , 40$/hr
-											<hr />
-										</li>
-										<li>
-											Jose , 7mi , 50$/hr
-											<hr />
-										</li>
-										<li>
-											Santa , 2000mi , 1,000$/hr
-											<hr />
-										</li>
+										<li>HERE GOES</li>
 									</ul>
 								</div>
 							</div>

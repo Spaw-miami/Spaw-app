@@ -43,13 +43,25 @@ router.get('/groomer/:id', (req, res, next) => {
 		.catch((err) => console.error(err));
 });
 
+router.get('/allGroomers', (req, res, next) => {
+	Groomer.find()
+		.populate({ path: 'reviews', populate: { path: 'author' } })
+		.populate({ path: 'weeks', populate: { path: 'Monday' } })
+		.populate({ path: 'weeks', populate: { path: 'Tuesday' } })
+		.populate({ path: 'weeks', populate: { path: 'Wednesday' } })
+		.populate({ path: 'weeks', populate: { path: 'Thursday' } })
+		.populate({ path: 'weeks', populate: { path: 'Friday' } })
+		.populate({ path: 'weeks', populate: { path: 'Saturday' } })
+		.populate({ path: 'weeks', populate: { path: 'Sunday' } })
+		.populate('pricing')
+		.then((groomers) => {
+			res.json(groomers);
+		});
+});
+
 router.get('/current', (req, res, next) => {
 	console.log(req.user, '=-=-=-=-=-=');
 	res.json(req.user);
-});
-
-router.get('/info', (req, res, next) => {
-	res.json({ hello: 'hello' });
 });
 
 module.exports = router;
