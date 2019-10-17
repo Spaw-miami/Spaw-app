@@ -266,6 +266,7 @@ export default class Home extends Component {
 					<input type="submit" name="submit" />
 				</form>
 				<button onClick={this.showEditPet}>back</button>
+        
 			</div>
 		);
 	};
@@ -316,7 +317,7 @@ export default class Home extends Component {
 		// console.log("_+_+_+_+_+_+_+_+", this.state.dogs[0]);
 		console.log("_+_+_+_+_+_+_+_+_+_+_+_", this.props.user);
 		return (
-			<div>
+	
 				<div className="Home">
 					<div className="">
 						<div className="col-md-3 ">
@@ -351,7 +352,7 @@ export default class Home extends Component {
 								</div>
 							</div>
 						</div>
-						<div className="col-md-6">
+						<div className="">
 							{/* GEO LIST + EVENTS */}
 
 							<div>
@@ -405,21 +406,29 @@ export default class Home extends Component {
 											</li>
 										</ul>
 									</div>
+                  
 								</div>
+                <div className="Home"><Footer></Footer></div>
 							</div>
+             
 						</div>
-						<div className="col-md-3">
+            
+						<div className="set">
 							<div className="settings-box">
 								<div>
 									<h1>Settings</h1>
 								</div>
 								{this.state.petSettings || this.state.userSettings ? this.petInfo() : this.userInfo()}
 							</div>
+             
 						</div>
+            
 					</div>
-					<Footer id="footer" />
+         {/* <p></p> */}
+          
 				</div>
-			</div>
+       
+		
 		);
 	}
 }

@@ -64,19 +64,19 @@ export default class Landing extends Component {
           <div className="parallax3"></div>
         </div> 
         <div className="para">
-            1. CREATE AN ACCOUNT
+            CREATE AN ACCOUNT
         <p className="p1">WETHER YOU ARE A DOG GROOMER LOOKIN TO MAXIMIZE YOUR TIME/CUSTOMERS BASED OR A PET OWNER LOOKING TO FIND THE BEST POSSIBLE CARE IN AREA NEAR YOU. SPAWS IS HERE FOR YOU. START BY CREATING AN ACCOUNT. <Link className="a"to="/signup">Click Here to Sign Up</Link>
         </p>
         </div>
         <div className="para1">
-          2. STAY LOCAL
+          STAY LOCAL
        <p className="p2"> SPAWS NEAR YOU FEATURE ALLOWS YOU TO SEE THE DOG GROOMERS NEAR YOUR AREA. YOU WILL BE ABLE TO VIEW THE DOG GROOMERS PROFILE WITH ALL THEIR SEVICE PLANS; AS WELL AS REVIEWS FROM OTHER PET OWNERS. </p>
         </div>
         <div className="para2">
-          3. APPOINMENTS
+          APPOINMENTS
             <p className="p3">FINDING THE RIGHT DOG GROOMER IS ONLY HALF THE BATTLE, WITH SPAWS YOU WILL BE ABLE TO BOOK AN APPOINMENT IN THE COMFORT OF YOUR HOME. DOG GROOMER WILL BE PROVINDING THEIR SERVICES IN THE COMFORT OF YOUR HOME.  </p>
         </div><p className="par"></p>
-        <Footer></Footer>
+        <div clasName="phone"><Footer></Footer></div>
       
 </div>
     )

@@ -135,9 +135,9 @@ export default class Signup extends Component {
                 <button type="submit">Save new thing</button>
             </form>
           </div> */}
-        <div className="pet-owner">
-          <h1 className="page-header">Sign Up Now!</h1>
-          <button onClick={this.groomerOrUser}>Are you a Pet Groomer?</button>
+        <div className="">
+        <h2 className="create">Create an Account</h2>
+          <button className="boton" onClick={this.groomerOrUser}>Are you a Pet Groomer?<p className="boton1">click Here</p></button>
           <div className="form-container">
             <form onSubmit={this.handleClick}>
               <input id="step2" type="checkbox" />
@@ -147,7 +147,7 @@ export default class Signup extends Component {
               <div id="part1" className="form-group">
                 <div className="panel panel-primary">
                   <div className="panel-heading">
-                    <h3 className="panel-title">Owner User info</h3>
+                    <h3 className="">Owner User info</h3>
                   </div>
                   <input
                     onChange={this.handleInputChange}
@@ -180,7 +180,7 @@ export default class Signup extends Component {
               <div id="part2" className="form-group">
                 <div className="panel panel-primary">
                   <div className="panel-heading">
-                    <h3 className="panel-title">Owner Personal Info</h3>
+                    <h3 className="">Owner Personal Info</h3>
                   </div>
                   <input
                     onChange={this.handleInputChange}
@@ -231,7 +231,7 @@ export default class Signup extends Component {
               <div id="part3" className="form-group">
                 <div className="panel panel-primary">
                   <div className="panel-heading">
-                    <h3 className="panel-title">Owner Full Name</h3>
+                    <h3 className="">Owner Full Name</h3>
                   </div>
                   <input
                     onChange={this.handleInputChange}
@@ -268,7 +268,7 @@ export default class Signup extends Component {
               <div id="part4" className="form-group">
                 <div className="panel panel-primary">
                   <div className="panel-heading">
-                    <h3 className="panel-title">Profile Picture</h3>
+                    <h3 className="">Profile Picture</h3>
                   </div>
                   <input
                     onChange={this.handleInputChange}
@@ -279,10 +279,10 @@ export default class Signup extends Component {
                   />
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
                     <label htmlFor="step4" id="back-step4" className="back">
-                      <div className="btn btn-default btn-primary btn-lg">Back</div>
+                      <div className="ultimo">Back</div>
                     </label>
                     <label className="continue">
-                      <button type="submit" className="btn btn-default btn-success btn-lg">
+                      <button type="submit" className="btn  btn-lg">
                         Submit
 											</button>
                     </label>
@@ -302,9 +302,9 @@ export default class Signup extends Component {
   signupGroomer = () => {
     return (
       <Fragment>
-        <div className="pet-groomer">
-          <h1 className="page-header">Sign Up Now!</h1>
-          <button onClick={this.groomerOrUser}>Are you a Pet Owner?</button>
+        <div className="">
+        <h2 className="create">Create an Account</h2>
+          <button className="boton" onClick={this.groomerOrUser}>Are you a Pet Owner?<p className="boton1">click Here</p></button>
           <div className="form-container">
             <form onSubmit={this.handleClickGroomer}>
               <input id="step2" type="checkbox" />
@@ -314,7 +314,7 @@ export default class Signup extends Component {
               <div id="part1" className="form-group">
                 <div className="panel panel-primary">
                   <div className="panel-heading">
-                    <h3 className="panel-title">Groomer User Info</h3>
+                    <h3 className="">Groomer User Info</h3>
                   </div>
                   <input
                     onChange={this.handleInputChange}
@@ -348,7 +348,7 @@ export default class Signup extends Component {
               <div id="part2" className="form-group">
                 <div className="panel panel-primary">
                   <div className="panel-heading">
-                    <h3 className="panel-title">Groomer Personal Info</h3>
+                    <h3 className="">Groomer Personal Info</h3>
                   </div>
                   <input
                     onChange={this.handleInputChange}
@@ -398,7 +398,7 @@ export default class Signup extends Component {
               <div id="part3" className="form-group">
                 <div className="panel panel-primary">
                   <div className="panel-heading">
-                    <h3 className="panel-title">Groomer Full Name</h3>
+                    <h3 className="">Groomer Full Name</h3>
                   </div>
                   <input
                     onChange={this.handleInputChange}
@@ -442,7 +442,7 @@ export default class Signup extends Component {
               <div id="part4" className="form-group">
                 <div className="panel panel-primary">
                   <div className="panel-heading">
-                    <h3 className="panel-title">Groomer Bio</h3>
+                    <h3 className="">Groomer Bio</h3>
                   </div>
                   <textarea
                     onChange={this.handleInputChange}
@@ -498,7 +498,7 @@ export default class Signup extends Component {
         </div>
 
         {this.state.message && <div className="info info-danger">{this.state.message}</div>}
-        
+        <Footer></Footer>
       </Fragment>
     );
   };

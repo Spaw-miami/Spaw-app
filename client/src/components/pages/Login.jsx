@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import api from '../../api';
 import axios from 'axios';
+import Footer from '../Footer'
 
 export default class Login extends Component {
 	constructor(props) {
@@ -37,6 +38,7 @@ export default class Login extends Component {
 					<form onSubmit={this.handleClick}>
 						<br />
 						<input
+						className="lo"
 							type="text"
 							value={this.state.username}
 							name="username"
@@ -45,6 +47,7 @@ export default class Login extends Component {
 						/>{' '}
 						<br />
 						<input
+						className="lo"
 							type="password"
 							value={this.state.password}
 							name="password"
@@ -54,6 +57,8 @@ export default class Login extends Component {
 						<br />
 						<button onClick={(e) => this.handleClick(e)}>Login</button>
 					</form>
+					
+					
 				</div>
 			);
 		} else {
@@ -65,6 +70,7 @@ export default class Login extends Component {
 					<form onSubmit={this.handleClickGroomer}>
 						<br />
 						<input
+						className="lo"
 							type="text"
 							value={this.state.username}
 							name="username"
@@ -73,6 +79,7 @@ export default class Login extends Component {
 						/>{' '}
 						<br />
 						<input
+						className="lo"
 							type="password"
 							value={this.state.password}
 							name="password"
@@ -82,6 +89,7 @@ export default class Login extends Component {
 						<br />
 						<button onClick={(e) => this.handleClickGroomer(e)}>Login</button>
 					</form>
+					
 				</div>
 			);
 		}
@@ -128,6 +136,7 @@ export default class Login extends Component {
 					{this.groomerOrUser()}
 				</div>
 				{this.state.message && <div className="info info-danger">{this.state.message}</div>}
+				<Footer></Footer>
 			</div>
 		);
 	}
