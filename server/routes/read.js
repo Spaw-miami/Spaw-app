@@ -48,10 +48,8 @@ router.get('/current', (req, res, next) => {
 	res.json(req.user);
 });
 
-
-router.get('/getUser/something/please', (req, res, next) => {
-	console.log('GETTING USER?????????????????', req.user)
-	res.json({ user: req.user })
-})
+router.get('/info', (req, res, next) => {
+	res.json({ hello: 'hello' });
+});
 
 module.exports = router;
