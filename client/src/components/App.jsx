@@ -46,6 +46,7 @@ export default class App extends Component {
 		user = user ? user : {};
 		console.log('user', user);
 		this.setState({ user });
+		console.log(this.state);
 	};
 
 	handleLogoutClick(e) {

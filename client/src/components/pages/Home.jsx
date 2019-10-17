@@ -31,29 +31,29 @@ export default class Home extends Component {
 	}
 
 	componentDidMount() {
-		axios.get(`http://localhost:5000/read/user/5d9f9c2e8afcf44f5676895b`).then((user) => {
-			console.log(user.data);
 
-			this.setState({
-				username: user.data.username,
-				petSettings: user.data.petSettings,
-				userSettings: user.data.userSettings,
-				showEdit: user.data.showEdit,
-				password: user.data.password,
-				message: user.data.message,
-				firstName: user.data.firstName,
-				lastName: user.data.lastName,
-				profilepicture: user.data.profilepicture,
-				about: user.data.about,
-				phoneNumber: user.data.phoneNumber,
-				address: user.data.address,
-				groomer: user.data.groomer,
-				petName: user.data.petName,
-				petBreed: user.data.petBreed,
-				petWeight: user.data.petWeight,
-				dogs: user.data.dogs
-			});
+		console.log("++++++++++++++", this.props);
+
+		this.setState({
+			username: this.props.user.username,
+			petSettings: this.props.user.petSettings,
+			userSettings: this.props.user.userSettings,
+			showEdit: this.props.user.showEdit,
+			password: this.props.user.password,
+			message: this.props.user.message,
+			firstName: this.props.user.firstName,
+			lastName: this.props.user.lastName,
+			profilepicture: this.props.user.profilepicture,
+			about: this.props.user.about,
+			phoneNumber: this.props.user.phoneNumber,
+			address: this.props.user.address,
+			groomer: this.props.user.groomer,
+			petName: this.props.user.petName,
+			petBreed: this.props.user.petBreed,
+			petWeight: this.props.user.petWeight,
+			dogs: this.props.user.dogs
 		});
+
 	}
 
 	handleInputChange(event) {
@@ -65,28 +65,28 @@ export default class Home extends Component {
 	handleClick(e) {
 		e.preventDefault();
 		let data = {
-			username: this.state.username,
-			firstName: this.state.firstName,
-			lastName: this.state.lastName,
-			phone: this.state.phone,
-			address: this.state.address,
-			email: this.state.email,
-			password: this.state.password,
-			username: this.state.username,
-			firstName: this.state.firstName,
-			lastName: this.state.lastName,
-			phone: this.state.phone,
-			address: this.state.address,
-			profilepicture: this.state.pfp,
-			about: this.state.about,
-			username: this.state.username,
-			firstName: this.state.firstName,
-			lastName: this.state.lastName,
-			phone: this.state.phoneNumber,
-			address: this.state.address,
-			petName: this.state.petName,
-			petBreed: this.state.petBreed,
-			petWeight: this.state.petWeight
+			username: this.props.user.username,
+			firstName: this.props.user.firstName,
+			lastName: this.props.user.lastName,
+			phone: this.props.user.phone,
+			address: this.props.user.address,
+			email: this.props.user.email,
+			password: this.props.user.password,
+			username: this.props.user.username,
+			firstName: this.props.user.firstName,
+			lastName: this.props.user.lastName,
+			phone: this.props.user.phone,
+			address: this.props.user.address,
+			profilepicture: this.props.user.pfp,
+			about: this.props.user.about,
+			username: this.props.user.username,
+			firstName: this.props.user.firstName,
+			lastName: this.props.user.lastName,
+			phone: this.props.user.phoneNumber,
+			address: this.props.user.address,
+			petName: this.props.user.petName,
+			petBreed: this.props.user.petBreed,
+			petWeight: this.props.user.petWeight
 		};
 		api
 			.signup(data)
@@ -113,47 +113,41 @@ export default class Home extends Component {
 	};
 
 	updateDog = () => {
-		axios.post(`http://localhost:5000/update/user/5da5ebb4f4a8a002391516ba`).then((user) => {
-			console.log(user.data);
-			this.setState({
-				petName: user.data.petName,
-				petBreed: user.data.petBreed,
-				petWeight: user.data.petWeight
-			});
+		axios.post(`http://localhost:5000/update/dog/5da5ebb4f4a8a002391516ba`).then((user) => {
+
 		});
 	};
 
 	editPet = () => {
 		console.log('_+_+_+_+_+_+_+_+', this.state.dogs);
-		const pets = this.state.dogs.map(
-			(pets, i) => (
-				//return (
-				<div key={i} className="edit-pet">
-					<form onSubmit={this.updateDog}>
-						<input
-							onChange={this.handleInputChange}
-							type="text"
-							name="petName"
-							placeholder={pets.name ? pets.name : 'Pet Name'}
-						/>
-						<input
-							onChange={this.handleInputChange}
-							type="text"
-							name="petBreed"
-							placeholder={pets.breed ? pets.breed : 'Pet Breed'}
-						/>
-						<input
-							onChange={this.handleInputChange}
-							type="text"
-							name="petWeight"
-							placeholder={pets.size ? pets.size : 'Pet Weight'}
-						/>
-						<br />
-						<button>Submit</button>
-					</form>
-					<button onClick={this.showEditPet}>back</button>
-				</div>
-			)
+		const pets = this.props.user.dogs.map((pets, i) => (
+			//return (
+			<div key={i} className="edit-pet">
+				<form onSubmit={this.updateDog}>
+					<input
+						onChange={this.handleInputChange}
+						type="text"
+						name="petName"
+						placeholder={pets.name ? pets.name : 'Pet Name'}
+					/>
+					<input
+						onChange={this.handleInputChange}
+						type="text"
+						name="petBreed"
+						placeholder={pets.breed ? pets.breed : 'Pet Breed'}
+					/>
+					<input
+						onChange={this.handleInputChange}
+						type="text"
+						name="petWeight"
+						placeholder={pets.size ? pets.size : 'Pet Weight'}
+					/>
+					<br />
+					<button>Submit</button>
+				</form>
+				<button onClick={this.showEditPet}>back</button>
+			</div>
+		)
 			// )
 		);
 		return pets;
@@ -161,7 +155,7 @@ export default class Home extends Component {
 
 	dogInfo = () => {
 		console.log(')()()()()()()()()(');
-		const dogs = this.state.dogs.map((eachDog, j) => (
+		const dogsInfo = this.props.user.dogs.map((eachDog, j) => (
 			<div key={j}>
 				<h3>{eachDog.name}</h3>
 				{/* this.state.petName */}
@@ -172,7 +166,7 @@ export default class Home extends Component {
 				<button onClick={this.showEditPet}>edit info</button>
 			</div>
 		));
-		return dogs;
+		return dogsInfo;
 	};
 
 	petInfo = () => {
@@ -186,17 +180,17 @@ export default class Home extends Component {
 		event.preventDefault();
 		let data = {
 			userID: '5d9f9c2e8afcf44f5676895b',
-			username: `${this.state.username}`,
-			firstName: `${this.state.firstName}`,
-			lastName: `${this.state.lastName}`,
-			phoneNumber: `${this.state.phoneNumber}`,
-			address: `${this.state.address}`,
-			profilePic: `${this.state.profilePic}`,
-			email: `${this.state.email}`
+			username: `${this.props.user.username}`,
+			firstName: `${this.props.user.firstName}`,
+			lastName: `${this.props.user.lastName}`,
+			phoneNumber: `${this.props.user.phoneNumber}`,
+			address: `${this.props.user.address}`,
+			profilePic: `${this.props.user.profilePic}`,
+			email: `${this.props.user.email}`
 		};
 
 		axios.post('http://localhost:5000/update/user/', data).then((data) => {
-			console.log(data);
+			console.log("AXIOS POST HOME>JS", data);
 		});
 
 		// .post('http://localhost:5000/update/user', {
@@ -242,31 +236,31 @@ export default class Home extends Component {
 						onChange={this.handleInputChange}
 						type="text"
 						name="username"
-						placeholder={this.state.username}
+						placeholder={this.props.user.username}
 					/>
 					<input
 						onChange={this.handleInputChange}
 						type="text"
 						name="firstName"
-						placeholder={this.state.firstName}
+						placeholder={this.props.user.firstName}
 					/>
 					<input
 						onChange={this.handleInputChange}
 						type="text"
 						name="lastName"
-						placeholder={this.state.lastName}
+						placeholder={this.props.user.lastName}
 					/>
 					<input
 						onChange={this.handleInputChange}
 						type="text"
 						name="address"
-						placeholder={this.state.address}
+						placeholder={this.props.user.address}
 					/>
 					<input
 						onChange={this.handleInputChange}
 						type="text"
 						name="phoneNumber"
-						placeholder={this.state.phoneNumber}
+						placeholder={this.props.user.phoneNumber}
 					/>
 					<br />
 					<input type="submit" name="submit" />
@@ -282,20 +276,20 @@ export default class Home extends Component {
 				{this.state.showEdit ? (
 					this.editUser()
 				) : (
-					<div>
-						<h3>
-							{this.state.firstName} {this.state.lastName}
-						</h3>
-						{/* {this.state.user.firstName}{this.state.user.lastName} */}
-						<h2>{this.state.address}</h2>
-						{/* this.state.address */}
-						<h4>{this.state.phoneNumber}</h4>
-						{/* this.state.phone */}
-						<h5 />
-						{/* this.state.petName */}
-						<button onClick={this.showEditPet}>edit info</button>
-					</div>
-				)}
+						<div>
+							<h3>
+								{this.props.user.firstName} {this.props.user.lastName}
+							</h3>
+							{/* {this.props.user.user.firstName}{this.props.user.user.lastName} */}
+							<h2>{this.props.user.address}</h2>
+							{/* this.props.user.address */}
+							<h4>{this.props.user.phoneNumber}</h4>
+							{/* this.props.user.phone */}
+							<h5 />
+							{/* this.state.petName */}
+							<button onClick={this.showEditPet}>edit info</button>
+						</div>
+					)}
 			</div>
 		);
 	};
@@ -320,7 +314,7 @@ export default class Home extends Component {
 
 	render() {
 		// console.log("_+_+_+_+_+_+_+_+", this.state.dogs[0]);
-
+		console.log("_+_+_+_+_+_+_+_+_+_+_+_", this.props.user);
 		return (
 			<div>
 				<div className="Home">
@@ -344,16 +338,16 @@ export default class Home extends Component {
 									/>
 								</div>
 								<div className="card-body">
-									<p className="card-title">{this.state.username}</p>
+									<p className="card-title">{this.props.user.username}</p>
 
-									<h5 className="card-text">{this.state.address}</h5>
+									<h5 className="card-text">{this.props.user.address}</h5>
 								</div>
 								<div className="card-body">
 									{this.state.petSettings || this.state.userSettings ? (
 										this.switchSettings()
 									) : (
-										this.switchSettings2()
-									)}
+											this.switchSettings2()
+										)}
 								</div>
 							</div>
 						</div>
