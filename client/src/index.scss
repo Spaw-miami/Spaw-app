@@ -1578,7 +1578,7 @@ section {
 @media screen and (max-width: 500px) {
   #logo2 {
     width:100%;
-    margin-left: 17%;
+    margin-left: 25%;
     position: absolute;
     background: #518edd;
     margin-top: 0%;
@@ -1597,7 +1597,7 @@ section {
     height: 33vh;
     }
   .bye {
-    margin-right: -10%;
+    margin-right: -29%;
     background: #518edd;
   }
   .hello {
@@ -1629,6 +1629,7 @@ section {
     text-align: center;
    }
    .button {
+     text-align: center;
      margin-bottom:10%;
      margin-left: 0%;
     display: inline-block;
@@ -1677,8 +1678,8 @@ section {
     display: none;
    }
    .para1 {
-     margin-top:-19%;
-    margin-right: -29%;
+     margin-top:-51%;
+    margin-right: -51%;
     margin-left: 0%;
     margin-bottom: -11%;
     padding-bottom: 40%;
@@ -1730,8 +1731,19 @@ section {
  .footer-distributed .footer-right {
   width: 100%;
  }
+ .footer-distributed .footer-center i {
+  background-color: #33383b;
+  /* color: #518edd; */
+  /* font-size: 25px; */
+  width: 16%;
+  border-radius: 50%;
+  text-align: center;
+  /* line-height: 42px; */
+  margin: 23px 111px;
+  /* vertical-align: middle; */
+  }
  .par{
-    margin-right: -29%;
+    margin-right: -51%;
     margin-bottom: 0%;
     padding-bottom: 8%;
     font-weight: bold;
@@ -1754,9 +1766,9 @@ section {
       padding-left: 2%;
       border-radius: 5px;
       margin-left: 5%;
-      width: 164%;
+      width: 167%;
       margin-bottom: 4%;
-      margin-top: 50%;
+      margin-top: 17%;
     }
     .containerr {
       width: 123%;
@@ -1817,14 +1829,14 @@ section {
     margin-top: -23%;
   }
   .Home .settings-box {
-    padding-bottom: 3%;
+    padding-bottom: 10%;
     padding-right: 10%;
     padding-left: 8%;
     background: white;
     border-radius: 6px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
     display: flex;
-    margin: 32% 0% 0% 15%;
+    margin: 29% 0% 0% 15%;
     width: 83%;
     height: 60%;
     flex-direction: column;
