@@ -1739,4 +1739,61 @@ section {
     background: snow;
     color: #518edd;
  }
+  .Home div.col-md-3 {
+    width: 100%;
+    height: 80vh;
+    margin: 0px 0px 0px 9px;
+    padding: 0px;
+    }
+    .Home .hold-down {
+      margin: 6% 0% 0% 0%;
+     }
+    .roww {
+      background: white;
+      padding-top: 3%;
+      padding-left: 2%;
+      border-radius: 5px;
+      margin-left: 5%;
+      width: 120%;
+      margin-bottom: 4%;
+      margin-top: -4%;
+    }
+    .containerr {
+      width: 123%;
+      margin-left: 3%;
+      margin-top: 6%;
+      margin-bottom: 132px;
+      background-color: #518edd;
+      padding: 200px 20px 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(163, 163, 163, 0.85);
+      text-align: center;
+  }
+  .containerr-two {
+    /* float: right; */
+    /* margin-top: 106%; */
+    margin-right: -29%;
+    height: 60%;
+    width: 129%;
+    background-color: white;
+    padding: 0 20px 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 60, 255, 0.075);
+    text-align: center;
+  }
+  .containerr-calendar {
+    /* float: right; */
+    margin-top: 14%;
+    margin-right: -8%;
+    height: 60%;
+    width: 117%;
+    background-color: white;
+    padding: 0 20px 55px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+    /* text-align: center; */
+    }
+    .entire {
+      margin-bottom: 130%;
+    }
 }
