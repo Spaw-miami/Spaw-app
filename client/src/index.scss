@@ -1,7 +1,8 @@
 body {
 	margin: 0;
 	padding: 0;
-	font-family: sans-serif;
+  font-family: sans-serif;
+  background: #518edd;
 }
 .Home{
   margin-top:10%;
@@ -473,7 +474,7 @@ h3 {
 		width: 70%;
 		height: 60%;
     flex-direction: column;
-    border: 2px solid;
+    
 	}
 	.hold-down {
 		margin: 5% 0% 0% 0%;
@@ -485,7 +486,7 @@ h3 {
 	}
 }
 .roww {
-  border:2px solid;
+ 
 	background: white;
     padding-top: 1%;
     padding-left: 2%;
@@ -1633,7 +1634,7 @@ section {
     margin-top: 24%;
   }
   .Home .card {
-    border:2px solid;
+    
     text-align: center;
     background: white;
     position: absolute;
@@ -1697,7 +1698,7 @@ section {
     display: inline-block;
     width: 100%;
     margin-top:10%;
-    border: 2px solid black;
+    
     padding: 7px 30px; 
     top: 0;
     font-size: 25px;
@@ -1719,7 +1720,7 @@ section {
     display: inline-block;
     margin-top: 2%;
     width: 100%;
-    border: 2px solid black;
+  
     padding: 7px 136px;
     top: 0;
     font-size: 25px;
@@ -1899,7 +1900,7 @@ section {
       padding-bottom: 1%;
    }
    .Home .card {
-    border: 2px solid;
+    
     text-align: center;
     background: white;
     position: absolute;
@@ -1925,7 +1926,7 @@ section {
     width: 83%;
     height: 60%;
     flex-direction: column;
-    border: 2px solid;
+   
   }
   .Signup button, .Login button {
     background: snow;
@@ -1943,7 +1944,7 @@ section {
 
 @media screen and (max-width: 1000px){
   .Home .card {
-    border: 2px solid;
+   
       text-align: center;
       background: white;
       position: absolute;
@@ -1968,7 +1969,8 @@ section {
   @media screen and (max-width: 990px){
     .roww{
       margin-top:0%;
-      border:2px solid;
+      
+
       padding-bottom: 14%;
     }
     .Home div.col-md-3 {
@@ -1982,3 +1984,17 @@ section {
       
     }
   }
+
+
+
+  .carousel{
+    background: #ffffff;
+    margin-top: 20px;
+}
+.carousel-item{
+    text-align: center;
+    min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+}
+.bs-example{
+	margin: 20px;
+}
