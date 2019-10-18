@@ -55,7 +55,7 @@ export default class Signup extends Component {
       address: this.state.address
     };
     axios
-      .post('http://spaws-project.herokuapp.com//create/user', data)
+      .post('http://spaws-project.herokuapp.com/create/user', data)
       .then((user) => {
         console.log(user);
         this.props.setUser(user.data)
