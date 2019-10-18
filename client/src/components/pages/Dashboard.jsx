@@ -173,9 +173,9 @@ export default class Dashboard extends Component {
 	};
 	//REPLACE
 	render() {
-		if (this.state.groomer) {
-			return <div>Loading</div>;
-		}
+		
+		
+		
 		return (
 			<div className="groomer-db">
 				<div className="">
