@@ -35,7 +35,7 @@ export default class App extends Component {
 
 		//axios.get('http://localhost:5000/read/user/5d9f9c2e8afcf44f5676895b')
 		axios
-			.get('http://localhost:5000/read/current')
+			.get('http://spaws-project.herokuapp.com/read/current')
 			.then((res) => {
 				console.log(res);
 				this.setUser(res.data.user);

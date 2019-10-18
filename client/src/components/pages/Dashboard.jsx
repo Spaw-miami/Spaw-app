@@ -23,7 +23,7 @@ export default class Dashboard extends Component {
 	}
 
 	componentWillMount() {
-		axios.get(`http://localhost:5000/read/groomer/5da4d019f4a8a00239151614`).then((groomer) => {
+		axios.get(`http://spaws-project.herokuapp.com/read/groomer/5da4d019f4a8a00239151614`).then((groomer) => {
 			this.setState({
 				groomer: groomer.data,
 				username: this.state.username,

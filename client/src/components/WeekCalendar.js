@@ -44,7 +44,7 @@ export default class WeekCalendar extends Component {
 			userID: this.state.customerID
 		};
 
-		axios.post('http://localhost:5000/update/appointment', data).then((app) => {});
+		axios.post('http://spaws-project.herokuapp.com/update/appointment', data).then((app) => {});
 	};
 
 	modalOpen = (e) => {

@@ -24,7 +24,7 @@ app.use(nocache());
 app.use(
 	cors({
 		origin: (origin, cb) => {
-			cb(null, origin && origin.startsWith('http://localhost:'));
+			cb(null, origin && origin.startsWith('http://spaws-project.herokuapp.com/'));
 		},
 		optionsSuccessStatus: 200,
 		credentials: true

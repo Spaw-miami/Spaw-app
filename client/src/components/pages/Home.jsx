@@ -27,7 +27,7 @@ export default class Home extends Component {
 	};
 
 	componentWillMount() {
-		axios.get('http://localhost:5000/read/current').then((user) => {
+		axios.get('http://spaws-project.herokuapp.com/read/current').then((user) => {
 			console.log(user.data, ' <><><><><><><><><><><><><><><><><><> This is it.');
 			if (user.data.address) {
 				this.setState({
@@ -55,7 +55,7 @@ export default class Home extends Component {
 				return <Redirect to="/login" />;
 			}
 		});
-		axios.get('http://localhost:5000/read/allGroomers').then((groomers) => {
+		axios.get('http://spaws-project.herokuapp.com/read/allGroomers').then((groomers) => {
 			let display = groomers.data.map((each) => {
 				return (
 					<li>
@@ -105,7 +105,7 @@ export default class Home extends Component {
 			weight: this.state.petWeight,
 		};
 		console.log(data);
-		axios.post('http://localhost:5000/update/user', data).then((dogdata) => {
+		axios.post('http://spaws-project.herokuapp.com/update/user', data).then((dogdata) => {
 			console.log('AXIOS POST ------HOME>JS', dogdata);
 		});
 	};
@@ -183,7 +183,7 @@ export default class Home extends Component {
 			email: this.state.email
 		};
 		console.log(data);
-		axios.post('http://localhost:5000/update/user', data).then((data) => {
+		axios.post('http://spaws-project.herokuapp.com/update/user', data).then((data) => {
 			console.log('AXIOS POST HOME>JS', data);
 		});
 	};

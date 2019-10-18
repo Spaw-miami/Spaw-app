@@ -11,7 +11,7 @@ export default class Home extends Component {
 
 	componentWillMount = () => {
 		let id = this.props.location.pathname.split('/groomerprofile/')[1];
-		axios.get(`http://localhost:5000/read/groomer/${id}`).then((groomer) => {
+		axios.get(`http://spaws-project.herokuapp.com/read/groomer/${id}`).then((groomer) => {
 			console.log(groomer, 'this is the groomer in the profile');
 			this.setState({
 				groomer: groomer
