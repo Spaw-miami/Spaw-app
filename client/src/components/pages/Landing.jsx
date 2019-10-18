@@ -23,6 +23,8 @@ export default class Landing extends Component {
 
     return (
        <div>
+
+
         
 {/*         <div className=""> */}
 {/*           <img id="logo2"src="./images/Spaws_white.png"></img> */}
