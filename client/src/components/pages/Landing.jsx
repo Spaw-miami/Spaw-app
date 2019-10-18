@@ -48,7 +48,7 @@ export default class Landing extends Component {
 {/*         </div>   */}
 
         <div className="">
-<div className="today parrallax1">
+<div className="">
 <div class="container">
 	<div class="row">
 		{/* <!-- Carousel --> */}
@@ -82,7 +82,7 @@ export default class Landing extends Component {
                         </div>
                     </div>
 			    </div>
-			    <div class="item">
+			    <div class="item ">
 			    	<img src="./images/first.png" alt="Second slide"/>
 			    	{/* <!-- Static Header --> */}
                     <div class="header-text hidden-xs">
@@ -100,7 +100,7 @@ export default class Landing extends Component {
                     </div>
 
 			    </div>
-			    <div class="item">
+			    <div class="item ">
 			    	<img src="./images/dog.jpg" alt="Third slide" width="200" height="200"/>
 			    	{/* <!-- Static Header --> */}
                     <div class="header-text hidden-xs">
