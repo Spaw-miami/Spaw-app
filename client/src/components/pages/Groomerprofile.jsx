@@ -27,7 +27,7 @@ export default class Home extends Component {
 			<div>
 				<div className="entire">
 					<div className="containerr-two">
-						<div>{/* <h2>{this.state.groomer.username}</h2> */}</div>
+						{/* <div><h2>{this.state.groomer.data.username}</h2></div> */}
 						<div id="book">
 							{/* <button
 							type="button"
@@ -40,24 +40,25 @@ export default class Home extends Component {
 						</div>
 						<br />
 						<div>
-							<h4>BEST GROOMER IN MIAMI</h4>
+							<h4>ABOUT US</h4>
+							<h4></h4>
 						</div>
-						<div> {/* <p>{this.state.groomer.about}</p> */}</div>
+						<div> {this.state.groomer.data.about}</div>
 					</div>
 
 					<div className="containerr">
 						<div className="avatar-flip">
-							{/* <img alt="" src={this.state.groomer.profilePic} height="150" width="150" /> */}
+							<img alt="" src={this.state.groomer.data.profilePic} height="150" width="150" />
 							<img
 								alt=""
-								src="http://media.idownloadblog.com/wp-content/uploads/2012/04/Phil-Schiller-headshot-e1362692403868.jpg"
+								src="http://www.surgery.pitt.edu/sites/default/files/default_images/default-person.jpg"
 								height="150"
 								width="150"
 							/>
 						</div>
-						<h2>CONTACT INFO</h2>
-						{/* <h4>{this.state.groomer.phoneNumber}</h4>
-					<p>{this.state.groomer.email}</p> */}
+						<h2>{this.state.groomer.data.firstName} {this.state.groomer.data.lastName}</h2>
+						<h4>{this.state.groomer.data.phoneNumber}</h4>
+					<p><a href="">{this.state.groomer.data.email}</a></p>
 						<h2>
 							<em />(84% rating)
 						</h2>
