@@ -173,14 +173,14 @@ export default class Dashboard extends Component {
 	};
 	//REPLACE
 	render() {
-		if (!this.state.groomer) {
+		if (this.state.groomer) {
 			return <div>Loading</div>;
 		}
 		return (
 			<div className="groomer-db">
-				<div className="container">
+				<div className="">
 					<div className="row">
-						<div className="col-md-6">
+						<div className="col-md-3">
 							<div className="next-apt">
 								<h2>Up Next</h2>
 								<p>User Name</p>
@@ -191,8 +191,8 @@ export default class Dashboard extends Component {
 								{this.state.switch ? this.scheduleInfo() : this.settingsInfo()}
 							</div>
 						</div>
-						<div className="col-md-6">
-							<div className="map">
+						<div className="col-md-9">
+							<div className="">
 								<GoogleMap></GoogleMap>
 								<h2>Google Map</h2>
 
