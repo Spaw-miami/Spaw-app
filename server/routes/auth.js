@@ -46,6 +46,7 @@ router.post('/loginGroomer', (req, res, next) => {
 	// first check to see if there's a document with that username
 	Groomer.findOne({ username })
 		.then((userDoc) => {
+			console.log("USERDOC", userDoc)
 			// "userDoc" will be empty if the username is wrong (no document in database)
 			if (!userDoc) {
 				// create an error object to send to our error handler with "next()"
@@ -100,7 +101,7 @@ router.post('/login-with-passport-local-strategy', (req, res, next) => {
 router.get('/logout', (req, res) => {
 	console.log('logout not working');
 	req.logout();
-	req.session.destroy(function() {
+	req.session.destroy(function () {
 		res.json({ message: 'You are out!' });
 	});
 });

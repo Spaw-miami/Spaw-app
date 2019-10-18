@@ -84,7 +84,7 @@ export default class Home extends Component {
 								<h2>WEEK SCHEDULE</h2>
 							</div>
 							<br />
-							<WeekCalendar data={this.state.groomer} />
+							<WeekCalendar data={this.state.groomer} user={this.props} />
 						</div>
 						<div className="modal fade" id="myModal" role="dialog">
 							<div className="modal-dialog">

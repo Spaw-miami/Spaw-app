@@ -9,11 +9,10 @@ const Price = require('../models/Price');
 const Appointment = require('../models/Appointment');
 const uploader = require('../configs/Cloudinary');
 
-
 const bcrypt = require('bcrypt');
 const bcryptSalt = 10;
 // Route to add a country
-router.post('/user', uploader.single("profilePic"), (req, res, next) => {
+router.post('/user', uploader.single('profilePic'), (req, res, next) => {
 	//const imgPath = req.files.url;
 	const { username, password, firstName, lastName, profilePic, email, phoneNumber, address } = req.body;
 	if (!username || !password || !firstName || !lastName || !profilePic || !email || !phoneNumber || !address) {
@@ -41,6 +40,19 @@ router.post('/user', uploader.single("profilePic"), (req, res, next) => {
 			return newUser.save();
 		})
 		.then((userSaved) => {
+			let name = 'Toby';
+			let picture = 'https://www.keystonepuppies.com/wp-content/uploads/2018/10/Rover-Yellow-Lab2.jpg';
+			let breed = 'Labrador Retriever';
+			let size = 'Small';
+			let age = 1;
+
+			const newDog = new Dog({ name, picture, breed, size, age });
+			newDog.save();
+
+			User.findByIdAndUpdate(userSaved._id, { $push: { dogs: dogSaved._id } }).then((user) => {
+				console.log(user);
+			});
+
 			req.logIn(userSaved, () => {
 				// hide "encryptedPassword" before sending the JSON (it's a security risk)
 				userSaved.password = undefined;
@@ -405,8 +417,8 @@ router.post('/review', (req, res, next) => {
 		})
 		.then((reviewSaved) => {
 			// LOG IN THIS USER
-			User.findByIdAndUpdate(author, { $push: { reviews: reviewSaved._id } }).then((user) => { });
-			Groomer.findByIdAndUpdate(groomer, { $push: { reviews: reviewSaved._id } }).then((groomer) => { });
+			User.findByIdAndUpdate(author, { $push: { reviews: reviewSaved._id } }).then((user) => {});
+			Groomer.findByIdAndUpdate(groomer, { $push: { reviews: reviewSaved._id } }).then((groomer) => {});
 
 			res.json(reviewSaved);
 		})

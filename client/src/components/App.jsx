@@ -15,20 +15,30 @@ export default class App extends Component {
 		super(props);
 		this.state = {
 			countries: [],
-			user: {}
+			user: {},
+			username: '',
+			password: '',
 		};
 	}
 
 	componentDidMount() {
+		// axios.get(`http://localhost:5000/read/groomer/${'5d9f9cdc581f3d4fa89445d9'}`).then((groomer) => {
+		// 	this.setState({
+		// 		groomer: groomer.data
+		// 	});
+		// });
 		this.getUser();
 	}
 
 	getUser = () => {
+		//http://localhost:5000/read/getUser
+
+		//axios.get('http://localhost:5000/read/user/5d9f9c2e8afcf44f5676895b')
 		axios
 			.get('http://localhost:5000/read/current')
 			.then((res) => {
-				console.log(res, 'RESSSSS <<<<<<<');
-				this.setUser(res.data);
+				console.log(res);
+				this.setUser(res.data.user);
 			})
 			.catch((err) => console.error(err));
 	};
@@ -38,7 +48,7 @@ export default class App extends Component {
 		user = user ? user : {};
 		console.log('user', user);
 		this.setState({ user });
-		console.log(this.state);
+		console.log(this.state)
 	};
 
 	handleLogoutClick(e) {
@@ -49,17 +59,18 @@ export default class App extends Component {
 		});
 	}
 
+
 	render() {
 		return (
 			<div className="App">
 				{/* <header className="App-header"> */}
 
 				{/* <h1 className="App-title">Welcome to Spaws</h1> */}
-				<NavLink to="/" exact>
+				<NavLink to="/home" exact>
 					Home
 				</NavLink>
 				<NavLink to="/groomerprofile">Profile</NavLink>
-				<NavLink to="/landing">Landing</NavLink>
+				<NavLink to="/">Landing</NavLink>
 				<NavLink to="/dashboard">Groomer Dash-Board</NavLink>
 				<NavLink to="/signup">Signup</NavLink>
 				<NavLink to="/login">Login</NavLink>
@@ -71,12 +82,15 @@ export default class App extends Component {
 				{this.state.user.username}
 				{/* </header> */}
 				<Switch>
-					<Route path="/" exact render={(props) => <Home user={this.state.user} {...props} />} />
-					<Route path="/landing" component={Landing} />
+					<Route path="/home" exact render={(props) => <Home user={this.state.user} {...props} />} />
+					<Route path="/" exact component={Landing} />
 					<Route path="/dashboard" render={(props) => <Dashboard user={this.state.user} {...props} />} />
 					<Route path="/signup" render={(props) => <Signup setUser={this.setUser} {...props} />} />
 					<Route path="/login" render={(props) => <Login setUser={this.setUser} {...props} />} />
-					<Route path="/groomerprofile" component={Groomerprofile} />
+					<Route
+						path="/groomerprofile"
+						render={(props) => <Groomerprofile user={this.state.user} {...props} />}
+					/>
 					<Route path="/secret" component={Secret} />
 					<Route render={() => <h2>404</h2>} />
 				</Switch>

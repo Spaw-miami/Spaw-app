@@ -22,22 +22,16 @@ export default class Signup extends Component {
     phone: '',
     address: '',
     groomer: false,
+    pricing: '',
   };
 
-
-
-  saveNewThing(newThing) {
-    // //console.log('new thing is: ', newThing)
-    return axios.post('http://localhost:5000/create/user', newThing)
-      .then(res => res.data)
-      .catch();
-  };
 
 
   handleInputChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
     });
+
   };
 
   handleClick = (e) => {
@@ -71,6 +65,8 @@ export default class Signup extends Component {
       });
   };
 
+
+
   handleClickGroomer = (e) => {
     e.preventDefault();
     console.log(this.state);
@@ -98,6 +94,8 @@ export default class Signup extends Component {
       endTime: this.state.endTime,
 
       profilePic: this.state.profilePic,
+
+      pricing: this.state.pricing,
     };
     axios
       .post('http://localhost:5000/create/groomer', data)
@@ -136,7 +134,7 @@ export default class Signup extends Component {
             </form>
           </div> */}
         <div className="">
-        <h2 className="create">Create an Account</h2>
+          <h2 className="create">Create an Account</h2>
           <button className="boton" onClick={this.groomerOrUser}>Are you a Pet Groomer?<p className="boton1">click Here</p></button>
           <div className="form-container">
             <form onSubmit={this.handleClick}>
@@ -259,38 +257,18 @@ export default class Signup extends Component {
                       <div className="btn btn-default btn-success btn-lg">Back</div>
                     </label>
 
-                    <label htmlFor="step4" id="continue-step4" className="continue">
-                      <div
-                        // onClick={e => this.handleClick(e)}
-                        className="btn btn-default btn-success btn-lg"
-                        role="button"
-                      >
-                        Continue
-											</div>
-                    </label>
-                  </div>
-                </div>
-              </div>
+                    <label id="continue-step4" className="continue">
 
-              <div id="part4" className="form-group">
-                <div className="panel panel-primary">
-                  <div className="panel-heading">
-                    <h3 className="">Profile Picture</h3>
-                  </div>
-                  <div className="btn-group btn-group-lg" role="group" aria-label="...">
-                    <label htmlFor="step4" id="back-step4" className="back">
-                      <div className="ultimo">Back</div>
-                    </label>
-                    <label className="continue">
                       <button type="submit" className="btn  btn-lg">
-                        Submit
-											</button>
+                        submit
+											  </button>
+
                     </label>
                   </div>
                 </div>
               </div>
             </form>
-            
+
             {this.state.message && <div className="info info-danger">{this.state.message}</div>}
           </div>
 
@@ -303,7 +281,7 @@ export default class Signup extends Component {
     return (
       <Fragment>
         <div className="">
-        <h2 className="create">Create an Account</h2>
+          <h2 className="create">Create an Account</h2>
           <button className="boton" onClick={this.groomerOrUser}>Are you a Pet Owner?<p className="boton1">click Here</p></button>
           <div className="form-container">
             <form onSubmit={this.handleClickGroomer}>
@@ -478,6 +456,15 @@ export default class Signup extends Component {
                     <option>5:00 pm</option>
                     <option>6:00 pm</option>
                   </select>
+                  <br></br>
+                  <input
+                    onChange={this.handleInputChange}
+                    type="text"
+                    name="pricing"
+                    className="form-control"
+                    placeholder="Rate"
+
+                  />
                   {/* IMAGE UPLOAD TO BE ADDED */}
                   <div className="btn-group btn-group-lg" role="group" aria-label="...">
                     <label htmlFor="step4" id="back-step4" className="back">
@@ -494,7 +481,7 @@ export default class Signup extends Component {
             </form>
             {this.state.message && <div className="info info-danger">{this.state.message}</div>}
           </div>
-         
+
         </div>
 
         {this.state.message && <div className="info info-danger">{this.state.message}</div>}
