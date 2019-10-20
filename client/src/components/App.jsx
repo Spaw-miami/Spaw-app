@@ -63,9 +63,6 @@ export default class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				{/* <header className="App-header"> */}
-
-				{/* <h1 className="App-title">Welcome to Spaws</h1> */}
 				<NavLink to="/home" exact>
 					Home
 				</NavLink>
@@ -76,11 +73,7 @@ export default class App extends Component {
 				<NavLink to="/login">Login</NavLink>
 				<Link to="/" onClick={(e) => this.handleLogoutClick(e)}>
 					Logout
-				</Link>
-
-				<NavLink to="/secret">Secret</NavLink>
-				{this.state.user.username}
-				{/* </header> */}
+				</Link>	
 				<Switch>
 					<Route path="/home" exact render={(props) => <Home user={this.state.user} {...props} />} />
 					<Route path="/" exact component={Landing} />

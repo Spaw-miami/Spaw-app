@@ -60,7 +60,6 @@ export default class Dashboard extends Component {
 		};
 		api
 			.signup(data)
-			// CHANGE ROUTES
 			.then(result => {
 				console.log('SUCCESS!')
 				this.props.history.push('/') // Redirect to the home page
@@ -171,11 +170,8 @@ export default class Dashboard extends Component {
 			</div>
 		);
 	};
-	//REPLACE
+	
 	render() {
-		
-		
-		
 		return (
 			<div className="groomer-db">
 				<div className="">
@@ -195,7 +191,6 @@ export default class Dashboard extends Component {
 							<div className="">
 								<GoogleMap></GoogleMap>
 								<h2>Google Map</h2>
-
 							</div>
 							<div className="settings-box">
 								{this.state.switch ? (
@@ -205,9 +200,7 @@ export default class Dashboard extends Component {
 									)}
 							</div>
 						</div>
-
 					</div>
-
 				</div>
 				<Footer></Footer>
 			</div>
