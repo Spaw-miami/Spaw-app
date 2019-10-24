@@ -55,10 +55,10 @@ export default class Home extends Component {
 				return <Redirect to="/login" />;
 			}
 		});
-		axios.get('http://localhost:5000/read/allGroomers').then((groomers) => {
+		axios.get('http://localhost:5000/read/allGroomers').then((groomers, x) => {
 			let display = groomers.data.map((each) => {
 				return (
-					<li>
+					<li key={x}>
 						<p>
 							{' '}
 							<Link to={`/groomerprofile/${each._id}`}>{each.firstName}</Link>, TBC, {each.pricing}{' '}

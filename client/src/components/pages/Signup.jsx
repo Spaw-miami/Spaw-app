@@ -59,6 +59,7 @@ export default class Signup extends Component {
       .then((user) => {
         console.log(user);
         this.props.setUser(user.data)
+        this.props.history.push('/home');
       })
       .catch((error) => {
         console.log(error);
@@ -101,6 +102,7 @@ export default class Signup extends Component {
       .post('http://localhost:5000/create/groomer', data)
       .then((groomer) => {
         console.log(groomer);
+        this.props.history.push('/dashboard');
       })
       .catch((error) => {
         console.log(error);
