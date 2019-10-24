@@ -260,9 +260,6 @@ export default class Home extends Component {
 			</div>
 		);
 	};
-	// USER SWTTINGS BOX SWITCH ^
-
-	// SWITCHES SETTINGS BOX v
 	switchSettings = () => {
 		return (
 			<p onClick={this.showUser} className="card-link">
@@ -280,9 +277,9 @@ export default class Home extends Component {
 	// SWITCHES SETTINGS BOX ^
 
 	render() {
-		// if (!this.props.data.user) {
-		// 	return <div>Loading</div>;
-		// }
+		if (!this.props.data.user) {
+			return <div>Loading</div>;
+		}
 		return (
 			<div className="Home">
 				<div className="">

@@ -114,27 +114,6 @@ export default class Signup extends Component {
   signupOne = () => {
     return (
       <Fragment>
-        {/* <div>
-            <h2>New Thing</h2>
-            <form onSubmit={e => this.handleSubmit(e)}>
-                <label>Name</label>
-                <input 
-                    type="text" 
-                    name="name" 
-                    value={ this.state.name } 
-                    onChange={ e => this.handleChange(e)} />
-                <label>Description</label>
-                <textarea 
-                    type="text" 
-                    name="description" 
-                    value={ this.state.description } 
-                    onChange={ e => this.handleChange(e)} />
-                <input 
-                    type="file" 
-                    onChange={(e) => this.handleFileUpload(e)} /> 
-                <button type="submit">Save new thing</button>
-            </form>
-          </div> */}
         <div className="">
           <h2 className="create">Create an Account</h2>
           <button className="boton" onClick={this.groomerOrUser}>Are you a Pet Groomer?<p className="boton1">click Here</p></button>
@@ -169,7 +148,6 @@ export default class Signup extends Component {
                     <label htmlFor="step2" id="continue-step2" className="continue">
                       <div className="btn btn-default btn-success btn-lg">
                         {' '}
-
                         Continue
 											</div>
                     </label>
@@ -512,8 +490,8 @@ export default class Signup extends Component {
   };
 
   render() {
-    //console.log("_+_+_+_+_+_+_+_+", this.state);
-    //console.log(this.state, this.handleClick);
+    console.log("_+_+_+_+_+_+_+_+", this.state);
+    console.log(this.state, this.handleClick);
     return (
       <div className="Signup">
         <div className="container-contact100">
